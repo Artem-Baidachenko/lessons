@@ -1,0 +1,45 @@
+* {
+	color: #111;
+}
+#nature {
+	color: palevioletred;
+}
+[class*="container"] h1 {
+	color: green;
+}
+a.link {
+	color: blue;
+}
+a.link.orange {
+	color: orange;
+}
+a.link.aqua {
+	color: aqua;
+}
+.small-title.title {
+	color: yellow;
+}
+div ~ p {
+	color: pink;
+}
+h3 + p {
+	color: orange;
+}
+[title] {
+	color: blueviolet;
+}
+span {
+	color: teal;
+}
+.list2 > .item5 {
+	color: yellowgreen;
+}
+.green {
+	color: greenyellow;
+}
+.small-title1, .small-title2, .small-title3, .small-title4 {
+	color: rebeccapurple;
+}
+.text3 p {
+	color: green;
+}

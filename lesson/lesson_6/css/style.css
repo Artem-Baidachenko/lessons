@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+	font-family: "Montserrat", sans-serif;
+	color: #111;
+	line-height: 1.3;
+}
+[class*="container"] {
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+.header {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.link {
+	color: blue;
+	font-weight: 700;
+	line-height: 1.3;
+	padding: 10px 0;
+}
+/* =========== Відпрацювання властивостей ============== */
+.hero {
+	padding-bottom: 30px;
+}
+.info-block {
+}
+/* ===== Border ==== */
+.border-info {
+	padding-bottom: 20px;
+}
+.text-border,
+.text-outline,
+.text-border-radius,
+.text-box-shadow,
+.block-box-shadow,
+.block-box-shadow-inset,
+.text-background {
+	font-size: 18px;
+}
+.text-border p,
+.text-outline p,
+.text-box-shadow p,
+.block-box-shadow p,
+.text-background p {
+	margin-bottom: 15px;
+}
+.block-border,
+.block-border-top,
+.block-border-right,
+.block-border-bottom,
+.block-border-left,
+.block-border-color,
+.block-border-style,
+.block-border-width {
+	font-size: 18px;
+	padding: 4px;
+}
+.block-border,
+.block-border-top,
+.block-border-right,
+.block-border-bottom,
+.block-border-left,
+.block-border-color,
+.block-border-style,
+.block-border-width p {
+	margin-bottom: 15px;
+}
+.block-border {
+	border: 2px solid darkcyan;
+}
+.block-border-top {
+	border-top: 2px dashed rgb(4, 95, 4);
+}
+.block-border-right {
+	border-right: 2px dotted rgb(21, 63, 201);
+}
+.block-border-bottom {
+	border-bottom: 2px dotted rgb(34, 128, 5);
+}
+.block-border-left {
+	border-left: 2px double rgb(34, 128, 5);
+}
+.block-border-color {
+	border-top: 1px solid rgb(214, 90, 7);
+	border-right: 2px dotted blue;
+	border-bottom: 3px double green;
+	border-left: 4px dashed yellow;
+	border-color: #0a84ff;
+}
+.block-border-style {
+	border-top: 1px solid rgb(214, 90, 7);
+	border-right: 2px dotted blue;
+	border-bottom: 3px double green;
+	border-left: 4px dashed yellow;
+	border-style: solid;
+}
+.block-border-width {
+	border-top: 1px solid rgb(214, 90, 7);
+	border-right: 2px dotted blue;
+	border-bottom: 3px double green;
+	border-left: 4px dashed yellow;
+	border-width: 5px;
+	border-style: solid;
+}
+/* ===== Outline ==== */
+.outline-info {
+	padding-bottom: 20px;
+}
+.block-outline,
+.block-outline-width,
+.block-outline-style,
+.block-outline-color,
+.block-outline-offset {
+	font-size: 18px;
+	padding: 4px;
+}
+.block-outline {
+	outline: 1px solid orange;
+	margin-bottom: 30px;
+}
+.block-outline-width {
+	outline: 1px solid blue;
+	outline-width: 3px;
+	margin-bottom: 30px;
+}
+.block-outline-style {
+	outline: 10px solid yellow;
+	outline-style: dotted;
+	margin-bottom: 30px;
+}
+.block-outline-color {
+	outline: 8px solid yellow;
+	outline-color: greenyellow;
+	margin-bottom: 30px;
+}
+.block-outline-offset {
+	outline: 5px solid rgb(3, 162, 173);
+	outline-offset: 5px; /* ===== Відстань обводки від контенту ==== */
+	margin-bottom: 30px;
+}
+/* ===== Border-radius ==== */
+.border-radius-info {
+	padding-bottom: 20px;
+}
+.text-border-radius {
+	background-color: #0a84ff;
+	color: #fff;
+	border-radius: 10px;
+	padding: 8px;
+}
+/* ===== Box-shadow ==== */
+.box-shadow-info {
+	padding-bottom: 20px;
+	box-shadow: 2px 3px 10px 10px rgb(221, 206, 2),
+					inset 2px 2px 10px 2px rgba(1, 66, 6, 0.5);
+	padding: 20px;
+	margin-bottom: 30px;
+}
+.block-box-shadow {
+	box-shadow: 2px 3px 10px 10px rgba(1, 175, 15, 0.5);
+	padding: 4px;
+	margin-bottom: 20px;
+}
+.block-box-shadow-inset {
+	box-shadow: inset 2px 2px 10px 2px rgba(1, 175, 15, 0.5);
+	padding: 20px;
+}
+/* ===== Opacity ==== */
+.opacity-info {
+	padding-bottom: 20px;
+	opacity: 1;
+}
+.text-opacity {
+	font-size: 18px;
+}
+.text-opacity p {
+	margin-bottom: 15px;
+}
+.block-opacity-05 {	
+	opacity: 0.5;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.block-opacity {
+	font-size: 18px;	
+}
+/* ===== Visibility ==== */
+.visibility-info {
+	padding-bottom: 20px;
+}
+.text-visibility {
+	font-size: 18px;
+}
+.text-visibility p {
+	margin-bottom: 15px;
+}
+/* ===== Background ==== */
+.background-info {
+	padding-bottom: 20px;
+}
+.block-background-color,
+.block-background-image,
+.block-background-repeat,
+.block-background-repeat1,
+.block-background-repeat2,
+.block-background-repeat3,
+.block-background-position,
+.block-background-position1,
+.block-background-position2,
+.block-background-position3,
+.block-background-position4,
+.block-background-position5,
+.block-background-position6,
+.block-background-position7,
+.block-background-position-text,
+.block-background-attachment,
+.block-background-attachment-scroll,
+.block-background-attachment-fixed,
+.block-background-size,
+.block-background-size-contain,
+.block-background-size-cover,
+.block-background-clip,
+.background,
+.background-img {
+	font-size: 18px;
+	margin-bottom: 15px;
+	line-height: 1.5;
+}
+.block-background-color {
+	background-color: gold;
+	border-radius: 5px;
+	padding: 5px;
+}
+.block-background-image {
+	background: url('../img/nature.jpg') 0 0 / 100% no-repeat;
+	min-height: 300px;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-repeat {
+	background-color: #053a6e;
+	color: #fff;
+	padding: 8px;
+	border-radius: 8px;
+}
+.block-background-repeat1 {
+	background: url('../img/nature.jpg') 0 0 / cover no-repeat;
+	min-height: 500px;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-repeat2 {
+	background: url('../img/nature.jpg') 0 0 / auto repeat-x;
+	min-height: 300px;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-repeat3 {
+	background: url('../img/nature.jpg') 0 0 / auto repeat-y;
+	height: 800px;
+	padding: 20px;
+	width: 600px;
+	color: #ffffff;
+	border-radius: 10px;
+}
+.block-background-position {
+	background: url('../img/nature.jpg') 0 0 / 100% no-repeat;
+	width: 600px;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-position1 {
+	background: url('../img/nature.jpg') 0 0 / 100% no-repeat;
+	width: 600px;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-position2 {
+	background: url('../img/nature.jpg') 0 0 / 100% no-repeat;
+	width: 600px;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-position3 {
+	background: url('../img/nature.jpg') 100px 180px / 100% repeat;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-position4 {
+	background: url('../img/nature.jpg') right bottom / 100% no-repeat;
+	width: 600px;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-position5 {
+	background: url('../img/nature.jpg') center / 100% no-repeat;
+	width: 600px;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-position6 {
+	background: url('../img/nature.jpg') 30% 20% / 100% no-repeat;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-position7 {
+	background: url('../img/nature.jpg') 50% / 100% no-repeat;
+	width: 600px;
+	padding: 20px;
+	color: #fff;
+	border-radius: 10px;
+}
+.block-background-position-text {
+	background-color: #17c001;
+	border-radius: 8px;
+	padding: 8px;
+	color: #fff;
+}
+.block-background-attachment {
+}
+.block-background-attachment-scroll {
+	background: url('../img/nature.jpg') 0 0 / 100% no-repeat;
+	border-radius: 8px;
+	width: 600px;
+	padding: 8px;
+	color: #fff;
+}
+.block-background-attachment-fixed {
+	background: url('../img/nature.jpg') 0 0 / 100% no-repeat;
+	border-radius: 8px;
+	height: 200px;
+	padding: 8px;
+	color: #fff;
+	background-attachment: fixed;
+}
+.block-background-size {
+	background: url('../img/nature.jpg') 0 0 / 100% no-repeat;
+	border-radius: 8px;
+	height: 200px;
+	width: 600px;
+	padding: 8px;
+	color: #fff;
+}
+.block-background-size-contain {
+	background: url('../img/nature.jpg') 0 0 / contain no-repeat;
+	border-radius: 8px;
+	height: 400px;
+	width: 600px;
+	padding: 8px;
+	color: #fff;
+}
+.block-background-size-cover {
+	background: url('../img/nature.jpg') 0 0 / cover no-repeat;
+	border-radius: 8px;
+	height: 400px;
+	width: 600px;
+	padding: 8px;
+	color: #fff;
+}
+.block-background-clip {
+	background: url('../img/nature.jpg') 0 0 / 100% no-repeat;
+	border-radius: 8px;
+	color: #fff;
+	background-clip: text;
+	font-size: 20px;
+}
+.background {
+	background: url('../img/nature.jpg') 0 0 / 100% no-repeat;
+	border-radius: 8px;
+	color: #fff;
+	margin-bottom: 15px;
+	padding: 8px;
+}
+.background p {
+	margin-bottom: 15px;
+}
+.background-img {
+	background: url('../img/nature.jpg') right 0 / 100px no-repeat,
+					url('../img/tiger.jpg') center / 100px no-repeat,
+					linear-gradient(90deg, #02a124 0%, #3a3dff 50%, #d3c501 100%);
+	height: 200px;
+	width: 400px;
+	color: #fff;
+}
+/* ==== Arrow ==== */
+.arrow-info {
+}
+.arrow-left,
+.arrow-right,
+.arrow-top {
+	margin-bottom: 20px;
+}
+.arrow-left {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-right: 100px solid #0e635c;
+	border-bottom: 50px solid transparent;
+}
+.arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-left: 100px solid #0e635c;
+	border-bottom: 50px solid transparent;
+}
+.arrow-top {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid #0e635c;
+}
+.arrow-bottom {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid #0e635c;
+}
+
+/* ====================================================== */
+
+/* =========== Завдання з Figma макет Furniro =========== */
+.template {
+}
+.furniro {
+	background: url('../img/bg-checkout.jpg') 0 0 / 100% no-repeat;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 30px;
+}
+.furniro-container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-top: 61px;
+	padding-bottom: 97px;
+}
+.furniro-logo {
+	margin: 0 auto;
+	text-align: center;
+	width: 77px;
+	height: 77px;
+}
+.furniro-content {
+	text-align: center;
+}
+.furniro-title {
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 1.5; /* 72/48 */
+	color: #000;
+	margin-bottom: 1px;
+	text-align: center;
+	margin-top: -16px;
+}
+.breadcrumbs {
+	display: inline-block;
+	font-family: "Poppins", sans-serif;
+}
+.breadcrumbs-item,
+.breadcrumbs-icon {
+	display: inline-block;
+}
+.breadcrumbs-icon {
+	background: url('../img/icon-arrow-right.svg') center / auto no-repeat;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+.breadcrumbs-link {
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #000;
+}
+.breadcrumbs-link.active {
+	font-weight: 300;
+}
+/* =========== Завдання з Figma макет Catalyst =========== */
+.catalyst-block {
+	background: url('../img/rectangle-bg.png') 0 0 / 100% no-repeat,
+	url('../img/bg.jpg') 0 0 / 100% no-repeat;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 30px;
+}
+.catalyst-container {
+	text-align: center;
+	padding-top: 94px;
+	padding-bottom: 85px;
+}
+.catalyst-title {
+	font-family: "Barlow", sans-serif;
+	font-weight: 800;
+	font-size: 64px;
+	line-height: 1.5;
+	text-transform: uppercase;
+	color: #f8eeeb;
+	margin-bottom: 17px; 
+}
+.catalyst-button {
+	padding: 13px 78px;
+	background-color: #0a84ff;
+	border-radius: 12px;
+	font-family: "Roboto Flex", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	text-align: center;
+	text-transform: capitalize;
+	color: #fff;
+}
+/* ============================================================= */
+.catalyst-about {
+	padding: 32px 32px;
+ 	background-color: #191919;
+ 	border-radius: 12px;
+	font-family: "Barlow", sans-serif;
+	max-width: 834px;
+	margin: 0 15px 30px;
+}
+.info-title {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 1.5;
+	text-transform: uppercase;
+	color: #f8eeeb;
+	margin-bottom: 12px;
+}
+.info-text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #b3b2b1;
+}
+.info-text p {
+	margin-bottom: 35px;
+}
+.catalyst-item {
+	background: url("../img/icon-diamond-dot.svg") 0 4px / 16px no-repeat;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #b3b2b1;
+	margin-bottom: 12px;
+	min-height: 16px;
+	padding-left: 26px;
+}
+/* ============================================================= */
+span.yellow {
+	color: rgb(250, 236, 47);
+}
+span.red {
+	color: rgb(163, 4, 4);
+}
+span.green {
+	color: green;
+}
+.title,
+.footer-title {
+	font-size: 24px;
+  	line-height: 1.33;
+   font-weight: 600;
+  	color: rgb(4, 165, 45);
+  	text-shadow: 1px 2px 5px rgba(5, 189, 51, 0.5);
+	margin-bottom: 20px;
+}
+/* ============================= */

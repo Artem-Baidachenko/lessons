@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №6 - CSS-властивості оформлення блоків, властивість background</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<h1 class="big-title title">Урок №6 - CSS-властивості оформлення блоків, властивість background</h1>
+				<ul class="list">
+					<li class="item">
+						<a href="#border" class="link">Властивість border</a>
+					</li>
+					<li class="item">
+						<a href="#outline" class="link">Властивість outline</a>
+					</li>
+					<li class="item">
+						<a href="#border-radius" class="link">Властивість border-radius</a>
+					</li>
+					<li class="item">
+						<a href="#box-shadow" class="link">Властивість box-shadow</a>
+					</li>
+					<li class="item">
+						<a href="#opacity" class="link">Властивість opacity</a>
+					</li>
+					<li class="item">
+						<a href="#visibility" class="link">Властивість visibility</a>
+					</li>
+					<li class="item">
+						<a href="#background" class="link">Властивість background</a>
+					</li>
+					<li class="item">
+						<a href="#arrow" class="link">Стрілки на CSS</a>
+					</li>
+					<li class="item">
+						<a href="#template" class="link">Завдання з Figma</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main class="page">
+			<div class="hero">
+				<div class="container">
+					<div class="info-block">
+						<div id="border" class="border-info">
+							<h2 class="title">Властивість border</h2>
+							<div class="text-border">
+								<p>
+									Border — це універсальна CSS-властивість, що встановлює межу навколо елемента, задаючи її товщину, стиль і колір.
+								</p>
+							</div>
+							<div class="block-border">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+							<div class="block-border-top">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+							<div class="block-border-right">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+							<div class="block-border-bottom">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+							<div class="block-border-left">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+							<div class="block-border-color">
+								<p>Встановлює колір border (border-color)</p>
+							</div>
+							<div class="block-border-style">
+								<p>Встановлює стиль border (solid)</p>
+							</div>
+							<div class="block-border-width">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+						</div>
+						<div id="outline" class="outline-info">
+							<h2 class="title">Властивість outline</h2>
+							<div class="text-outline">
+								<p>
+									Outline — це універсальна властивість встановлює товщину, стиль та колір обводки навколо елемента. Властивість не успадковується.
+								</p>
+							</div>
+							<div class="block-outline">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+							<div class="block-outline-width">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+							<div class="block-outline-style">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+							<div class="block-outline-color">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+							<div class="block-outline-offset">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto autem saepe expedita dolores officiis reprehenderit qui nostrum! Hic ab dolor natus repellat porro! In nulla eos pariatur alias nisi.</p>
+							</div>
+						</div>
+						<div id="border-radius" class="border-radius-info">
+							<h2 class="title">Властивість border-radius</h2>
+							<div class="text-border-radius">
+								<p>
+									Border-radius — це універсальна CSS-властивість, що встановлює межу навколо елемента, задаючи її товщину, стиль і колір.
+								</p>
+							</div>
+						</div>
+						<div id="box-shadow" class="box-shadow-info">
+							<h2 class="title">Властивість box-shadow</h2>
+							<div class="text-box-shadow">
+								<p>
+									Box-shadow — додає тінь до елементу. Властивість не успадковується. box-shadow: зсув_по_гориз зсув_по_верт радіус(розмиття) розмір колір. inset - тінь в середені об'єкту.
+								</p>
+							</div>
+							<div class="block-box-shadow">
+								<p>зсув_по_гориз зсув_по_верт радіус(розмиття) розмір колір.</p>
+							</div>
+							<div class="block-box-shadow-inset">
+								<p>inset - тінь в середені об'єкту</p>
+							</div>
+						</div>
+						<div id="opacity" class="opacity-info">
+							<h2 class="title">Властивість opacity</h2>
+							<div class="text-opacity">
+								<p>
+									Opacity — Встановлює рівень прозорості елемента. Властивість не успадковується.
+								</p>
+								<p>0 - повна прозорість</p>
+								<p>1 - повна непрозорість (за замовченням)</p>
+								<p>0.5 - прозорість 50%</p>
+							</div>
+							<div class="block-opacity-05">
+								<p>0.5 - прозорість</p>
+							</div>
+							<div class="block-opacity">
+								<p>1 - повна непрозорість (за замовченням)</p>
+							</div>
+						</div>
+						<div id="visibility" class="visibility-info">
+							<h2 class="title">Властивість visibility</h2>
+							<div class="text-visibility">
+								<p>
+									Visibility — Керує відображенням елемента
+								</p>
+								<p>
+									visible - (за замовченням) відображає об'єкт
+								</p>
+								<p>
+									hidden - ховає об'єкт (з об'єктом не можна взаємодіяти)
+								</p>
+							</div>
+						</div>
+						<div id="background" class="background-info">
+							<h2 class="title">Властивість background</h2>
+							<div class="text-background">
+								<p>
+									Background — окремі властивості
+								</p>
+							</div>
+							<div class="block-background-color">
+								<p>Визначає колір фону елемента</p>
+							</div>
+							<div class="block-background-image">
+								<p>Встановлює фонове зображення елемента або задає градієнтну заливку <span class="yellow">!! Фонове зображення НЕ встановлює розміри об'єкту</span></p>
+							</div>
+							<div class="block-background-repeat">
+								<p>background-repeat - визначає, як повторюватиметься фонове зображення та градієнту. background-repeat: repeat; (за замовченням)</p>
+							</div>
+							<div class="block-background-repeat1">
+								<p>Визначає, як повторюватиметься фонове зображення та градієнту. background-repeat: no-repeat; (Не повторяти)</p>
+							</div>
+							<div class="block-background-repeat2">
+								<p>Визначає, як повторюватиметься фонове зображення та градієнту. background-repeat: repeat-x; (по горизонталі)</p>
+							</div>
+							<div class="block-background-repeat3">
+								<p>Визначає, як повторюватиметься фонове зображення та градієнту. background-repeat: repeat-y; (по вертикалі)</p>
+							</div>
+							<div class="block-background-position">
+								<p>Задає початкове положення фонового зображення та градієнту, де перше значення (відсотки, px, слово) визначає розташування по горизонталі,	друге – вертикалі.</p>
+								<p>0 0 (або left top) - за замовченням;</p>
+								<p>center;</p>
+								<p>top;</p>
+								<p>left;</p>
+								<p>bottom;</p>
+								<p>right;</p>
+							</div>
+							<div class="block-background-position1">
+								<p>background-position: горизонталь вертикаль</p>
+							</div>
+							<div class="block-background-position2">
+								<p>background-position: 0 0; (за замовченням)</p>
+							</div>
+							<div class="block-background-position3">
+								<p>background-position: 100px 180px;</p>
+							</div>
+							<div class="block-background-position4">
+								<p>background-position: right bottom;</p>
+							</div>
+							<div class="block-background-position5">
+								<p>background-position: center;</p>
+							</div>
+							<div class="block-background-position6">
+								<p>background-position: 30% 20%;</p>
+							</div>
+							<div class="block-background-position7">
+								<p>background-position: 50%;</p>
+							</div>
+							<div class="block-background-position-text">
+								<p>Значення у відсотках: Горизонтальне залежить від ширини об'єкту. Вертикальне від висоти об'єкту. <span class="red">(!!!!!!!) Але рухає центр зображення. Значення 50% (center) розмістить зображення таким чином, що центральна точка зображення буде співпадати з центральною точкою об'єкту.</span></p>
+							</div>
+							<div class="block-background-attachment">
+								<p>Керує встановленням фонового зображення відносно вікна браузера (в'юпорта), фонове зображення та градієнт перестає скролитись разом із вмістом елемента.</p>
+							</div>
+							<div class="block-background-attachment-scroll">
+								<p>scroll - (за замовченням) позиціонується відносно елемента та скролиться разом з блоком.</p>
+							</div>
+							<div class="block-background-attachment-fixed">
+								<p>fixed - фонове зображення позиціонується відносно в'юпорта, <span class="yellow">НЕ скролиться разом з блоком</span></p>
+							</div>
+							<div class="block-background-size">
+								<p>Масштабує фонове зображення та градієнт згідно з заданими розмірами. У цифрах, де перше значення (відсотки, px) визначає ширину, друге – висоту. Або спеціальним значенням.</p>
+							</div>
+							<div class="block-background-size-contain">
+								<p>contain - Масштабує зображення зі збереженням пропорцій таким чином, щоб картинка повністю помістилася всередину блоку. Тобто щонайменше картинки.</p>
+							</div>
+							<div class="block-background-size-cover">
+								<p>cover - Масштабує зображення зі збереженням пропорцій так, щоб його ширина або висота дорівнювала ширині або висоті блоку. Тобто з більшого боку картинки.</p>
+							</div>
+							<div class="block-background-clip">
+								<p>background-clip налаштовує поведінку фонового зображення разом з межею border та текстом.</p>
+							</div>
+							<div class="background">
+								<p>Універсальна властивість - background. Властивість background.</p>
+								<p>Ця універсальна CSS властивість дозволяє одночасно задати кілька параметрів фону, а саме визначити колір,  встановити фонове зображення, задати початкове положення фонового зображення, визначити як повторюватиметься фонове зображення, встановити чи прокручуватиметься фонове зображення разом із вмістом і масштабувати фонове зображення відповідно до заданих розмірів.</p>
+								<p>Також значенням властивості background може бути вказана градієнтна заливка фону.</p>
+							</div>
+							<div class="background-img">
+								<p>Мультіфони</p>
+							</div>
+						</div>
+						<div id="arrow" class="arrow-info">
+							<h2 class="title">Стрілки на CSS</h2>
+							<div class="arrow-left"></div>
+							<div class="arrow-right"></div>
+							<div class="arrow-top"></div>
+							<div class="arrow-bottom"></div>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<div id="template" class="template">
+				<h2 class="title">Завдання з Figma</h2>
+				<div class="furniro">
+					<div class="furniro-container">
+						<div class="furniro-logo">
+							<img src="img/logo.png" alt="Logo">
+						</div>
+						<div class="furniro-content">
+							<h2 class="furniro-title">Checkout</h2>
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs-item">
+									<a href="#" class="breadcrumbs-link">Home</a>
+								</li>
+								<li class="breadcrumbs-icon"></li>
+								<li class="breadcrumbs-item">
+									<a href="#" class="breadcrumbs-link active">Cart</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="catalyst-block">
+					<div class="catalyst-container">
+						<h2 class="catalyst-title">Web Designer</h2>
+						<div class="catalyst-actions">
+							<a href="#" class="catalyst-button">Apply Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="catalyst-about">
+					<div class="catalyst-info">
+						<h3 class="info-title">About this position</h3>
+						<div class="info-text">
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+							</p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							</p>
+						</div>
+					</div>
+					<div class="catalyst-responsibilities">
+						<h3 class="info-title">Responsibilities</h3>
+						<ul class="catalyst-list">
+							<li class="catalyst-item">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+							</li>
+							<li class="catalyst-item">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							</li>
+							<li class="catalyst-item">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+							</li>
+							<li class="catalyst-item">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+							</li>
+							<li class="catalyst-item">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							</li>
+							<li class="catalyst-item">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+							</li>
+						</ul>
+					</div>
+					<div class="catalyst-requirements">
+						<h3 class="info-title">Requirements</h3>
+						<ul class="catalyst-list">
+							<li class="catalyst-item">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+							</li>
+							<li class="catalyst-item">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							</li>
+							<li class="catalyst-item">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+							</li>
+							<li class="catalyst-item">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+							</li>
+						</ul>
+					</div>
+					<div class="catalyst-benefits">
+						<h3 class="info-title">Benefits</h3>
+						<div class="info-text">
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+							</p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+							</p>
+							<p>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<h2 class="footer-title">Урок №6 - CSS-властивості оформлення блоків, властивість background</h2>
+				<ul class="list">
+					<li class="item">
+						<a href="#top" class="link">Наверх</a>
+					</li>
+					<li class="item">
+						<a href="#template" class="link">Завдання з Figma</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

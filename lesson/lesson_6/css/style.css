@@ -472,15 +472,17 @@ body {
 	display: inline-block;
 	font-family: "Poppins", sans-serif;
 }
-.breadcrumbs-item,
-.breadcrumbs-icon {
+.breadcrumbs-item {
 	display: inline-block;
 }
-.breadcrumbs-icon {
+.breadcrumbs-item:not(:last-child)::after {
+	display: inline-block;
+	content: "";
 	background: url('../img/icon-arrow-right.svg') center / auto no-repeat;
 	width: 20px;
 	height: 20px;
-	vertical-align: middle;
+	vertical-align: top;
+	margin-left: 6px;
 }
 .breadcrumbs-link {
 	font-family: "Poppins", sans-serif;
@@ -527,15 +529,15 @@ body {
 	color: #fff;
 }
 /* ============================================================= */
-.catalyst-about {
+.article {
 	padding: 32px 32px;
  	background-color: #191919;
  	border-radius: 12px;
 	font-family: "Barlow", sans-serif;
 	max-width: 834px;
-	margin: 0 15px 30px;
+	margin: 0 15px 30px;	
 }
-.info-title {
+.article h3 {
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 1.5;
@@ -543,16 +545,14 @@ body {
 	color: #f8eeeb;
 	margin-bottom: 12px;
 }
-.info-text {
+.article p {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
 	color: #b3b2b1;
-}
-.info-text p {
 	margin-bottom: 35px;
 }
-.catalyst-item {
+.article li {
 	background: url("../img/icon-diamond-dot.svg") 0 4px / 16px no-repeat;
 	font-weight: 400;
 	font-size: 16px;

@@ -15,11 +15,23 @@ body {
 	padding-top: 10px;
 	padding-bottom: 20px;
 }
-.link {
+.footer {
+	padding-bottom: 5px;
+}
+.footer-block,
+.header-list,
+.footer-list {
+	margin-bottom: 20px;
+}
+.header-item,
+.footer-item {
+	margin-bottom: 15px;
+}
+.header-link,
+.footer-link {
 	color: blue;
 	font-weight: 700;
 	line-height: 1.3;
-	padding: 10px 0;
 }
 /* =========== Відпрацювання властивостей ============== */
 .hero {

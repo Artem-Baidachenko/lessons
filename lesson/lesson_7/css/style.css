@@ -16,7 +16,7 @@ body {
 	padding-bottom: 20px;
 }
 .footer {
-	padding-bottom: 20px;
+	padding-bottom: 5px;
 }
 .footer-block:not(:last-child),
 .header-list:not(:last-child),
@@ -342,9 +342,9 @@ body {
 	height: 30px;
 	background-color: #219653;
 }
-.game-item:not(:nth-child(-n + 1)) {
+/* .game-item:not(:nth-child(-n + 1)) {
   visibility: hidden;
-}
+} */
 .game-item:hover + .game-item,
 .game-item:hover {
   background-color: #219653;
@@ -426,9 +426,9 @@ body {
 	margin-top: -80px;
 }
 .game-item--12 {
-	width: 50px;
+	width: 40px;
 	height: 20px;
-	margin-left: 820px;
+	margin-left: 830px;
 	margin-top: -80px;
 }
 .game-item--13 {

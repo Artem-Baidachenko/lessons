@@ -486,6 +486,14 @@ body {
 }
 .breadcrumbs-item {
 	display: inline-block;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #000;
+}
+.breadcrumbs-item.active {
+	font-weight: 300;
 }
 .breadcrumbs-item:not(:last-child)::after {
 	display: inline-block;
@@ -495,16 +503,6 @@ body {
 	height: 20px;
 	vertical-align: top;
 	margin-left: 6px;
-}
-.breadcrumbs-link {
-	font-family: "Poppins", sans-serif;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.5;
-	color: #000;
-}
-.breadcrumbs-link.active {
-	font-weight: 300;
 }
 /* =========== Завдання з Figma макет Catalyst =========== */
 .catalyst-block {
@@ -547,7 +545,7 @@ body {
  	border-radius: 12px;
 	font-family: "Barlow", sans-serif;
 	max-width: 834px;
-	margin: 0 15px 30px;	
+	margin-bottom: 30px;
 }
 .article h3 {
 	font-weight: 500;
@@ -564,8 +562,11 @@ body {
 	color: #b3b2b1;
 	margin-bottom: 35px;
 }
+.article ul {
+	margin-bottom: 24px;
+}
 .article li {
-	background: url("../img/icon-diamond-dot.svg") 0 4px / 16px no-repeat;
+	background: url("../img/icon-diamond-dot.svg") 0 6px / 16px no-repeat;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;

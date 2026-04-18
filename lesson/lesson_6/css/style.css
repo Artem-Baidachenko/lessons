@@ -443,12 +443,7 @@ body {
 	border-right: 50px solid transparent;
 	border-top: 100px solid #0e635c;
 }
-
-/* ====================================================== */
-
 /* =========== Завдання з Figma макет Furniro =========== */
-.template {
-}
 .furniro {
 	background: url('../img/bg-checkout.jpg') 0 0 / 100% no-repeat;
 	width: 100%;
@@ -487,13 +482,10 @@ body {
 .breadcrumbs-item {
 	display: inline-block;
 	font-family: "Poppins", sans-serif;
-	font-weight: 500;
+	font-weight: 300;
 	font-size: 16px;
 	line-height: 1.5;
 	color: #000;
-}
-.breadcrumbs-item.active {
-	font-weight: 300;
 }
 .breadcrumbs-item:not(:last-child)::after {
 	display: inline-block;
@@ -504,6 +496,12 @@ body {
 	vertical-align: top;
 	margin-left: 6px;
 }
+.breadcrumbs-link {
+	font-weight: 500;
+}
+/* .breadcrumbs-link:hover {
+	text-decoration: underline;
+} */
 /* =========== Завдання з Figma макет Catalyst =========== */
 .catalyst-block {
 	background: url('../img/rectangle-bg.png') 0 0 / 100% no-repeat,
@@ -538,14 +536,18 @@ body {
 	text-transform: capitalize;
 	color: #fff;
 }
+/* .catalyst-button:hover {
+	background-color: #023c77;
+} */
 /* ============================================================= */
 .article {
 	padding: 32px 32px;
- 	background-color: #191919;
+ 	background-color: #1a1a1a;
  	border-radius: 12px;
 	font-family: "Barlow", sans-serif;
 	max-width: 834px;
-	margin: 0 15px 30px;
+	margin: 0 auto 30px;
+	color: #b3b2b1;
 }
 .article h3 {
 	font-weight: 500;
@@ -559,21 +561,22 @@ body {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
-	color: #b3b2b1;
-	margin-bottom: 35px;
+	margin-bottom: 24px;
 }
 .article ul {
 	margin-bottom: 24px;
 }
-.article li {
-	background: url("../img/icon-diamond-dot.svg") 0 6px / 16px no-repeat;
+.article ul li {
+	background: url("../img/icon-diamond-dot.svg") 0 5px / 16px no-repeat;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
-	color: #b3b2b1;
 	margin-bottom: 12px;
 	min-height: 16px;
 	padding-left: 26px;
+}
+.article *:last-child {
+	margin-bottom: 0;
 }
 /* ============================================================= */
 span.yellow {

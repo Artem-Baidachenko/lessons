@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM%20Sans:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №7 - CSS псевдокласи та псевдоелементи</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<h1 class="big-title title">Урок №7 - CSS псевдокласи та псевдоелементи</h1>
+				<ul class="header-list">
+					<li class="header-item">
+						<a href="#pseudoclass" class="header-link">Псевдокласи</a>
+					</li>
+					<li class="header-item">
+						<a href="#pseudoelement" class="header-link">Псевдоелементи</a>
+					</li>
+					<li class="header-item">
+						<a href="#template" class="header-link">Завдання з Figma</a>
+					</li>
+					<li class="header-item">
+						<a href="#game" class="header-link">Game</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main class="page">
+			<div class="hero">
+				<div class="container">
+					<div id="pseudoclass" class="pseudoclass">
+						<div class="pseudoclass-block pseudoclass-hover">
+							<h2 class="title">Псевдокласи (стану) :hover</h2>
+							<div class="text">
+								<p>
+									Псевдоклас :hover - звернення до елемента у стані "при наведення курсору". Застосовується до будь-якого елемента
+								</p>
+							</div>
+							<a href="#hover-block" class="hover-link">
+								Наведіть на мене
+								<div class="hover-block">
+									<h3 class="hover-title">Title</h3>
+									<div class="hover-text">
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti laborum, possimus, tempora eum iste incidunt porro nemo placeat corporis saepe quae quisquam animi ad distinctio eligendi voluptates laboriosam iusto consequuntur?</p>
+									</div>
+									<ul class="list-hover">
+										<li class="item-hover">Lorem ipsum dolor sit amet consectetur</li>
+										<li class="item-hover">Lorem ipsum dolor sit amet consectetur</li>
+										<li class="item-hover">Lorem ipsum dolor sit amet consectetur</li>
+									</ul>
+								</div>
+							</a>
+						</div>
+						<div class="pseudoclass-block pseudoclass-active">
+							<h2 class="title">Псевдоклас :active</h2>
+							<div class="text">
+								<p>
+									Псевдоклас :active - звернення до елемента у стані "при натиснутій клавіші миші". Застосовується до будь-якого елемента
+								</p>
+							</div>
+							<a href="#" class="active-link">Натисніть на мене</a>
+						</div>
+						<div class="pseudoclass-block pseudoclass-visited">
+							<h2 class="title">Псевдоклас :visited</h2>
+							<div class="text">
+								<p>Звернення до тега A у стані "відвіданого посилання" обмежена кількість властивостей</p>
+								<p>
+									Варто зазначити, що через міркування безпеки та конфіденційності браузери дозволяють змінювати лише деякі властивості для псевдокласу :visited, такі як:
+								</p>
+							</div>
+							<ul class="list">
+								<li class="item">color (колір тексту)</li>
+								<li class="item">background-color (колір фону)</li>
+								<li class="item">border-color (колір рамки)</li>
+								<li class="item">outline-color (колір обвідки)</li>
+								<li class="item">column-rule-color (колір розділових ліній у колонках)</li>
+								<li class="item">text-decoration-color (колір текстових прикрас)</li>
+							</ul>
+							<a href="https://www.google.com/" target="_blank" class="visited-link">Посилання на Google</a>
+						</div>
+						<div class="pseudoclass-block pseudoclass-focus">
+							<h2 class="title">Псевдоклас :focus, :focus-visible</h2>
+							<div class="text">
+								<p>Звернення до елементу у стані "фокусу".</p>
+								<p>:focus - завжди коли взаємодіємо з об'єктом.</p>
+								<p>:focus-visible - тільки коли на об'єкт перейшли (TAB)</p>
+							</div>
+							<a href="#" class="focus-link">Посилання</a>
+						</div>
+						<div class="pseudoclass-block pseudoclass-target">
+							<h2 class="title">Псевдоклас :target</h2>
+							<div class="text">
+								<p>Звернення до елемента у стані "ефекту від посилання з іншого об'єкту"</p>
+							</div>
+							<a href="#target-block" class="target-link">Посилання</a>
+							<div id="target-block" class="target-block"></div>
+						</div>
+						<div class="pseudoclass-block pseudoclass-first">
+							<h2 class="title">Псевдокласи (положення у коді) :first-child</h2>
+							<div class="text1">
+								<p>Звернення до першого дочірнього елементу в коді</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+							</div>
+						</div>
+						<div class="pseudoclass-block pseudoclass-first">
+							<h2 class="title">Псевдокласи (положення у коді) :first-of-type</h2>
+							<div class="text2">
+								<p>Звернення до першого вказаного об'єкту в коді</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+							</div>
+						</div>
+						<div class="pseudoclass-block pseudoclass-last">
+							<h2 class="title">Псевдокласи (положення у коді) :last-child</h2>
+							<div class="text3">
+								<p>Звернення до останього елементу в коді</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+							</div>
+						</div>
+						<div class="pseudoclass-block pseudoclass-nth">
+							<h2 class="title">Псевдокласи (положення у коді) :nth-child(значення/алгоритм)</h2>
+							<div class="text4">
+								<p>Шукає елемент за номером. Звернення до конкретного елементу (ів) в коді</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+							</div>
+						</div>
+						<div class="pseudoclass-block pseudoclass-nth">
+							<h2 class="title">Псевдокласи (положення у коді) :nth-of-type()</h2>
+							<div class="text5">
+								<p>Шукає вказаний селектор за номером. Звернення до конкретного елементу (ів) в коді</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+							</div>
+						</div>
+						<div class="pseudoclass-block pseudoclass-nth">
+							<h2 class="title">Псевдокласи (положення у коді) :nth-of-type()</h2>
+							<div class="text6">
+								<p>Алгоритми NTH</p>
+								<p>odd - через один не парні</p>
+								<p>even - через один парні</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+							</div>
+						</div>
+						<div class="pseudoclass-block pseudoclass-nth">
+							<h2 class="title">Псевдокласи (положення у коді) :nth-of-type()</h2>
+							<div class="text7">
+								<p>Алгоритми NTH</p>
+								<p>Алгоритм "кожен-через"</p>
+								<p>кожен(n) + починаючи з</p>
+								<p>Кожен четвертий</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+							</div>
+							<div class="text8">
+								<p>Алгоритми NTH</p>
+								<p>Алгоритм "кожен-через"</p>
+								<p>кожен(n) + починаючи з</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur hic iusto quidem dolores eaque nesciunt enim culpa repellat tempore distinctio iure optio non soluta sit impedit iste quisquam! Labore!
+								</p>
+							</div>
+						</div>
+						<div class="pseudoclass-block pseudoclass-not">
+							<h2 class="title">:not() (селектор або псевдоклас)</h2>
+							<div class="text9">
+								<p>Псевдоклас виключення</p>
+								<p>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, est atque architecto dolor eos impedit qui esse nulla vel dolores deleniti modi ratione recusandae, autem harum culpa explicabo, molestias voluptatibus?
+								</p>
+								<p>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, est atque architecto dolor eos impedit qui esse nulla vel dolores deleniti modi ratione recusandae, autem harum culpa explicabo, molestias voluptatibus?
+								</p>
+							</div>
+						</div>
+						<div class="pseudoclass-block pseudoclass-has">
+							<h2 class="title">:has() (селектор або псевдоклас)</h2>
+							<div class="text10">
+								<p>Псевдоклас присутності в коді</p>
+								<p>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, est atque architecto dolor eos impedit qui esse nulla vel dolores deleniti modi ratione recusandae, autem harum culpa explicabo, molestias voluptatibus?
+								</p>
+								<p>
+									<span>!!! Псевдокласи мають більший пріоритет (уточнення)</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div id="pseudoelement" class="pseudoelement">
+						<div class="pseudoelement-block pseudoelement">
+							<h2 class="title">Псевдоелемент ::before, ::after</h2>
+							<div class="text11">
+								<p>
+									Псевдоелементи не можна додати до одинарних тегів (без зачиняючих елементів) (наприклад img,br), тому що ці теги не можуть містити в собі контенту.
+								</p>
+								<p>
+									<span>!!!!! Псевдоелементи - рядкові (але в reset доданий display: inline-block;) !!!!! Властивість content: ""; - Обов'язкова!</span>
+								</p>
+							</div>
+							<ul class="list">
+								<li class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+								<li class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+								<li class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+								<li class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="template" class="template">
+				<div class="container">
+					<h2 class="title">Завдання з Figma</h2>
+					<div class="about-block">
+						<h2 class="about-title">Grown <span>by Nature</span></h2>
+						<div class="about-text">
+							<p>
+								We grow our crops naturally. We are a fast-growing agricultural technology company passionate about ensuring food security. We leverage our technology to improve productivity & sales to promote food security for you and your family.
+							</p>
+						</div>
+						<div class="about-actions">
+							<a href="#" class="about-link">
+								<span>Learn more</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="game" class="game">
+				<div class="container">
+					<h3 class="title">Game</h3>
+					<div class="game-items">
+						<div class="game-item game-item--1"></div>
+						<div class="game-item game-item--2"></div>
+						<div class="game-item game-item--3"></div>
+						<div class="game-item game-item--4"></div>
+						<div class="game-item game-item--5"></div>
+						<div class="game-item game-item--6"></div>
+						<div class="game-item game-item--7"></div>
+						<div class="game-item game-item--8"></div>
+						<div class="game-item game-item--9"></div>
+						<div class="game-item game-item--10"></div>
+						<div class="game-item game-item--11"></div>
+						<div class="game-item game-item--12"></div>
+						<div class="game-item game-item--13"></div>
+						<div class="game-item game-item--14"></div>
+						<div class="game-item game-item--15"></div>
+						<div title="Кінець" class="game-item game-item--16"></div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-block">
+					<h2 class="footer-title">Урок №7 - CSS псевдокласи та псевдоелементи</h2>
+					<ul class="footer-list">
+						<li class="footer-item">
+							<a href="#top" class="footer-link">Наверх</a>
+						</li>
+						<li class="footer-item">
+							<a href="#template" class="footer-link">Завдання з Figma</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-block">
+					<h2 class="footer-title">Корисні ресурси</h2>
+					<ul class="footer-list">
+						<li class="footer-item">
+							<a href="https://validator.w3.org/nu/#file" target="_blank" class="footer-link">HTML-валідатор</a>
+						</li>
+						<li class="footer-item">
+							<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="footer-link">CSS-валідатор</a>
+						</li>
+						<li class="footer-item">
+							<a href="https://caninclude.onrender.com/" target="_blank" class="footer-link">Сервіс для перевірки вкладеності</a>
+						</li>
+						<li class="footer-item">
+							<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" class="footer-link">Генератор для border-radius</a>
+						</li>
+						<li class="footer-item">
+							<a href="https://www.freeonlinetools.dev/tools/box-shadow-generator" target="_blank" class="footer-link">Посилання на Генератор тіней для простого створення мультитіней.</a>
+						</li>
+						<li class="footer-item">
+							<a href="https://cssgradient.io/" target="_blank" class="footer-link">Генератор градієнтів</a>
+						</li>
+						<li class="footer-item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer-link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer-item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer-link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer-item">
+							<a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements" target="_blank" class="footer-link">Довідкова інформація по псевдокласах та псевдоелементах </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

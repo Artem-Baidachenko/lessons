@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+	font-family: "Montserrat", sans-serif;
+	color: #111;
+	line-height: 1.3;
+}
+[class*="container"] {
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+.header {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.footer {
+	padding-bottom: 20px;
+}
+.footer-block:not(:last-child),
+.header-list:not(:last-child),
+.footer-list:not(:last-child) {
+	margin-bottom: 20px;
+}
+/* Hover */
+.header-link,
+.footer-link {
+	color: blue;
+	font-weight: 700;
+	line-height: 1.3;
+}
+.header-item:not(:last-child),
+.footer-item:not(:last-child) {
+	margin-bottom: 15px;
+}
+.header-link:hover,
+.footer-link:hover {
+	color: green;
+}
+.list:not(:last-child) {
+	margin-bottom: 20px;
+}
+.item {
+	font-size: 18px;
+	line-height: 1.5;
+	color: rgb(185, 85, 2);
+}
+.item::before {
+	display: inline-block;
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	vertical-align: middle;
+	background-color: rgb(185, 85, 2);
+	margin-right: 10px;
+}
+.item:not(:last-child) {
+	margin-bottom: 15px;
+}
+/* ============================= */
+.hero {
+	padding-bottom: 20px;
+}
+.pseudoclass:not(:last-child) {
+	margin-bottom: 20px;
+}
+.pseudoclass-block:not(:last-child) {
+	margin-bottom: 20px;
+}
+.hover-text {
+	color: #111;
+	line-height: 1.5;
+	font-size: 18px;
+}
+.hover-text:not(:last-child) {
+	margin-bottom: 15px;
+}
+.hover-block {
+	display: none;
+}
+.hover-link:hover .hover-block {
+	display: block;
+	padding: 10px 0;
+}
+.hover-link,
+.active-link,
+.visited-link,
+.focus-link,
+.target-link {
+	color: blue;
+	line-height: 1.3;
+	font-size: 18px;
+}
+.target-link:not(:last-child) {
+	margin-bottom: 20px;
+}
+.visited-link:visited {
+	color: #75016f;
+}
+.hover-link:hover,
+.active-link:hover,
+.visited-link:hover,
+.focus-link:hover,
+.target-link:hover {
+	color: green;
+}
+.active-link:active,
+.visited-link:active,
+.focus-link:active,
+.target-link:active {
+	color: rgb(255, 208, 0);
+}
+.focus-link:focus {
+	outline: 2px solid green;
+}
+.focus-link:focus-visible {
+	outline: 5px solid rgb(13, 0, 128);
+}
+.hover-title {
+	font-weight: 600;
+	color: #111;
+	line-height: 1.3;
+	font-size: 24px;
+}
+.hover-title:not(:last-child) {
+	margin-bottom: 10px;
+}
+.item-hover {
+	color: #111;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.item-hover::before {
+	display: inline-block;
+	content: "";
+	background: url('../img/icon-diamond-dot.svg') 0 5px / auto no-repeat;
+	width: 16px;
+	height: 20px;
+	margin-right: 5px;
+}
+.item-hover:not(:last-child) {
+	margin-bottom: 15px;
+}
+.target-block {
+	display: none;
+	width: 1400px;
+	height: 400px;
+	background-color: rgb(1, 180, 46);
+	border-radius: 20px;
+}
+.target-block:target {
+	display: block;
+	background-color: gold;
+}
+/* ============================= */
+.title,
+.footer-title {
+	font-size: 24px;
+  	line-height: 1.33;
+  	font-weight: 600;
+  	color: rgb(4, 165, 45);
+  	text-shadow: 1px 2px 5px rgba(5, 189, 51, 0.5);
+	margin-bottom: 20px;
+}
+.title,
+.footer-title:not(:last-child) {
+	margin-bottom: 20px;
+}
+.text,
+.text1,
+.text2, 
+.text3,
+.text4,
+.text5,
+.text6,
+.text7,
+.text8,
+.text9,
+.text10,
+.text11  {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #111;
+}
+.text:not(:last-child),
+.text1:not(:last-child),
+.text2:not(:last-child),
+.text3:not(:last-child),
+.text4:not(:last-child),
+.text5:not(:last-child),
+.text6:not(:last-child),
+.text7:not(:last-child),
+.text8:not(:last-child), 
+.text9:not(:last-child), 
+.text10:not(:last-child), 
+.text11:not(:last-child) {
+	margin-bottom: 15px;
+}
+.text p:not(:last-child),
+.text1 p:not(:last-child),
+.text2 p:not(:last-child),
+.text3 p:not(:last-child),
+.text4 p:not(:last-child),
+.text5 p:not(:last-child),
+.text6 p:not(:last-child),
+.text7 p:not(:last-child),
+.text8 p:not(:last-child),
+.text9 p:not(:last-child), 
+.text10 p:not(:last-child),
+.text11 p:not(:last-child) {
+	margin-bottom: 15px;
+}
+.text1 p:first-child {
+	color: rgb(42, 2, 185);
+}
+.text1 p:first-of-type {
+	color: orange;
+}
+.text2 p:first-of-type {
+	color: rgb(182, 170, 3);
+}
+.text3 p:last-child {
+	color: gold;
+}
+.text4 p:nth-child(4) {
+	color: green;
+}
+.text5 p:nth-of-type(3) {
+	color: green;
+}
+.text6 p:nth-of-type(even) {
+	color: rgb(172, 160, 3);
+}
+/* Кожен четвертий */
+.text7 p:nth-of-type(4n) {
+	color: rgb(6, 4, 122);
+}
+.text8 p:nth-of-type(2n + 1) {
+	color: rgb(1, 100, 18);
+}
+.text8 p:nth-of-type(5n + 4),
+.text8 p:nth-of-type(3n + 2) {
+	color: rgb(190, 147, 4);
+}
+.text9 p:not(:last-child) {
+	color: #2872e2;
+}
+.text10:has(p) {
+	color: #75016f;
+}
+.text10 p span {
+	color: #850303;
+	font-weight: 600;
+}
+.text11 p span {
+	color: #850303;
+	font-weight: 600;
+}
+/* =========== Завдання з Figma макет Agrolink =========== */
+.template {
+	padding-bottom: 30px;
+}
+.about-block > * {
+	margin-bottom: 20px;
+}
+.about-title {
+	font-family: "DM Sans", sans-serif;
+	font-weight: 400;
+	font-size: 50px;
+	line-height: 1.3;
+	letter-spacing: -1.26px;
+	color: #131313;
+}
+.about-title::before {
+	display: block;
+	margin-bottom: 17px;
+	content: "";
+	width: 169px;
+	height: 4px;
+	background: #12FF46 linear-gradient(90deg,rgba(18, 255, 70, 1) 0%, rgba(0, 0, 0, 1) 100%);
+	border-radius: 2px;
+}
+.about-title span {
+	font-family: "DM Sans", sans-serif;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 1.3;
+	letter-spacing: -1.26px;
+	color: #1aaf5b;
+}
+.about-text {
+	font-family: "DM Sans", sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.4;
+	letter-spacing: -0.5px;
+	color: #000;
+	opacity: 0.6;
+	margin-bottom: 58px;
+	max-width: 460px;
+}
+.about-link {
+	padding: 25px 40px 23px;
+	background-color: #1aaf5b;
+	border-radius: 0px 18px 0px 0px;
+}
+.about-link:hover {
+	background-color: #219653;
+}
+.about-link span {
+	font-family: "DM Sans", sans-serif;
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 1.29; /* 22/17 */
+	letter-spacing: -0.43px;
+	color: #fff;
+}
+.about-link span::after {
+	content: "";
+	background: url('../img/arrow-right.svg') 0 0 / auto no-repeat;
+	width: 20px;
+	height: 10px;
+	display: inline-block;
+	margin-left: 18px;
+}
+.about-block > *:last-child {
+	margin-bottom: 0px;
+}
+/* =========== Завдання Game =========== */
+.game {
+	padding-bottom: 30px;
+}
+.game-items {
+	width: 1000px;
+	height: 500px;
+	background-color: #e3f5b3;
+}
+.game-item {
+	height: 30px;
+	background-color: #219653;
+}
+.game-item:not(:nth-child(-n + 1)) {
+  visibility: hidden;
+}
+.game-item:hover + .game-item,
+.game-item:hover {
+  background-color: #219653;
+  visibility: visible;
+}
+.game-item--1 {
+	width: 100px;
+}
+.game-item--1:hover, 
+.game-item--2:hover, 
+.game-item--3:hover, 
+.game-item--4:hover, 
+.game-item--5:hover, 
+.game-item--6:hover, 
+.game-item--7:hover, 
+.game-item--8:hover, 
+.game-item--9:hover, 
+.game-item--10:hover, 
+.game-item--11:hover, 
+.game-item--12:hover, 
+.game-item--13:hover, 
+.game-item--14:hover, 
+.game-item--15:hover, 
+.game-item--16:hover {
+	background-color: #75016f;
+}
+.game-item--2 {
+	width: 30px;
+	height: 100px;
+	margin-left: 70px;
+}
+.game-item--3 {
+	width: 30px;
+	height: 20px;
+	margin-left: 40px;
+	margin-top: -20px;
+}
+.game-item--4 {
+	width: 120px;
+	height: 20px;
+	margin-left: 40px;
+}
+.game-item--5 {
+	width: 20px;
+	height: 60px;
+	margin-left: 140px;
+}
+.game-item--6 {
+	width: 200px;
+	height: 50px;
+	margin-left: 140px;
+}
+.game-item--7 {
+	width: 30px;
+	height: 220px;
+	margin-left: 310px;
+}
+.game-item--8 {
+	width: 360px;
+	height: 20px;
+	margin-left: 310px;
+}
+.game-item--9 {
+	width: 20px;
+	height: 80px;
+	margin-left: 650px;
+	margin-top: -80px;
+}
+.game-item--10 {
+	width: 160px;
+	height: 20px;
+	margin-left: 670px;
+	margin-top: -80px;
+}
+.game-item--11 {
+	width: 20px;
+	height: 80px;
+	margin-left: 810px;
+	margin-top: -80px;
+}
+.game-item--12 {
+	width: 50px;
+	height: 20px;
+	margin-left: 820px;
+	margin-top: -80px;
+}
+.game-item--13 {
+	width: 20px;
+	height: 100px;
+	margin-left: 850px;
+	margin-top: -120px;
+}
+.game-item--14 {
+	width: 60px;
+	height: 20px;
+	margin-left: 850px;
+	margin-top: -100px;
+}
+.game-item--15 {
+	width: 20px;
+	height: 200px;
+	margin-left: 890px;
+	margin-top: 0px;
+}
+.game-item--16 {
+	width: 110px;
+	height: 20px;
+	margin-left: 890px;
+}

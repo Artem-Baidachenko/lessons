@@ -545,7 +545,7 @@ body {
  	border-radius: 12px;
 	font-family: "Barlow", sans-serif;
 	max-width: 834px;
-	margin-bottom: 30px;
+	margin: 0 15px 30px;
 }
 .article h3 {
 	font-weight: 500;

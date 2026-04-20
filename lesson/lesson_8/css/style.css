@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+	font-family: "Montserrat", sans-serif;
+	color: #111;
+	line-height: 1.3;
+}
+[class*="container"] {
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+.header {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.header-logo img {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.footer {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.footer-block:not(:last-child),
+.header-list:not(:last-child),
+.footer-list:not(:last-child) {
+	margin-bottom: 20px;
+}
+/* Hover */
+.header-link,
+.footer-link {
+	color: blue;
+	font-weight: 700;
+	line-height: 1.3;
+}
+.header-item:not(:last-child),
+.footer-item:not(:last-child) {
+	margin-bottom: 15px;
+}
+.header-link:hover,
+.footer-link:hover {
+	color: green;
+}
+
+.list:not(:last-child) {
+	margin-bottom: 20px;
+}
+.item {
+	font-size: 18px;
+	line-height: 1.5;
+}
+.item::before {
+	display: inline-block;
+	content: "";
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	vertical-align: middle;
+	background-color: #111;
+	margin-right: 10px;
+}
+.item:not(:last-child) {
+	margin-bottom: 15px;
+}
+/* ==== Загальні стилі для тексту ==== */
+[class*="text"],
+span {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #111;
+}
+/* Варіант 1 */
+/* [class*="text"]:not(:last-child) {
+	margin-bottom: 15px;
+} */
+/* Варіант 2 */
+.text:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.text p:not(:last-child) {
+	margin-bottom: 15px;
+}
+/* ============================= */
+
+/* =========== Завдання з Figma макет Furniro =========== */
+.hero {
+	padding-bottom: 30px;
+}
+.hero-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.hero-image:not(:last-child) {
+	margin-bottom: 15px;
+}
+.portfolio {
+	padding-bottom: 30px;
+}
+.portfolio-container {
+	max-width: 1183px;
+	margin: 0 auto;
+}
+.portfolio-column {
+	display: block;
+}
+.portfolio-column:not(:last-child) {
+	margin-bottom: 15px;
+}
+.portfolio-column span {
+	display: block;
+}
+.portfolio-image {
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+.about {
+	padding-bottom: 30px;
+}
+.about-bg {
+	display: inline-block;
+}
+.about-bg:not(:last-child) {
+	margin-bottom: 15px;
+}
+.about-image {
+	border-radius: 10px;
+}
+/* .block:not(:last-child) {
+	margin-bottom: 20px;
+} */
+
+.social-item:not(:last-child) {
+	margin-bottom: 15px;
+}
+.social-link span {
+	display: inline-block;
+	margin-left: 15px;
+	vertical-align: top;
+}
+.social-account::before {
+	content: "";
+	background: url('../img/icons/account.svg') 0 0 / auto no-repeat;
+	width: 28px;
+	height: 28px;
+}
+.social-search::before {
+	content: "";
+	background: url('../img/icons/search.svg') 0 0 / auto no-repeat;
+	width: 28px;
+	height: 28px;
+}
+.social-heart::before {
+	content: "";
+	background: url('../img/icons/heart.svg') 0 0 / auto no-repeat;
+	width: 28px;
+	height: 28px;
+}
+.social-cart::before {
+	content: "";
+	background: url('../img/icons/cart.svg') 0 0 / auto no-repeat;
+	width: 28px;
+	height: 28px;
+}
+/*  */
+.block:not(:last-child) {
+	margin-bottom: 20px;
+}
+/* ============================= */
+.title,
+.footer-title {
+	font-size: 24px;
+  	line-height: 1.33;
+  	font-weight: 600;
+  	color: rgb(4, 165, 45);
+  	text-shadow: 1px 2px 5px rgba(5, 189, 51, 0.5);
+	margin-bottom: 20px;
+}
+.title,
+.footer-title:not(:last-child) {
+	margin-bottom: 20px;
+}

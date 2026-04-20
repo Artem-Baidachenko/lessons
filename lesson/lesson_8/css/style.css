@@ -20,6 +20,9 @@ body {
 	vertical-align: middle;
 	margin-right: 5px;
 }
+.header-logo:not(:last-child) {
+	margin-bottom: 15px;
+}
 .footer {
 	padding-bottom: 20px;
 	padding-top: 20px;

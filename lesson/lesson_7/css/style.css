@@ -16,7 +16,7 @@ body {
 	padding-bottom: 20px;
 }
 .footer {
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 }
 .footer-block:not(:last-child),
 .header-list:not(:last-child),
@@ -64,10 +64,10 @@ body {
 	padding-bottom: 20px;
 }
 .pseudoclass:not(:last-child) {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 .pseudoclass-block:not(:last-child) {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 .hover-text {
 	color: #111;
@@ -169,93 +169,71 @@ body {
 .footer-title:not(:last-child) {
 	margin-bottom: 20px;
 }
-.text,
-.text1,
-.text2, 
-.text3,
-.text4,
-.text5,
-.text6,
-.text7,
-.text8,
-.text9,
-.text10,
-.text11  {
+
+[class*="text"],
+[class*="text2"] {
 	font-size: 18px;
 	line-height: 1.5;
 	color: #111;
 }
+/* Варіант 1 */
+/* [class*="text"]:not(:last-child),
+[class*="text2"]:not(:last-child) {
+	margin-bottom: 15px;
+} */
+/* Варіант 2 */
 .text:not(:last-child),
-.text1:not(:last-child),
-.text2:not(:last-child),
-.text3:not(:last-child),
-.text4:not(:last-child),
-.text5:not(:last-child),
-.text6:not(:last-child),
-.text7:not(:last-child),
-.text8:not(:last-child), 
-.text9:not(:last-child), 
-.text10:not(:last-child), 
-.text11:not(:last-child) {
+.text2:not(:last-child) {
 	margin-bottom: 15px;
 }
-.text p:not(:last-child),
-.text1 p:not(:last-child),
-.text2 p:not(:last-child),
-.text3 p:not(:last-child),
-.text4 p:not(:last-child),
-.text5 p:not(:last-child),
-.text6 p:not(:last-child),
-.text7 p:not(:last-child),
-.text8 p:not(:last-child),
-.text9 p:not(:last-child), 
-.text10 p:not(:last-child),
-.text11 p:not(:last-child) {
+
+[class*="text"] p:not(:last-child),
+[class*="text2"] p:not(:last-child) {
 	margin-bottom: 15px;
 }
-.text1 p:first-child {
+.text2 p:first-child {
 	color: rgb(42, 2, 185);
 }
-.text1 p:first-of-type {
+.text2 p:first-of-type {
 	color: orange;
 }
 .text2 p:first-of-type {
 	color: rgb(182, 170, 3);
 }
-.text3 p:last-child {
+.text2 p:last-child {
 	color: gold;
 }
-.text4 p:nth-child(4) {
+.text2 p:nth-child(4) {
 	color: green;
 }
-.text5 p:nth-of-type(3) {
+.text2 p:nth-of-type(3) {
 	color: green;
 }
-.text6 p:nth-of-type(even) {
+.text2 p:nth-of-type(even) {
 	color: rgb(172, 160, 3);
 }
 /* Кожен четвертий */
-.text7 p:nth-of-type(4n) {
+.text2 p:nth-of-type(4n) {
 	color: rgb(6, 4, 122);
 }
-.text8 p:nth-of-type(2n + 1) {
+.text2 p:nth-of-type(2n + 1) {
 	color: rgb(1, 100, 18);
 }
-.text8 p:nth-of-type(5n + 4),
-.text8 p:nth-of-type(3n + 2) {
+.text2 p:nth-of-type(5n + 4),
+.text2 p:nth-of-type(3n + 2) {
 	color: rgb(190, 147, 4);
 }
-.text9 p:not(:last-child) {
-	color: #2872e2;
+.text2 p:not(:first-child) {
+	border-bottom: 1px solid #111;
 }
-.text10:has(p) {
+.text2:has(p) {
 	color: #75016f;
 }
-.text10 p span {
+.text2 p span {
 	color: #850303;
 	font-weight: 600;
 }
-.text11 p span {
+.text2 p span {
 	color: #850303;
 	font-weight: 600;
 }
@@ -265,10 +243,9 @@ body {
 }
 .about-block > * {
 	margin-bottom: 20px;
+	font-family: "DM Sans", sans-serif;
 }
 .about-title {
-	font-family: "DM Sans", sans-serif;
-	font-weight: 400;
 	font-size: 50px;
 	line-height: 1.3;
 	letter-spacing: -1.26px;
@@ -284,7 +261,6 @@ body {
 	border-radius: 2px;
 }
 .about-title span {
-	font-family: "DM Sans", sans-serif;
 	font-weight: 700;
 	font-size: 50px;
 	line-height: 1.3;
@@ -292,8 +268,6 @@ body {
 	color: #1aaf5b;
 }
 .about-text {
-	font-family: "DM Sans", sans-serif;
-	font-weight: 400;
 	font-size: 20px;
 	line-height: 1.4;
 	letter-spacing: -0.5px;
@@ -311,7 +285,6 @@ body {
 	background-color: #219653;
 }
 .about-link span {
-	font-family: "DM Sans", sans-serif;
 	font-weight: 700;
 	font-size: 17px;
 	line-height: 1.29; /* 22/17 */
@@ -330,6 +303,8 @@ body {
 	margin-bottom: 0px;
 }
 /* =========== Завдання Game =========== */
+
+/* /* стилі для гри */ 
 .game {
 	padding-bottom: 30px;
 }
@@ -338,119 +313,103 @@ body {
 	height: 500px;
 	background-color: #e3f5b3;
 }
+/* загальні стилі для елементів */
 .game-item {
-	height: 30px;
 	background-color: #219653;
 }
-.game-item:not(:nth-child(-n + 1)) {
-  visibility: hidden;
-}
-.game-item:hover + .game-item,
-.game-item:hover {
-  background-color: #219653;
-  visibility: visible;
-}
-.game-item--1 {
+.game-item:nth-child(1) {
+	height: 30px;
 	width: 100px;
 }
-.game-item--1:hover, 
-.game-item--2:hover, 
-.game-item--3:hover, 
-.game-item--4:hover, 
-.game-item--5:hover, 
-.game-item--6:hover, 
-.game-item--7:hover, 
-.game-item--8:hover, 
-.game-item--9:hover, 
-.game-item--10:hover, 
-.game-item--11:hover, 
-.game-item--12:hover, 
-.game-item--13:hover, 
-.game-item--14:hover, 
-.game-item--15:hover, 
-.game-item--16:hover {
-	background-color: #75016f;
-}
-.game-item--2 {
+.game-item:nth-child(2) {
 	width: 30px;
 	height: 100px;
 	margin-left: 70px;
 }
-.game-item--3 {
+.game-item:nth-child(3) {
 	width: 30px;
 	height: 20px;
 	margin-left: 40px;
 	margin-top: -20px;
 }
-.game-item--4 {
+.game-item:nth-child(4) {
 	width: 120px;
 	height: 20px;
 	margin-left: 40px;
 }
-.game-item--5 {
+.game-item:nth-child(5) {
 	width: 20px;
 	height: 60px;
 	margin-left: 140px;
 }
-.game-item--6 {
+.game-item:nth-child(6) {
 	width: 200px;
 	height: 50px;
 	margin-left: 140px;
 }
-.game-item--7 {
+.game-item:nth-child(7) {
 	width: 30px;
 	height: 220px;
 	margin-left: 310px;
 }
-.game-item--8 {
+.game-item:nth-child(8) {
 	width: 360px;
 	height: 20px;
 	margin-left: 310px;
 }
-.game-item--9 {
+.game-item:nth-child(9) {
 	width: 20px;
 	height: 80px;
 	margin-left: 650px;
 	margin-top: -80px;
 }
-.game-item--10 {
+.game-item:nth-child(10) {
 	width: 160px;
 	height: 20px;
 	margin-left: 670px;
 	margin-top: -80px;
 }
-.game-item--11 {
+.game-item:nth-child(11) {
 	width: 20px;
 	height: 80px;
 	margin-left: 810px;
 	margin-top: -80px;
 }
-.game-item--12 {
+.game-item:nth-child(12) {
 	width: 40px;
 	height: 20px;
 	margin-left: 830px;
 	margin-top: -80px;
 }
-.game-item--13 {
+.game-item:nth-child(13) {
 	width: 20px;
 	height: 100px;
 	margin-left: 850px;
 	margin-top: -120px;
 }
-.game-item--14 {
+.game-item:nth-child(14) {
 	width: 60px;
 	height: 20px;
 	margin-left: 850px;
 	margin-top: -100px;
 }
-.game-item--15 {
+.game-item:nth-child(15) {
 	width: 20px;
 	height: 200px;
 	margin-left: 890px;
 	margin-top: 0px;
 }
-.game-item--16 {
+.game-item:nth-child(16) {
 	width: 110px;
 	height: 20px;
 	margin-left: 890px;
+}
+/* приховання елементів окрім першого */
+.game-item:not(:first-child) {
+	visibility: hidden;
+}
+/* показ наступного елементу при наведені */
+.game-item:hover + .game-item,
+.game-item:hover {
+	visibility: visible;
 }

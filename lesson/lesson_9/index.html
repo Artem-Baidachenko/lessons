@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок 9 - Методологія БЕМ</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title title">Урок №9 - Методологія БЕМ</h1>
+				<ul class="header__list">
+					<li class="header__item">
+						<a href="#block" class="header__link">БЕМ (БЕМ-Блок)</a>
+					</li>
+					<li class="header__item">
+						<a href="#element" class="header__link">БЕМ-Елемент</a>
+					</li>
+					<li class="header__item">
+						<a href="#modifier" class="header__link">БЕМ-Модифікатор</a>
+					</li>
+					<li class="header__item">
+						<a href="#mix" class="header__link">БЕМ-Мікс</a>
+					</li>
+					<li class="header__item">
+						<a href="#word" class="header__link">Часті слова</a>
+					</li>
+					<li class="header__item">
+						<a href="#template" class="header__link">Завдання з Figma</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main class="page">
+			<div id="#top" class="hero">
+				<div class="hero__container">
+					<div id="block" class="hero__info info block">
+						<h2 class="block__title title">Компонентний підхід у створенні інтерфейсу</h2>
+						<div class="block__text text">
+							<p>
+								Б.Е.М
+							</p>
+							<p>
+								Створюємо окремі незалежні частини, потім складаємо сторінку як конструктор та перевикористовуємо готові блоки.
+							</p>
+							<p>
+								Будь-який БЕМ-Блок стає компонентом.
+							</p>
+							<p>
+								Будь-який компонент обов'язково має бути побудований як БЕМ-Блок
+							</p>
+							<p>
+								НЕЗАЛЕЖНИЙ, САМОДОСТАТНІЙ об'єкт. НЕ має впливати на оточення (сусідні об'єкти).
+							</p>
+							<p>І'мя класу БЕМ-блоку:</p>	
+						</div>
+						<ol class="block__list list">
+							<li class="list__item">І'мя класу має відповідати змісту або конструкції БЕМ-блоку. Перевірочне питання - "Що це?</li>
+							<li class="list__item">Англійска мова (Латиниця)</li>
+							<li class="list__item">Нижній регістр</li>
+							<li class="list__item">Якщо слів декілька, розділяємо дефісом (-).</li>
+							<li class="list__item">При формуванні імені класу не має бути спроби ієрархії</li>
+						</ol>
+						<div class="block__text text">
+							<p>
+								Дозволяється вкладення будь якого рівня та будь-якої кількості БЕМ-блоків один в одного.
+							</p>
+						</div>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image.avif" alt="Image">
+						</div>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image-1.avif" alt="Image">
+						</div>
+					</div>					
+					<div id="element" class="hero__info info block">
+						<h2 class="block__title title">БЕМ-Елемент</h2>
+						<div class="block__text text">
+							<p>
+								ЗАЛЕЖНИЙ об'єкт від СВОГО БЕМ-блоку
+							</p>
+							<p>
+								ЗАВЖДИ знаходиться всередені СВОГО БЕМ-блоку (вкладений)
+							</p>
+							<p>
+								МОЖЕ впливати на оточення (сусідні об'єкти).
+							</p>
+							<p>І'мя класу БЕМ-елементу:</p>	
+						</div>
+						<ol class="block__list list">
+							<li class="list__item">
+								ЗАВЖДИ починається з імені першого в ієрархії батьківського БЕМ-блоку і відокремлюється двома підкресленнями (__).
+							</li>
+							<li class="list__item">І'мя має відповідати змісту або конструкції блоку. Перевірочне питання - "Що це?"</li>
+							<li class="list__item">Англійска мова (Латиниця)</li>
+							<li class="list__item">Нижній регістр</li>
+							<li class="list__item">Якщо слів декілька, розділяємо дефісом (-).</li>
+							<li class="list__item">При формуванні імені не має бути ієрархії.</li>
+						</ol>
+						<div class="block__text text">
+							<p>
+								БЕМ-елементи можна вкладати в інші БЕМ-елементи свого БЕМ-блоку
+							</p>
+						</div>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image-2.avif" alt="Image">
+						</div>
+					</div>					
+					<div id="modifier" class="hero__info info block">
+						<h2 class="block__title title">БЕМ-Модифікатор</h2>
+						<div class="block__text text">
+							<p>
+								Дозволяє вносити відмінності для БЕМ-блоків або БЕМ-елементів МОЖЕ впливати на оточення (сусідні об'єкти)
+							</p>
+							<p>І'мя класу БЕМ-модифікатора:</p>	
+						</div>
+						<ol class="block__list list">
+							<li class="list__item">ДОДАЄТЬСЯ до існуючого БЕМ-класу блоку або елементу.</li>
+							<li class="list__item">ЗАВЖДИ починається з існуючого БЕМ-класу блоку або елементу і відокремлюється подвійним дфісом (--)</li>
+							<li class="list__item">І'мя має відповідати модифікаціям. Перевірочне питання - "Який? Що змінено?"</li>
+							<li class="list__item">Англійска мова (Латиниця)</li>
+							<li class="list__item">Нижній регістр</li>
+							<li class="list__item">Якщо слів декілька, розділяємо дефісом (-).</li>
+							<li class="list__item">При формуванні імені не має бути ієрархії.</li>
+						</ol>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image-3.avif" alt="Image">
+						</div>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image-4.avif" alt="Image">
+						</div>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image-5.avif" alt="Image">
+						</div>
+					</div>					
+					<div id="mix" class="hero__info info block">
+						<h2 class="block__title title">БЕМ-Мікс</h2>
+						<div class="block__text text">
+							<p>
+								Після того як ви опануєте блок елемент модифікатор, саме час використовувати мікси. Мікс - це одночасне використання і БЕМ-блоку і БЕМ-елементу для одного об'єкту.
+							</p>
+							<p>Переваги міксу:</p>	
+						</div>
+						<ol class="block__list list">
+							<li class="list__item">вивільнення зрозумілих слів для нових елементів</li>
+							<li class="list__item">можливість викорістання CSS-властивостей, які впливають на оточення, фактично для БЕМ-блоку (БЕМ-елемент в ролі модифікатора)</li>
+							<li class="list__item">паралельне відокремлення певної структури в БЕМ-блок</li>
+						</ol>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image-6.avif" alt="Image">
+						</div>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image-7.avif" alt="Image">
+						</div>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image-8.avif" alt="Image">
+						</div>
+					</div>					
+					<div id="word" class="hero__info info block">
+						<h2 class="block__title title">Часті слова</h2>
+						<ol class="block__list list">
+							<li class="list__item">container - обмежуючий контейнер (block__container)</li>
+							<li class="list__item">body, content - головна частина блоку (block__body)</li>
+							<li class="list__item">row - рядок</li>
+							<li class="list__item">column - колонка</li>
+							<li class="list__item">link - посилання</li>
+							<li class="list__item">title - заголовок</li>
+							<li class="list__item">sub-title - підзаголовок</li>
+							<li class="list__item">label - ще заголовок</li>
+							<li class="list__item">text - текст</li>
+							<li class="list__item">list - список</li>
+							<li class="list__item">items - багато якихось елементів</li>
+							<li class="list__item">item - будь-що</li>
+							<li class="list__item">menu</li>
+							<li class="list__item">block</li>
+							<li class="list__item">button</li>
+							<li class="list__item">picture, image, img</li>
+							<li class="list__item">section</li>
+							<li class="list__item">article</li>
+							<li class="list__item">unit</li>
+							<li class="list__item">actions, action</li>
+							<li class="list__item">value</li>
+							<li class="list__item">search</li>
+							<li class="list__item">form</li>
+							<li class="list__item">page</li>
+							<li class="list__item">box</li>
+						</ol>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image-9.avif" alt="Image">
+						</div>
+						<div class="block__media">
+							<img class="block__image" src="img/info/image-10.avif" alt="Image">
+						</div>
+					</div>					
+				</div>
+			</div>
+			<div id="template" class="template">
+				<div class="template__container">
+					<h2 class="template__title title">Завдання з Figma</h2>
+				</div>
+				<div class="blog">
+					<div class="blog__container">
+						<div class="blog__blockhead blockhead">
+							<div class="blockhead__icon">
+								<img src="img/map.svg" alt="Image">
+							</div>
+							<div class="blockhead__label">Blog SECTION</div>
+							<h2 class="blockhead__title title title--white">Read my latest articles</h2>
+						</div>
+						<div class="blog__items">
+							<div class="blog__card card">
+								<div class="card__media">
+									<img class="card__image" src="img/card/image.avif" alt="Image">
+								</div>
+								<div class="card__content content-card">
+									<div class="content-card__top">
+										<div class="content-card__label label">Development</div>
+										<div class="content-card__date date">March 20, 2024</div>
+									</div>
+									<h3 class="content-card__title">
+										<a href="#" class="content-card__link-title">Approach to eco-friendly product development</a>
+									</h3>
+									<div class="content-card__text">
+										<p>Leverage agile by the way frameworks to provide a for high level in the most important overviews.</p>
+									</div>
+									<div class="content-card__actions">
+										<a href="#" class="content-card__link link-card">Read More</a>
+									</div>
+								</div>
+							</div>
+							<div class="blog__card card card--padding">
+								<div class="card__content content-card">
+									<div class="content-card__top">
+										<div class="content-card__label label">Design</div>
+									</div>
+									<h3 class="content-card__title">
+										<a href="#" class="content-card__link-title">How Raven's designs are changing the game</a>
+									</h3>
+									<div class="content-card__text">
+										<p>Leverage agile by the way frameworks to provide a for high level in the most important overviews.</p>
+									</div>
+								</div>
+							</div>
+							<div class="blog__card card">
+								<div class="card__content content-card">
+									<div class="content-card__top">
+										<div class="content-card__label label">Marketing</div>
+									</div>
+									<h3 class="content-card__title">
+										<a href="#" class="content-card__link-title">Prototyping secrets revealed of creation</a>
+									</h3>
+									<div class="content-card__text">
+										<p>Leverage agile by the way frameworks to provide a for high level in the most important overviews.</p>
+									</div>
+								</div>
+							</div>
+							<div class="blog__card card">
+								<div class="card__content content-card">
+									<div class="content-card__top">
+										<div class="content-card__label label">Design</div>
+									</div>
+									<h3 class="content-card__title">
+										<a href="#" class="content-card__link-title">Raven's perspective on the future of product design</a>
+									</h3>
+									<div class="content-card__text">
+										<p>Leverage agile by the way frameworks to provide a for high level in the most important overviews.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="questions">
+					<div class="questions__container">
+						<div class="questions__blockhead blockhead">
+							<div class="blockhead__icon">
+								<img src="img/faq-icon.svg" alt="Image">
+							</div>
+							<div class="blockhead__label">F.A.Q. SECTION</div>
+							<h2 class="blockhead__title title title--white">Frequently asked questions</h2>
+						</div>
+						<div class="questions__body">
+							<div class="questions__items">
+								<div class="questions__item item-questions">
+									<div class="item-questions__caption">How does Raven approach the design process?</div>
+									<div class="item-questions__icon"></div>
+								</div>
+								<div class="questions__item item-questions">
+									<div class="item-questions__caption">What types of products does Raven specialize in designing?</div>
+									<div class="item-questions__icon"></div>
+								</div>
+								<div class="questions__item item-questions">
+									<div class="item-questions__caption">Can Raven help with prototyping and testing product ideas?</div>
+									<div class="item-questions__icon"></div>
+								</div>
+								<div class="questions__item item-questions">
+									<div class="item-questions__caption"> How does Raven ensure designs are ready for manufacturing?</div>
+									<div class="item-questions__icon"></div>
+								</div>
+								<div class="questions__item item-questions">
+									<div class="item-questions__caption">Is Raven's design process sustainable?</div>
+									<div class="item-questions__icon"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block">
+					<h2 class="footer__title title">Урок №9 - Методологія БЕМ</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#top" class="footer__link">Наверх</a>
+						</li>
+						<li class="footer__item">
+							<a href="#template" class="footer__link">Завдання з Figma</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h2 class="footer__title title">Корисні ресурси</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="https://validator.w3.org/nu/#file" target="_blank" class="footer__link">HTML-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="footer__link">CSS-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://caninclude.onrender.com/" target="_blank" class="footer__link">Сервіс для перевірки вкладеності</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cloudconvert.com/ttf-to-woff2" target="_blank" class="footer__link">TTF to WOFF2 Converter</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" class="footer__link">Генератор для border-radius</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://www.freeonlinetools.dev/tools/box-shadow-generator" target="_blank" class="footer__link">Посилання на генератор тіней для простого створення мультитіней.</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgradient.io/" target="_blank" class="footer__link">Генератор градієнтів</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer__link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements" target="_blank" class="footer__link">Довідкова інформація по псевдокласах та псевдоелементах</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://tinypng.com/" target="_blank" class="footer__link">Генератор зображень</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://arkanit7.github.io/bem-validator-extended/" target="_blank" class="footer__link">Валідатор для методології БЕМ</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://bem-cheat-sheet.9elements.com/" target="_blank" class="footer__link">БЕМ Шпаргалка</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

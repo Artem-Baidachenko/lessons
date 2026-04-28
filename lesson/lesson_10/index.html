@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок 10 - CSS позиціонування (CSS position)</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title title">Урок №10 - CSS позиціонування (CSS position)</h1>
+				<ul class="header__menu menu">
+					<li class="menu__item">
+						<a href="#position" class="menu__link">Властивість position</a>
+					</li>
+					<li class="menu__item">
+						<a href="#relative" class="menu__link">Position relative</a>
+						<ul class="menu__submenu submenu">
+							<li class="submenu__item">
+								<a class="submenu__link" href="#">Link#1</a>
+							</li>
+							<li class="submenu__item">
+								<a class="submenu__link" href="#">Shop</a>
+								<div class="submenu__items">
+									<div class="submenu__block">
+										<h2 class="submenu__title">Menu Category List</h2>
+										<ul class="submenu__menu submenu2">
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Product Page With Sidebar</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Product Page Without Sidebar</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Horizontal Thumbnails</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Vertical Thumbnails</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Addtocart Sticky</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Vertical Tabs</a>
+											</li>
+										</ul>
+									</div>
+									<div class="submenu__block">
+										<h2 class="submenu__title">Menu Category List</h2>
+										<ul class="submenu__menu submenu2">
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Product Page With Sidebar</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Product Page Without Sidebar</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Horizontal Thumbnails</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Vertical Thumbnails</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Addtocart Sticky</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Vertical Tabs</a>
+											</li>
+										</ul>
+									</div>
+									<div class="submenu__block">
+										<h2 class="submenu__title">Menu Category List</h2>
+										<ul class="submenu__menu submenu2">
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Product Page With Sidebar</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Product Page Without Sidebar</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Horizontal Thumbnails</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Vertical Thumbnails</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Addtocart Sticky</a>
+											</li>
+											<li class="submenu2__item">
+												<a class="submenu2__link" href="#">Vertical Tabs</a>
+											</li>
+										</ul>
+									</div>
+									<img class="submenu__image" src="img/image-submenu.avif" alt="Image">
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__item">
+						<a href="#relative-1" class="menu__link">Position relative + z-index</a>
+					</li>
+					<li class="menu__item">
+						<a href="#absolute" class="menu__link">Position absolute</a>
+					</li>
+					<li class="menu__item">
+						<a href="#fixed" class="menu__link">Position fixed</a>
+					</li>
+					<li class="menu__item">
+						<a href="#sticky" class="menu__link">Position sticky</a>
+					</li>
+					<li class="menu__item">
+						<a href="#template" class="menu__link">Завдання з Figma</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main class="page">
+			<div id="#top" class="hero">
+				<div class="hero__container">
+					<div id="position" class="hero__info info block">
+						<h2 class="block__title title">Що таке позиціонування CSS?</h2>
+						<div class="block__text text">
+							<p>
+								Різне CSS позиціонування дуже часто використовується при верстці сучасних макетів і відкриває для нас нові цікаві можливості розташування елементів у потоці.
+							</p>
+							<p>
+								Але треба бути обережними та вміти поводитися з цими можливостями грамотно. Розглянемо такі CSS властивості позиціонування як position, top, left, right, bottom та z-index. А також їх значення.
+							</p>
+							<p>
+								Вправа! Дуже важливо розуміти відносно чого ви позіціонуєте об'єкт.
+							</p>
+							<p>
+								Модуль позіціонування: основна властивість — position, а також властивості розташування — top, right, bottom, left, а також z-index.
+							</p>
+							<p>
+								Значення властивості position:
+							</p>
+						</div>
+						<ul class="block__list list">
+							<li class="list__item">static — (за замовченням) статичне позіціонування</li>
+							<li class="list__item">relative — відносне позіціонування</li>
+							<li class="list__item">absolute — абсолютне позіціонування</li>
+							<li class="list__item">fixed — фіксоване позіціонування</li>
+							<li class="list__item">sticky — липке позіціонування (гібрідне поє'днання значень static та fixed)</li>
+						</ul>
+						<div class="block__text text">
+							<p>
+								(!) Властивості top, left, right, bottom та z-index працюють тільки зі значеннями position відмінними від static.
+							</p>
+							<p>
+								При позіціонуванні елементу вказавши значення для top, bottom перестає працювати. Так само це працює з left та right. При цьому, якщо таки ж вказати обидві властивості то пріорітетними будуть: по Y top, а по X left.
+							</p>
+							<p>
+								Гарною практикою є вказання значень лише для однієї властивості на вісь
+							</p>
+							<p>
+								z-index — керує положенням об'єкту по осі Z, auto — за замовчуванням ближчий буде об'єкт, який нижче по коду число від 0 до 9999(?) — порядковий номер на осі Z. Не впливає на позіціонування батьківського об'єкту у якого position відмінний від static.
+							</p>
+							<p>
+								Від'ємний z-index "сховає" на задній план (не статичний об'єкт "сховається" за статичні/не статичні)
+							</p>
+						</div>
+					</div>					
+					<div id="relative" class="hero__info info block">
+						<h2 class="block__title title">Position relative</h2>
+						<div class="block__text text">
+							<p>
+								relative — відносне позиціонування. Об'єкт позиціонується відносно свого поточного місця положення (відносно свого положення в коді).
+							</p>							
+							<p>
+								Відсоткові значення
+							</p>							
+							<p>
+								Горизонталь - відсоток від ширини батьківського елементу
+							</p>							
+							<p>
+								Вертикаль - для позиціонування об'єкту (з position: relative;) по вертикалі використовуючи відсотки неможливе без чіткої вказаної висоти для батьківського елементу. Наприклад: top: 20%; не спрацює без вказання висоти батьківського елементу
+							</p>							
+							<p>
+								Встановлює спосіб розташування елемента щодо вікна браузера або інших об'єктів на веб-сторінці. Допоміжні властивості left, right, top та bottom управляють положенням елемента, а z-index управляє накладенням один на одного по осі Z
+							</p>							
+						</div>
+						<div class="block__box box">
+							<div class="box__item box__item--4">Блок 1</div>
+							<div class="box__item box__item--5">Блок 2</div>
+							<div class="box__item box__item--6">Блок 3</div>
+						</div>
+					</div>					
+					<div id="relative-1" class="hero__info info block">
+						<h2 class="block__title title">Position relative + z-index</h2>
+						<div class="block__text text">
+							<p>
+								Кожен елемент може розташовуватися як нижче, так і вище за інші об'єкти веб-сторінки, їхнім розміщенням по z-вісі й керує z-index. Ця властивість працює тільки для елементів, у яких значення position задано як absolute, fixed або relative.
+							</p>							
+						</div>
+						<div class="block__box box">
+							<div class="box__item box__item--7">Блок 1</div>
+							<div class="box__item box__item--8">Блок 2</div>
+							<div class="box__item box__item--9">Блок 3</div>
+						</div>
+					</div>					
+					<div id="absolute" class="hero__info info block">
+						<h2 class="block__title title">Position absolute</h2>
+						<div class="block__text text">
+							<p>
+								absolute — абсолютне позиціонування
+							</p>
+						</div>
+						<ul class="block__list list">
+							<li class="list__item">
+								Разом з position: absolute; обов'язково використовуйте властивості для позиціонування (left або right, top або bottom)
+							</li>
+							<li class="list__item">
+								Об'єкт позиціонується відносно першого батьківського елементу, position якого відмінний від static. Або від тегу BODY
+							</li>
+							<li class="list__item">
+								Об'єкт втрачає свою блочну сутність. Також втрачає своє положення в коді, та простір, який він займав
+							</li>
+							<li class="list__item">Не можемо вказувати для БЕМ-блоків</li>
+						</ul>
+						<div class="block__text text">
+							<p>
+								Для позиціонування об'єкту (з position: absolute;) по верикалі, використовуючи відсотки, відсоток буде братися від висоти батьківського елементу.
+							</p>							
+							<p>
+								Елемент нібито виривається з коду і зависає в повітрі. Він перестає впливати на інші елементи. Додавання властивостей left, top, right і bottom змінює позицію елемента і зсуває його в той чи інший бік відносно батька, у якого задано параметр position: relative; Якщо такого немає, то елемент позиціонується відносно вікна браузера.
+							</p>							
+						</div>
+						<div class="block__box box box--1">
+							<div class="box__item box__item--10">Блок 1</div>
+							<div class="box__item box__item--11">Блок 2</div>
+							<div class="box__item box__item--12">Блок 3</div>
+						</div>
+					</div>					
+					<div id="fixed" class="hero__info info block">
+						<h2 class="block__title title">Position fixed</h2>
+						<div class="block__text text">
+							<p>
+								fixed- фіксоване позіціонування.
+							</p>							
+							<p>
+								Елемент нібито виривається з коду і зависає в повітрі. Фіксується, тобто не скролиться разом із вмістом. Він перестає впливати на інші елементи. Додавання властивостей left, top, right і bottom змінює позицію елемента і зсуває його в той чи інший бік щодо вікна браузера.
+							</p>							
+						</div>
+						<ol class="block__list list">
+							<li class="list__item">
+								Разом з position: fixed; обов'язково використовуйте властивості для позіціонування (left або right, top або bottom)
+							</li>
+							<li class="list__item">
+								Об'єкт втрачає свою блочну сутність. Також втрачає своє положення в коді, та простір, який він займав
+							</li>
+							<li class="list__item">
+								Завжди позіціонується відносно вікна браузера (в'юпорт). Не приймає участі у скролі
+							</li>
+							<li class="list__item">
+								(спірне питання) Не можемо вказувати для БЕМ-блоків.
+							</li>
+						</ol>
+						<div class="block__box box">
+							<div class="box__item box__item--13">Блок 1</div>
+							<div class="box__item box__item--14">Блок 2</div>
+							<div class="box__item box__item--15">Блок 3</div>
+						</div>
+					</div>					
+					<div id="sticky" class="hero__info info block">
+						<h2 class="block__title title">Position sticky</h2>
+						<div class="block__text text">
+							<p>
+								sticky - це гібридне поєднання значень static і fixed. Спочатку елемент поводиться як static, але після того, як скрол доходить до його межі, він стає fixed і прилипає до зазначеної позиції top bottom left right.
+							</p>
+							<p>
+								Рухається лише в середині свого батьківського елементу (статік/не статік).
+							</p>
+							<p>
+								<span>!!! Не працює, якщо у батьківських об'єктах присутній overflow: hidden;</span>
+							</p>
+							<p>
+								*Дивись <a href="https://caniuse.com/?search=position%3A+sticky%3B" target="_blank" class="text__link">підтримку браузерами</a>
+							</p>
+							<p>
+								**Для демонстрації роботи потрібно проскролити контент всередині блоку
+							</p>						
+						</div>
+						<div class="block__box box">
+							<div class="box__item box__item--16">Блок 1</div>
+							<div class="box__item box__item--17">Блок 2</div>
+							<div class="box__item box__item--18">Блок 3</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<div id="template" class="template">
+				<div class="template__container">
+					<h2 class="template__title title">Завдання з Figma</h2>
+					<div class="template__article article">
+						<h3>Responsibilities</h3>
+						<ul>
+							<li>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+							</li>
+							<li>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							</li>
+							<li>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+							</li>
+							<li>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+							</li>
+							<li>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							</li>
+							<li>
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block">
+					<h2 class="footer__title title">Урок №10 - CSS позиціонування (CSS position)</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#top" class="footer__link">Наверх</a>
+						</li>
+						<li class="footer__item">
+							<a href="#template" class="footer__link">Завдання з Figma</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h2 class="footer__title title">Корисні ресурси</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="https://validator.w3.org/nu/#file" target="_blank" class="footer__link">HTML-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="footer__link">CSS-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://caninclude.onrender.com/" target="_blank" class="footer__link">Сервіс для перевірки вкладеності</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cloudconvert.com/ttf-to-woff2" target="_blank" class="footer__link">TTF to WOFF2 Converter</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" class="footer__link">Генератор для border-radius</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://www.freeonlinetools.dev/tools/box-shadow-generator" target="_blank" class="footer__link">Посилання на генератор тіней для простого створення мультитіней.</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgradient.io/" target="_blank" class="footer__link">Генератор градієнтів</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer__link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements" target="_blank" class="footer__link">Довідкова інформація по псевдокласах та псевдоелементах</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://tinypng.com/" target="_blank" class="footer__link">Генератор зображень</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://arkanit7.github.io/bem-validator-extended/" target="_blank" class="footer__link">Валідатор для методології БЕМ (1)</a>
+						</li>						
+						<li class="footer__item">
+							<a href="https://nglazov.github.io/bem-validator-page/" target="_blank" class="footer__link">Валідатор для методології БЕМ (2)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://yoksel.github.io/html-tree/" target="_blank" class="footer__link">Генератор HTML-дерева</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://bem-cheat-sheet.9elements.com/" target="_blank" class="footer__link">БЕМ Шпаргалка</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssposition.html" target="_blank" class="footer__link">Шпаргалка CSS позиціонування (CSS position)</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

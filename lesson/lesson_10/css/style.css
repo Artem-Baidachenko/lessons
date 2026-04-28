@@ -1,0 +1,419 @@
+body {
+	font-family: "Montserrat", sans-serif;
+	color: #111;
+	line-height: 1.3;
+}
+[class*="__container"] {
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1600px;
+	margin: 0 auto;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+}
+/* =============================================== */
+.header {
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	z-index: 50;
+}
+.header__container {	
+	min-height: 105px;
+}
+.header__title {
+	padding-top: 10px;
+}
+.menu {
+	display: inline-block;
+}
+.menu__item {
+	display: inline-block;
+	position: relative;
+}
+.menu__item:nth-child(2):after {
+	content: "";
+	background: url('../img/icons/arrow.svg') center / auto no-repeat;
+	display: inline-block;
+	width: 20px;
+	height: 10px;
+}
+.menu__item:hover .submenu {
+	opacity: 1;
+	visibility: visible;
+}
+.menu__item:not(:last-child) {
+	margin-right: 15px;
+}
+.menu__link {
+	color: blue;
+	font-weight: 700;
+	line-height: 1.3;
+	font-size: 18px;
+	padding: 10px 0;
+}
+/* ================ Submenu ================ */
+.menu__submenu {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background-color: #f1eded;
+}
+.submenu {
+	opacity: 0;
+	visibility: hidden;
+}
+.submenu__item:nth-child(2):after {
+	content: "";
+	background: url('../img/icons/arrow.svg') center / auto no-repeat;
+	display: inline-block;
+	width: 20px;
+	height: 10px;
+}
+.submenu__item:hover .submenu__items {
+	opacity: 1;
+	visibility: visible;
+}
+.submenu__link {
+	color: blue;
+	font-weight: 700;
+	line-height: 1.3;
+	font-size: 18px;
+	padding: 10px 15px;
+}
+.submenu__link:hover {
+	color: green;
+}
+.submenu__items {
+	display: inline-block;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	min-width: 1400px;
+	box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.25);
+	background-color: #fff;
+	padding: 30px;
+}
+.submenu__block {
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+}
+.submenu__block:not(:last-child) {
+	margin-right: 100px;
+}
+.submenu__title {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: #000;
+}
+.submenu__title::after {
+	content: "";
+	display: block;
+	width: 247px;
+	height: 2px;
+	background-color: #000;
+}
+.submenu__title:not(:last-child) {
+	margin-bottom: 18px;
+}
+.submenu__image {
+	position: absolute;
+	max-width: 532px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+.submenu2__item:not(:last-child) {
+	margin-bottom: 15px;
+}
+.submenu2__link {
+	color: #000;
+	line-height: 1.3;
+	font-size: 18px;
+}
+.submenu2__link:hover {
+	color: green;
+}
+/* ======================================== */
+.footer__link {
+	color: blue;
+	font-weight: 700;
+	line-height: 1.3;
+	font-size: 18px;
+}
+.menu__link:hover,
+.footer__link:hover {
+	color: green;
+}
+/* ================ Title ================ */
+.title {
+	font-size: 24px;
+  	line-height: 1.33;
+  	font-weight: 600;
+  	color: rgb(4, 165, 45);
+  	text-shadow: 1px 2px 5px rgba(5, 189, 51, 0.5);
+	margin-bottom: 20px;
+}
+.title--white {
+	font-weight: 500;
+	font-size: 52px;
+	line-height: 1.15;
+	letter-spacing: -1.04px;
+	text-align: center;
+	color: #fff;
+	text-shadow: none;
+}
+.title:not(:last-child) {
+	margin-bottom: 20px;
+}
+/* ================ Text ================ */
+.text {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #111;
+}
+.text span {
+	color: #b10e0e;
+}
+.text:not(:last-child) {
+	margin-bottom: 15px;
+}
+.text p:not(:last-child) {
+	margin-bottom: 15px;
+}
+/* ================ Стилізація списку ================ */
+.list {
+	counter-reset: list-counter;
+}
+.list:not(:last-child) {
+	margin-bottom: 20px;
+}
+.list__item {
+	counter-increment: list-counter;
+	font-size: 18px;
+	line-height: 1.5;
+	color: rgb(185, 85, 2);
+}
+.list__item::before {
+	content: counter(list-counter)")";
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.list__item:not(:last-child) {
+	margin-bottom: 15px;
+}
+/* =============================================== */
+.hero {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.hero__info:not(:last-child) {
+	margin-bottom: 30px;
+}
+.block__items:not(:last-child) {
+	margin-bottom: 30px;
+}
+.block__box {
+	width: 1000px;
+	height: 500px;
+	border-radius: 12px;
+	border: 3px solid green;
+}
+/* =========== Text Link =========== */
+.text__link {
+	color: blue;
+	position: relative;
+	transition: color 0.3s ease 0s;
+}
+.text__link:hover {
+	color: green;
+}
+.text__link::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 1px;
+	background-color: green;
+	bottom: -2px;
+	left: 50%;
+	transition: left 0.3s ease, width 0.3s ease;
+	pointer-events: none;
+}
+.text__link:hover::before {
+	left: 0;
+	width: 100%;
+}
+/* ============================================= */
+.box--1 {
+	position: relative;
+}
+.box__item {
+	width: 100%;
+	height: 100px;
+	border-radius: 8px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 48px;
+}
+.box__item--1 {
+	background-color: rgb(146, 190, 23);
+}
+.box__item--2 {
+	background-color: rgb(79, 233, 148);
+}
+.box__item--3 {
+	background-color: rgb(24, 167, 124);
+}
+.box__item--4 {
+	background-color: rgb(146, 190, 23);
+}
+.box__item--5 {
+	position: relative;
+	top: 30px;
+	left: 20px;
+	/* top: 10%;
+	left: 20%; */
+	background-color: rgb(79, 233, 148);
+}
+.box__item--6 {
+	background-color: rgb(24, 167, 124);
+}
+.box__item--7 {
+	background-color: rgb(146, 190, 23);
+}
+.box__item--8 {
+	position: relative;
+	top: 30px;
+	left: 20px;
+	background-color: rgb(79, 233, 148);
+	z-index: 1;
+}
+.box__item--9 {
+	position: relative;
+	z-index: 2;
+	background-color: rgb(24, 167, 124);
+}
+.box__item--10 {
+	background-color: rgb(146, 190, 23);
+}
+.box__item--11 {
+	position: absolute;
+	top: 300px;
+	left: 20px;
+	/* top: 15%;
+	left: 20%; */
+	background-color: rgb(79, 233, 148);
+}
+.box__item--12 {
+	background-color: rgb(24, 167, 124);
+}
+.box__item--13 {
+	background-color: rgb(146, 190, 23);
+}
+.box__item--14 {
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
+	background-color: rgb(79, 233, 148);
+	z-index: 3;
+}
+.box__item--15 {
+	background-color: rgb(24, 167, 124);
+}
+.box__item--16 {
+	background-color: rgb(146, 190, 23);
+}
+.box__item--17 {
+	position: sticky;
+	top: 100px;
+	background-color: rgb(79, 233, 148);
+}
+.box__item--18 {
+	background-color: rgb(24, 167, 124);
+}
+/* ============================================= */
+.template {
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+/* =========== Завдання з Figma макет Catalyst =========== */
+.article {
+	padding: 32px;
+ 	background-color: #1a1a1a;
+ 	border-radius: 12px;
+	line-height: 1.5;
+	font-family: "Barlow", sans-serif;
+	max-width: 834px;
+	margin: 0 auto;
+	color: #b3b2b1;
+}
+.article h3 {
+	font-weight: 500;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #f8eeeb;
+	margin-bottom: 12px;
+}
+.article p {
+	font-size: 16px;
+	margin-bottom: 24px;
+}
+.article ul {
+	margin-bottom: 24px;
+}
+.article ul li {
+	position: relative;
+	font-size: 16px;
+	margin-bottom: 12px;
+	padding-left: 26px;
+}
+.article ul li::before {
+	content: "";
+	background: url("../img/icon-diamond-dot.svg") 0 0 no-repeat;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 16px;
+	height: 16px;
+}
+.article *:last-child {
+	margin-bottom: 0;
+}
+/* =============================================== */
+.footer {
+	padding-bottom: 120px;
+}
+.footer__block:not(:last-child),
+.footer__list:not(:last-child) {
+	margin-bottom: 20px;
+}
+.footer__item:not(:last-child) {
+	margin-bottom: 15px;
+}
+.title,
+.footer-title {
+	font-size: 24px;
+  	line-height: 1.33;
+  	font-weight: 600;
+  	color: rgb(4, 165, 45);
+  	text-shadow: 1px 2px 5px rgba(5, 189, 51, 0.5);
+	margin-bottom: 20px;
+}
+.title,
+.footer-title:not(:last-child) {
+	margin-bottom: 20px;
+}
+/* =============================================== */

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №11 - CSS трансформації (CSS transform)</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title title">Урок №11 - CSS трансформації (CSS transform)</h1>
+				
+			</div>
+		</header>
+		<main class="page">
+			<div id="#top" class="hero">
+				<div class="hero__container">
+					<div id="transform" class="hero__info info block">
+						<h2 class="block__title title">Властивість transform</h2>
+						<div class="block__text text">
+							<p>
+								За допомогою 2D і 3D трансформації ми зможемо зрушувати, повертати, масштабувати елементи і робити багато іншого! Задається трансформація властивістю transform і такими значеннями:
+							</p>
+						</div>
+					</div>					
+					<div id="translate" class="hero__info info block">
+						<h2 class="block__title title">Властивість translate (x, y)</h2>
+						<div class="block__text text">
+							<p>
+								Зсуває елемент на нове місце, переміщаючи відносно початкового положення об'єкта вправо і вниз, використовуючи координати X і Y. Записується таким чином translate (x,y).
+							</p>
+						</div>
+						<div class="block__box box">
+							<div class="box__item"><span>Translate (80px, 80px)</span></div>
+							<div class="box__item box__item--translateX"><span>TranslateX (250px)</span></div>
+							<div class="box__item box__item--translateY"><span>TranslateY (250px)</span></div>
+						</div>
+					</div>					
+					<div id="scale" class="hero__info info block">
+						<h2 class="block__title title">Властивість scale (x, y)</h2>
+						<div class="block__text text">
+							<p>
+								Масштабує елементи, роблячи їх більшими або меншими.
+							</p>
+						</div>
+						<div class="block__box box">
+							<div class="box__item box__item--1"><span>Scale (0.5,0.5)</span></div>
+							<div class="box__item box__item--1scaleX"><span>ScaleX (2)</span></div>
+							<div class="box__item box__item--1scaleY"><span>ScaleY (-1.5)</span></div>
+						</div>
+					</div>					
+					<div id="rotate" class="hero__info info block">
+						<h2 class="block__title title">Властивість rotate (n + deg)</h2>
+						<div class="block__text text">
+							<p>Повертає елементи.</p>
+						</div>
+						<div class="block__box box">
+							<div class="box__item box__item--2"><span>Rotate (45deg)</span></div>
+							<div class="box__item box__item--2rotateX"><span>RotateX (90deg)</span></div>
+							<div class="box__item box__item--2rotateY"><span>RotateY (90deg)</span></div>
+						</div>
+					</div>					
+					<div id="skew" class="hero__info info block">
+						<h2 class="block__title title">Властивість skew (x + deg, y + deg)</h2>
+						<div class="block__text text">
+							<p>
+								Деформує (нахиляє) елементи.
+							</p>
+						</div>
+						<div class="block__box box">
+							<div class="box__item box__item--3"><span>Skew (20deg, 30deg)</span></div>
+							<div class="box__item box__item--3skewX"><span>SkewX (35deg)</span></div>
+							<div class="box__item box__item--3skewY"><span>SkewY (-35deg)</span></div>
+						</div>
+					</div>					
+					<div id="matrix" class="hero__info info block">
+						<h2 class="block__title title">Matrix (a, c, b, d, x, y)</h2>
+						<div class="block__text text">
+							<p>
+								Дозволяє об'єднати кілька функцій 2D-трансформацій в одній.
+							</p>
+							<p>
+								Значення a змінює масштаб по горизонталі. Значення від 0 до 1 зменшує елемент, більше 1 - збільшує. Значення c деформує (зсуває) сторони елемента за віссю Y, позитивне значення - вгору, негативне - вниз. Значення b деформує (зсуває) сторони елемента за віссю X, позитивне значення - вліво, негативне - вправо. Значення d змінює масштаб по вертикалі. Значення менше 1 зменшує елемент, більше 1 - збільшує. Значення x зміщує елемент по осі X, позитивне - вправо, негативне - вліво. Значення y зміщує елемент по осі Y, позитивне значення - вниз, негативне - вгору.
+							</p>
+						</div>
+						<div class="block__box box">
+							<div class="box__item box__item--4"><span>Matrix (0.4, 0.2, 0.3, 0.5, -30, 19)</span></div>
+							<div class="box__item box__item--4matrix1"><span>Matrix (4, 2, -0.3, 1.5, 40, -16)</span></div>
+							<div class="box__item box__item--4matrix2"><span>Matrix (-2, -2, 1.8, 0.9, -80, 20)</span></div>
+						</div>
+					</div>					
+					<div id="2dtransform" class="hero__info info block">
+						<h2 class="block__title title">Множинні 2D transform</h2>
+						<div class="block__text text">
+							<p>
+								Дає змогу об'єднати кілька функцій 2D-трансформацій в одній.
+							</p>
+						</div>
+					</div>					
+					<div class="hero__info info block">
+						<h2 class="block__title title">2D-трансформація</h2>
+						<div class="block__box box box--1">
+							<div class="box__item box__item--5"><span>translate(30px, 30px) rotate(45deg) scale(0.8)</span></div>
+							<div class="box__item box__item--5trs1"><span>translate(-20px, 10px) rotate(-90deg) scale(1)</span></div>
+							<div class="box__item box__item--5trs2"><span>translate(-25px, -25px) rotate(-45deg) scale(0.4)</span></div>
+						</div>
+					</div>					
+					<div id="origin" class="hero__info info block">
+						<h2 class="block__title title">Властивість transform-origin</h2>
+						<div class="block__text text">
+							<p>Дозволяє змістити центр трансформації, щодо якого відбувається зміна положення/розміру/форми елемента.</p>
+						</div>
+						<div class="block__box box box--1">
+							<div class="box__item box__item--6"><span>transform-origin: top left; rotate(45deg)</span></div>
+							<div class="box__item box__item--6to1"><span>transform-origin: top right; rotate(-90deg)</span></div>
+							<div class="box__item box__item--6to2"><span>transform-origin: right bottom; rotate(-45deg)</span></div>
+						</div>
+					</div>					
+					<div id="perspective" class="hero__info info block">
+						<h2 class="block__title title">Властивість perspective, perspective-origin</h2>
+						<div class="block__text text">
+							<p>
+								Встановлення глибини та зміна точки початку координат.
+							</p>
+						</div>
+						<div class="block__box box box--2">
+							<div class="box__item box__item--7"><span>perspective: 400px; perspective-origin: 0 0; rotateX(-45deg)</span></div>
+						</div>
+					</div>					
+					<div id="translate3d" class="hero__info info block">
+						<h2 class="block__title title">Translate3d (x, y, z)</h2>
+						<div class="block__text text">
+							<p>
+								За аналогією зі своїм 2D братом, це значення задає переміщення елемента, але в 3D-просторі. Крім осі X і Y додається вісь Z.
+							</p>
+						</div>
+						<div class="block__box box box--3">
+							<div class="box__item box__item--8"><span>perspective: 400px; translate3d(12px, 20px, 50px);</span></div>
+						</div>
+					</div>					
+					<div id="scale3d" class="hero__info info block">
+						<h2 class="block__title title">Scale3d (x, y, z)</h2>
+						<div class="block__text text">
+							<p>
+								Задає тривимірне масштабування за однією з осей X Y Z. Фактично повторює функціонал свого 2d аналога.
+							</p>
+						</div>
+						<div class="block__box box box--3">
+							<div class="box__item box__item--9"><span>perspective: 400px; scale3d(1.1, 1.9, 1.25)</span></div>
+						</div>
+					</div>					
+					<div id="rotate3d" class="hero__info info block">
+						<h2 class="block__title title">Rotate3d (x, y, z, deg)</h2>
+						<div class="block__text text">
+							<p>
+								Обертає елемент відносно трьох осей. Елемент повертається під кутом, заданим останнім параметром відносно вектора напрямку x,y,z.
+							</p>
+						</div>
+						<div class="block__box box box--3">
+							<div class="box__item box__item--10"><span>perspective: 400px; rotate3d(10, 20, 15, 45deg)</span></div>
+						</div>
+					</div>					
+					<div id="matrix3d" class="hero__info info block">
+						<h2 class="block__title title">Matrix3d (n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</h2>
+						<div class="block__text text">
+							<p>
+								Задає тривимірне перетворення як однорідну матрицю розміром 4×4 із шістнадцятьма значеннями в стовпцях
+							</p>
+							<p>
+								Генератор 3D матриць - <a target="_blank" href="http://ds-overdesign.com/transform/matrix3d.html" class="text__link">http://ds-overdesign.com/transform/matrix3d.html</a>
+							</p>
+						</div>
+					</div>					
+					<div class="hero__info info block">
+						<h2 class="block__title title">Множинні 3D трансформації</h2>
+						<div class="block__text text">
+							<p>Дає змогу об'єднати кілька функцій 3D-трансформацій в одній.</p>
+						</div>
+						<div class="block__box box box--3">
+							<div class="box__item box__item--11"><span>perspective: 400px; translate3d(50px, 30px,80px) rotate3d(2,5,1,-35deg)</span></div>
+						</div>
+					</div>					
+					<div id="style" class="hero__info info block">
+						<h2 class="block__title title">Властивість transform-style</h2>
+						<div class="block__text text">
+							<p>
+								Визначає, як дочірні елементи мають відображатися в 3D-просторі.
+							</p>
+						</div>
+						<div class="block__box box box--4">
+							<div class="box__item box__item--12"><span>perspective: 400px;	transform-style: preserve-3d; rotateY(30deg)</span></div>
+						</div>
+					</div>					
+					<div id="backface" class="hero__info info block">
+						<h2 class="block__title title">Властивість backface-visibility</h2>
+						<div class="block__text text">
+							<p>
+								Відображення зворотного боку об'єкта.
+							</p>
+						</div>
+						<div class="block__box box box--5">
+							<div class="box__item box__item--13">Visible</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<div class="car car__block block">
+				<div class="block__container">
+					<img class="block__image" src="img/road.avif" alt="Image">
+					<div class="block__auto">
+						<div class="block__decor">
+							<div class="block__line block__line--1"></div>
+							<div class="block__line block__line--2"></div>
+							<div class="block__line block__line--3"></div>
+						</div>
+						<div class="block__doors">
+							<div class="block__door door door--1"></div>
+							<div class="block__door door door--2"></div>
+						</div>
+						<div class="block__windows">
+							<div class="block__window window window--1"></div>
+							<div class="block__window window window--2"></div>
+						</div>
+						<div class="block__mirrors">
+							<div class="block__mirror mirror mirror--1"></div>
+							<div class="block__mirror mirror mirror--2"></div>
+						</div>
+						<div class="block__headlights">
+							<div class="block__headlight headlight headlight--1"></div>
+							<div class="block__headlight headlight headlight--2"></div>
+						</div>
+						<div class="block__spoilers">
+							<div class="block__spoiler spoiler spoiler--1"></div>
+							<div class="block__spoiler spoiler spoiler--2"></div>
+							<div class="block__spoiler spoiler spoiler--3"></div>
+							<div class="block__spoiler spoiler spoiler--4"></div>
+							<div class="block__spoiler spoiler spoiler--5"></div>
+							<div class="block__spoiler spoiler spoiler--6"></div>
+						</div>
+						<div class="block__arcs">
+							<div class="block__arc arc arc--1"></div>
+							<div class="block__arc arc arc--2"></div>
+						</div>
+						<div class="block__wheels">
+							<div class="block__wheel wheel wheel--1"></div>
+							<div class="block__wheel wheel wheel--2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block">
+					<h2 class="footer__title title">Урок №11 - CSS трансформації (CSS transform)</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#top" class="footer__link">Наверх</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h2 class="footer__title title">Корисні ресурси</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="https://validator.w3.org/nu/#file" target="_blank" class="footer__link">HTML-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="footer__link">CSS-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://caninclude.onrender.com/" target="_blank" class="footer__link">Сервіс для перевірки вкладеності</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cloudconvert.com/ttf-to-woff2" target="_blank" class="footer__link">TTF to WOFF2 Converter</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" class="footer__link">Генератор для border-radius</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://www.freeonlinetools.dev/tools/box-shadow-generator" target="_blank" class="footer__link">Посилання на генератор тіней для простого створення мультитіней.</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgradient.io/" target="_blank" class="footer__link">Генератор градієнтів</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer__link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements" target="_blank" class="footer__link">Довідкова інформація по псевдокласах та псевдоелементах</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://tinypng.com/" target="_blank" class="footer__link">Генератор зображень</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://arkanit7.github.io/bem-validator-extended/" target="_blank" class="footer__link">Валідатор для методології БЕМ (1)</a>
+						</li>						
+						<li class="footer__item">
+							<a href="https://nglazov.github.io/bem-validator-page/" target="_blank" class="footer__link">Валідатор для методології БЕМ (2)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://yoksel.github.io/html-tree/" target="_blank" class="footer__link">Генератор HTML-дерева</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://bem-cheat-sheet.9elements.com/" target="_blank" class="footer__link">БЕМ Шпаргалка</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssposition.html" target="_blank" class="footer__link">Шпаргалка CSS позиціонування (CSS position)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/transform.html" target="_blank" class="footer__link">Шпаргалка CSS transform. 2D та 3D трансформації</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

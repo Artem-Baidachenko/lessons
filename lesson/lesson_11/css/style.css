@@ -307,12 +307,17 @@ body {
 }
 /* =============================================== */
 .car {
-	padding-bottom: 30px;
-}
-.car__block {
+	position: relative;
 }
 .block__container {
-	position: relative;
+	height: 800px;
+}
+.block__image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 }
 .block__auto {
 	background-color: yellow;
@@ -596,6 +601,7 @@ body {
 }
 /* =============================================== */
 .footer {
+	padding-top: 30px;
 	padding-bottom: 20px;
 }
 .footer__block:not(:last-child),

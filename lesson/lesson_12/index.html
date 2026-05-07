@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №12 - CSS переходи (CSS transition) та CSS анімація (CSS animation & @keyframes)</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">				
+			</div>
+		</header>
+		<main class="page">
+			<div class="car block">
+				<div class="block__container">
+					<img class="block__image" src="img/road.avif" alt="Image">
+					<div class="block__auto">
+						<div class="block__decor">
+							<div class="block__line block__line--1"></div>
+							<div class="block__line block__line--2"></div>
+							<div class="block__line block__line--3"></div>
+						</div>
+						<div class="block__doors">
+							<div class="block__door door door--1"></div>
+							<div class="block__door door door--2"></div>
+						</div>
+						<div class="block__windows">
+							<div class="block__window window window--1"></div>
+							<div class="block__window window window--2"></div>
+							<div class="block__text">
+								<p>Всім привіт!</p>
+							</div>
+						</div>
+						<div class="block__mirrors">
+							<div class="block__mirror mirror mirror--1"></div>
+							<div class="block__mirror mirror mirror--2"></div>
+						</div>
+						<div class="block__headlights">
+							<div class="block__headlight headlight headlight--1"></div>
+							<div class="block__headlight headlight headlight--2"></div>
+						</div>
+						<div class="block__spoilers">
+							<div class="block__spoiler spoiler spoiler--1"></div>
+							<div class="block__spoiler spoiler spoiler--2"></div>
+							<div class="block__spoiler spoiler spoiler--3"></div>
+							<div class="block__spoiler spoiler spoiler--4"></div>
+							<div class="block__spoiler spoiler spoiler--5"></div>
+							<div class="block__spoiler spoiler spoiler--6"></div>
+						</div>
+						<div class="block__arcs">
+							<div class="block__arc arc arc--1"></div>
+							<div class="block__arc arc arc--2"></div>
+						</div>
+						<div class="block__wheels">
+							<div class="block__wheel wheel wheel--1"></div>
+							<div class="block__wheel wheel wheel--2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block">
+					<h2 class="footer__title title">Корисні ресурси</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="https://validator.w3.org/nu/#file" target="_blank" class="footer__link">HTML-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="footer__link">CSS-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://caninclude.onrender.com/" target="_blank" class="footer__link">Сервіс для перевірки вкладеності</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cloudconvert.com/ttf-to-woff2" target="_blank" class="footer__link">TTF to WOFF2 Converter</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" class="footer__link">Генератор для border-radius</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://www.freeonlinetools.dev/tools/box-shadow-generator" target="_blank" class="footer__link">Посилання на генератор тіней для простого створення мультитіней.</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgradient.io/" target="_blank" class="footer__link">Генератор градієнтів</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer__link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements" target="_blank" class="footer__link">Довідкова інформація по псевдокласах та псевдоелементах</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://tinypng.com/" target="_blank" class="footer__link">Генератор зображень</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://arkanit7.github.io/bem-validator-extended/" target="_blank" class="footer__link">Валідатор для методології БЕМ (1)</a>
+						</li>						
+						<li class="footer__item">
+							<a href="https://nglazov.github.io/bem-validator-page/" target="_blank" class="footer__link">Валідатор для методології БЕМ (2)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://yoksel.github.io/html-tree/" target="_blank" class="footer__link">Генератор HTML-дерева</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://bem-cheat-sheet.9elements.com/" target="_blank" class="footer__link">БЕМ Шпаргалка</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssposition.html" target="_blank" class="footer__link">Шпаргалка CSS позиціонування (CSS position)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/transform.html" target="_blank" class="footer__link">Шпаргалка CSS transform. 2D та 3D трансформації</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/csstransition.html" target="_blank" class="footer__link">Шпаргалка CSS переходи (CSS transition)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssanimation.html" target="_blank" class="footer__link">Шпаргалка CSS анімація (CSS animation & @keyframes)</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

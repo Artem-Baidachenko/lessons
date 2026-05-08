@@ -45,6 +45,101 @@ body {
 	top: 0;
 	left: 0;
 }
+.block__firework {
+}
+.firework {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+	/* Анимація взриву */
+	animation: explode 2s infinite;
+}
+.firework--1 {
+	left: 0%;
+}
+.firework--2 {
+	left: 25%;
+}
+.firework--3 {
+	left: 50%;
+}
+.firework--4 {
+	left: 75%;
+}
+.firework--5 {
+	left: 100%;
+}
+@keyframes explode {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 1;
+		/* Розлітаючі частини */
+		box-shadow: 
+			-121px -400.7px 0 #00ff44,
+			-115px -306.2px 0 #1deb46,
+			106px -100.4px 0 #0099ff,
+			135px -15.5px 0 gold,
+			178px -219.65px 0 #aaff00,
+			-37px -380.11px 0 #fff200,
+			140px -224px 0 #ffa200,
+			70px -351.97px 0 #dd00ff,
+			-37px -376.07px 0 #00ffa6,
+			-176px -106.47px 0 #00ff8c,
+			129px -242.4px 0 #3700ff,
+			-4px -204.7px 0 aqua,
+			180px 24.1px 0 #66ff00,
+			-18px -11.78px 0 #ff1100,
+			223px -67.7px 0 #00ff91,
+			69px -238.5px 0 #00d0ff,
+			214px -95px 0 #0400ff,
+			-246px 50px 0 #ff4000,
+			-2px -3.6px 0 #00ff33,
+			109px -99.7px 0 #00f2ff,
+			-222px -79.99px 0 #6f00ff,
+			169px -182.5px 0 #3cff00,
+			-90px -24.75px 0 #00ffd0,
+			-180px -30.667px 0 #9d00ff,
+			154px 1.33222px 0 #a2ff00,
+			182px -16.62px 0 #ff0026,
+			215px 6.9888px 0 #80ff00,
+			-80px -40.44px 0 #0400ff,
+			44px -40.1111px 0 #ff9d00,
+			39px -78.88px 0 #ff0084,
+			144px -59.999px 0 #8c00ff,
+			-117px -189.6px 0 #00ff6a,
+			-92px 94.3px 0 #00ffc8,
+			-236px -40.4446px 0 #0040ff,
+			-207px -210.87px 0 #006fff,
+			20px -129.67px 0 #ff9500,
+			31px 5.3px 0 #ff6f00,
+			88px -152.26px 0 #ffb700,
+			16px -167.16px 0 #ff0400,
+			-268px -199.65px 0 #7700ff,
+			-157px -83.7px 0 #2fff00,
+			12px -183.222px 0 rgb(192, 2, 192),
+			145px -220.333px 0 #0040ff,
+			-106px -264.41111px 0 #ffa600,
+			-259px -194.99999px 0 #8cff00,
+			85px -245.2223px 0 #00c4ff,
+			-233px 69.4444px 0 #00fff2,
+			-74px -306.777777px 0 #fffb00,
+			89px 14.3443px 0 #2f00ff,
+			228px -78.999px 0 #00ffb7,
+			-269px -116.44445px 0 #0091ff,
+			-15px 55.55556px 0 #fff;
+	}
+}
 .block__auto {
 	background-color: yellow;
 	width: 350px;

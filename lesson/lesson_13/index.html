@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №13 — Модуль FLEX</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title title">Урок №13 — Модуль FLEX</h1>
+				<div class="header__menu menu">
+					<div class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#flex" class="menu__link">Властивості Flex-контейнера</a>
+							</li>
+							<li class="menu__item">
+								<a href="#flex" class="menu__link">Властивості Flex-елементів</a>
+							</li>
+							<li class="menu__item">
+								<a href="#practice" class="menu__link">Практичні приклади</a>
+							</li>
+							<li class="menu__item">
+								<a href="#template" class="menu__link">Завдання з Figma</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div id="top" class="hero">
+				<div class="hero__container">
+					<div class="hero__info info block">
+						<h2 class="block__title title">Модуль FLEX. Flexbox</h2>
+						<div class="block__text text">
+							<p>
+								<span class="bold">Flexbox</span> - це цілий модуль, що містить у собі набір властивостей та їхніх значень як для батька <span class="bold">flex-контейнера</span>, так і для його дочірніх елементів <span class="bold">flex-елементів</span>. Основною перевагою гнучкої Flex розмітки є можливість змінювати ширину/висоту простору навколо і порядок flex-елементів, для того, щоб найкращим чином заповнити доступний простір flex-контейнера.
+							</p>
+						</div>
+					</div>
+					<div id="flex" class="hero__info info block">
+						<h2 class="block__title title">Властивості Flex-контейнера. Застосовуються для flex-контейнера, обгортки flex-елементів.</h2>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість display зі значеннями flex/inline-flex</h3>
+							<div class="block__text text">
+								<p>
+									Визначає flex-контейнер, блоковий або рядковий залежить від переданого значення. Перетворює всі свої прямі, дочірні елементи у flex-елементи.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">display: block/inline* (default);</span> — * залежить від тегу (за замовченням).
+								</p>
+							</div>
+							<div class="block__box block__box--1">
+								<div class="block__row block__row--1">
+									<!--  flex-element  -->
+									<div class="block__element">
+										<!--  content  -->
+										<div class="block__content">1</div>
+									</div>
+									<!--  flex-element  -->
+									<div class="block__element">
+										<!--  content  -->
+										<div class="block__content">2</div>
+									</div>
+									<!--  flex-element  -->
+									<div class="block__element">
+										<!--  content  -->
+										<div class="block__content">3</div>
+									</div>
+									<!--  flex-element  -->
+									<div class="block__element">
+										<!--  content  -->
+										<div class="block__content">4</div>
+									</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">display: flex;</span> — визначає рядковий flex-контейнер. Перетворює всі свої прямі, дочірні елементи на flex-елементи.
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">display: inline-flex;</span> — визначає блоковий flex-контейнер. Перетворює всі свої прямі, дочірні елементи на flex-елементи.
+								</p>
+							</div>
+							<div class="block__row block__row--3">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">display: inline-flex; + text-align: center;</span> у батька — визначає блоковий flex-контейнер. Перетворює всі свої прямі, дочірні елементи на flex-елементи.
+								</p>
+							</div>
+							<div class="block__box block__box--2">
+								<div class="block__row block__row--4">
+									<!--  flex-element  -->
+									<div class="block__element">
+										<!--  content  -->
+										<div class="block__content">1</div>
+									</div>
+									<!--  flex-element  -->
+									<div class="block__element">
+										<!--  content  -->
+										<div class="block__content">2</div>
+									</div>
+									<!--  flex-element  -->
+									<div class="block__element">
+										<!--  content  -->
+										<div class="block__content">3</div>
+									</div>
+									<!--  flex-element  -->
+									<div class="block__element">
+										<!--  content  -->
+										<div class="block__content">4</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість flex-wrap</h3>
+							<div class="block__text text">
+								<p>
+									Визначає, чи зможуть flex-елементи переміщатися на наступні рядки, коли перестають поміщатися всередині flex-контейнера.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-wrap: nowrap (default);</span> — значення за замовчуванням (не потрібно вказувати). Flex-елементи <span class="bold">не зможуть</span> переміщатися на наступні рядки flex-контейнера.
+								</p>
+							</div>
+							<div class="block__row block__row--5">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-wrap: wrap;</span> — Flex-елементи <span class="bold">зможуть</span> переміщатися на наступні рядки flex-контейнера.
+								</p>
+							</div>
+							<div class="block__row block__row--6">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-wrap: wrap-reverse;</span> — Flex-елементи <span class="bold">зможуть</span> переміщатися на наступні рядки flex-контейнера, <span class="bold">але у зворотному порядку</span>.
+								</p>
+							</div>
+							<div class="block__row block__row--7">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість flex-direction</h3>
+							<div class="block__text text">
+								<p>
+									Встановлює основну вісь, таким чином визначає напрямок flex-елементів, розташованих у flex-контейнері.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-direction: row;</span> — значення за замовчуванням (не потрібно вказувати). Основна вісь <span class="bold">горизонтальна</span>. Усі flex-елементи розташуються <span class="bold">зліва направо по горизонталі</span>.
+								</p>
+							</div>
+							<div class="block__row block__row--8">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-direction: row-reverse;</span> — усі flex-елементи розташуються <span class="bold">справа наліво по горизонталі</span>.
+								</p>
+							</div>
+							<div class="block__row block__row--9">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-direction: column;</span> — основна вісь <span class="bold">зміниться</span> з горизонтальної на <span class="bold">вертикальну</span>. Усі flex-елементи розташуються <span class="bold">зверху вниз</span>.
+								</p>
+							</div>
+							<div class="block__row block__row--10">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-direction: column-reverse;</span> — основна вісь <span class="bold">зміниться</span> з горизонтальної на <span class="bold">вертикальну</span>. Усі flex-елементи розташуються <span class="bold">знизу вгору</span>.
+								</p>
+							</div>
+							<div class="block__row block__row--11">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість justify-content</h3>
+							<div class="block__text text">
+								<p>
+									Визначає вирівнювання вздовж основної осі (напрямок залежить від значення властивості flex-direction).
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: flex-start;</span> — значення за замовчуванням (не потрібно вказувати). Основна вісь <span class="bold">горизонтальна</span>. Flex-елементи притискаються до <span class="bold">початку</span> основної осі.
+								</p>
+							</div>
+							<div class="block__row block__row--12">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: flex-end;</span> — Flex-елементи притискаються до <span class="bold">кінця</span> основної осі.
+								</p>
+							</div>
+							<div class="block__row block__row--13">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: center;</span> — Flex-елементи розташовуються <span class="bold">по центру</span> основної осі.
+								</p>
+							</div>
+							<div class="block__row block__row--14">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: space-between;</span> — Flex-елементи розташовуються <span class="bold">рівномірно</span> по основній осі. <span class="bold">Перший елемент розташований на початку осі, останній елемент розташований наприкінці осі.</span>
+								</p>
+							</div>
+							<div class="block__row block__row--15">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: space-around;</span> — Flex-елементи розташовуються <span class="bold">рівномірно</span> по основній осі. <span class="bold">До кожного flex-елемента додається простір ліворуч і праворуч.</span>
+								</p>
+							</div>
+							<div class="block__row block__row--16">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: space-evenly;</span> — Flex-елементи розташовуються <span class="bold">рівномірно</span> по основній осі <span class="bold">з однаковим простором навколо них</span>.
+								</p>
+							</div>
+							<div class="block__row block__row--17">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість align-items</h3>
+							<div class="block__text text">
+								<p>
+									Визначає вирівнювання вздовж поперечної осі (напрямок залежить від значення властивості flex-direction).
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-items: stretch;</span> — значення за замовчуванням (не потрібно вказувати). Flex-елементи <span class="bold">розтягуються</span> на весь розмір поперечної осі flex-контейнера.
+								</p>
+							</div>
+							<div class="block__row block__row--18">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-items: flex-start;</span> — Flex-елементи притискаються до <span class="bold">початку</span> поперечної осі.
+								</p>
+							</div>
+							<div class="block__row block__row--19">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-items: flex-end;</span> — Flex-елементи притискаються до <span class="bold">кінця</span> поперечної осі.
+								</p>
+							</div>
+							<div class="block__row block__row--20">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-items: center;</span> — Flex-елементи розташовуються по <span class="bold">центру</span> поперечної осі.
+								</p>
+							</div>
+							<div class="block__row block__row--21">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-items: baseline;</span> — Flex-елементи розташовуються по <span class="bold">базовій лінії</span>.
+								</p>
+							</div>
+							<div class="block__row block__row--22">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div style="font-size: 35px;" class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість flex-flow</h3>
+							<div class="block__text text">
+								<p>
+									Існує ще властивість flex-flow. Це скорочення для властивостей flex-direction і flex-wrap, які разом визначають основну і поперечні осі і можливість переміщатися по рядках. За замовчуванням row nowrap.
+								</p>
+								<p>
+									<span class="bold">flex-flow: column-reverse wrap-reverse;</span> — основна вісь <span class="bold">змінюється</span> з горизонтальної на <span class="bold">вертикальну</span>. Усі flex-елементи розташуються <span class="blod">знизу вгору</span>. Flex-елементи <span class="bold">зможуть</span> переміщатися на наступні рядки flex-контейнера, <span class="bold">але у зворотному порядку</span>.
+								</p>
+							</div>
+							<div class="block__row block__row--23">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="flex-element" class="hero__info info block">
+						<h2 class="block__title title">Властивості Flex-елементів. Застосовуються для flex-елемента, дочірнього об'єкта flex-контейнера</h2>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість order</h3>
+							<div class="block__text text">
+								<p>
+									Керує порядком, у якому розташовуються flex-елементи всередині flex-контейнера.
+								</p>
+								<p>
+									<span class="bold">order: default;</span> — значення за замовчуванням (не потрібно вказувати).
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--1">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--2">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--3">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--4">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--5">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--6">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--7">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--8">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--9">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--10">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--11">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--12">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість align-self</h3>
+							<div class="block__text text">
+								<p>
+									Перевизначає для конкретного flex-елемента вирівнювання вздовж поперечної осі (напрямок залежить від значення властивості flex-direction). На прикладі flex-елементів №2 і №4.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-self: auto; (default); як у flex-контейнера</span> — значення за замовчуванням (не потрібно вказувати). Flex-елементи <span class="bold">розтягуються</span> на весь розмір поперечної осі flex-контейнера.
+								</p>
+							</div>
+							<div class="block__row block__row--18">
+								<!--  flex-element  -->
+								<div class="block__element block__element--13">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--14">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--15">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--16">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-self: flex-start;</span> — Flex-елементи <span class="bold">зможуть</span> переміщатися на наступні рядки flex-контейнера.
+								</p>
+							</div>
+							<div class="block__row block__row--18">
+								<!--  flex-element  -->
+								<div class="block__element block__element--17">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--18">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--19">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--20">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-self: flex-end;</span> — Flex-елементи притискаються до <span class="bold">кінця</span> поперечної осі.
+								</p>
+							</div>
+							<div class="block__row block__row--18">
+								<!--  flex-element  -->
+								<div class="block__element block__element--21">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--22">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--23">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--24">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-self: center;</span> — Flex-елементи розташовуються по <span class="bold">центру</span> поперечної осі.
+								</p>
+							</div>
+							<div class="block__row block__row--18">
+								<!--  flex-element  -->
+								<div class="block__element block__element--25">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--26">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--27">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--28">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість flex-basis</h3>
+							<div class="block__text text">
+								<p>
+									Визначає розмір елемента за замовчуванням, до розподілу простору, що залишився. Значення можуть бути у відсотках, пікселях тощо. На прикладі flex-елементів №2 і №4.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-basis: auto;</span> — значення за замовчуванням (не потрібно вказувати). Flex-елемент займатиме розмір залежно від <span class="bold">контенту</span> всередині нього.
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--29">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--30">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--31">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--32">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">Значення в пікселях</span> — встановлюємо двом flex-елементам початкову ширину <span class="bold">в пікселях.</span>
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--33">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--34">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--35">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--36">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">Значення у відсотках</span> — встановлюємо двом flex-елементам початкову ширину <span class="bold">в відсотках</span>.
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--37">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--38">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--39">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--40">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість flex-grow</h3>
+							<div class="block__text text">
+								<p>
+									Визначає можливість елемента збільшуватися в розмірі, за необхідності заповнюючи весь flex-контейнер. 0 заборонено. 1 дозволено. На прикладі flex-елементів №2 і №4.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-grow: 0;</span> — значення за замовчуванням (не потрібно вказувати). Flex-елемент <span class="bold">не може</span> збільшитися.
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--41">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--42">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--43">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--44">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-grow: 1;</span> — Flex-елемент <span class="bold">збільшиться</span>, заповнюючи простір flex-контейнера.
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--45">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--46">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--47">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--48">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Властивість flex-shrink</h3>
+							<div class="block__text text">
+								<p>
+									Визначає вирівнювання вздовж поперечної осі (напрямок залежить від значення властивості flex-direction).
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-shrink: 0;</span> — значення за замовчуванням (не потрібно вказувати). Flex-елемент <span class="bold">може</span> зменшуватись.
+								</p>
+							</div>
+							<div class="block__row block__row--24">
+								<!--  flex-element  -->
+								<div class="block__element block__element--49">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--50">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--51">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--52">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex-shrink: 1;</span> — Flex-елемент <span class="bold">не може</span> зменшуватись.
+								</p>
+							</div>
+							<div class="block__row block__row--24">
+								<!--  flex-element  -->
+								<div class="block__element block__element--53">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--54">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--55">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--56">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">
+								Властивість flex. Скорочений запис для flex-grow, flex-shrink і flex-basis (рекомендується)
+							</h3>
+							<div class="block__text text">
+								<p>
+									Визначає можливість елемента зменшуватися і збільшуватися в розмірі, за необхідності заповнюючи весь flex-контейнер (0 заборонено. 1 дозволено). А також задає базовий розмір. На прикладі flex-елементів №2 і №4.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex: 0 1 auto; (Default)</span> — значення за замовчуванням (не потрібно вказувати). Flex-елемент <span class="bold">не може</span> збільшуватися, може зменшуватися. Базовий розмір автоматичний.
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--57">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--58">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--59">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--60">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex: 1 1 auto; (Приклад №1)</span> — Flex-елемент <span class="bold">може</span> збільшуватися, <span class="bold">може</span> зменшуватися. Базовий розмір автоматичний.
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--61">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--62">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--63">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--64">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex: 0 0 250px; (Приклад №2)</span> — Flex-елемент <span class="bold">не може</span> збільшуватися, <span class="bold">не може</span> зменшуватися. Базовий розмір 250px.
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--65">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--66">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--67">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--68">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">flex: 1 0 50%; (Приклад №3)</span> — Flex-елемент <span class="bold">може</span> збільшуватися, <span class="bold">не може</span> зменшуватися. Базовий розмір 50%.
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--69">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--70">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--71">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--72">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="practice" class="hero__info info block">
+						<h2 class="block__title title">Практичні приклади</h2>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Горизонтальна структура</h3>
+							<div class="block__text text">
+								<p>
+									Приклади побудови горизонтальної структури flex-елементів (колонок).
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">3 колонки (гумові)</span>
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--73">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--73">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--73">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">4 колонки у два ряди</span>
+								</p>
+							</div>
+							<div class="block__row block__row--26">
+								<!--  flex-element  -->
+								<div class="block__element block__element--74">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<div class="block__element block__element--74">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<div class="block__element block__element--74">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<div class="block__element block__element--74">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">3 колонки одна велика</span>
+								</p>
+							</div>
+							<div class="block__row block__row--26">
+								<!--  flex-element  -->
+								<div class="block__element block__element--75">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--76">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--77">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">4 колонки (гума + відступи 20px)</span>
+								</p>
+							</div>
+							<div class="block__row block__row--27">
+								<!--  flex-element  -->
+								<div class="block__element block__element--78">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--78">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--78">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--78">
+									<!--  content  -->
+									<div class="block__content">4</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">2 колонки  (сайдбар - 350px)</span>
+								</p>
+							</div>
+							<div class="block__row block__row--2">
+								<!--  flex-element  -->
+								<div class="block__element block__element--78">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--79">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Вертикальна структура</h3>
+							<div class="block__text text">
+								<p>
+									Приклади побудови вертикальної структури flex-елементів (ряди).
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">3 ряди 2-ий елемент великий</span>
+								</p>
+							</div>
+							<div class="block__row block__row--28">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element block__element--80">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">3 ряди по центру</span>
+								</p>
+							</div>
+							<div class="block__row block__row--29">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">3 ряди розкидані</span>
+								</p>
+							</div>
+							<div class="block__row block__row--30">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">2</div>
+								</div>
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">3</div>
+								</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">По центру</h3>
+							<div class="block__text text">
+								<p>
+									Центруємо блок.
+								</p>
+							</div>
+							<div class="block__row block__row--25">
+								<!--  flex-element  -->
+								<div class="block__element">
+									<!--  content  -->
+									<div class="block__content">1</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="template" class="template">
+				<div class="template__container">
+					<h2 class="template__title title">Завдання з Figma</h2>
+				</div>
+				<div class="template__furniro-range furniro-range">
+					<div class="furniro-range__container">
+						<div class="furniro-range__blockhead blockhead">
+							<h2 class="blockhead__title">Browse The Range</h2>
+							<div class="blockhead__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</div>
+						</div>
+						<div class="furniro-range__items">
+							<div class="furniro-range__card card-range">
+								<a href="#" class="card-range__link-image">
+									<img class="card-range__image" src="img/range/dinning.avif" alt="Image">
+								</a>
+								<h3 class="card-range__title">
+									<a href="#" class="card-range__link-title">Dining</a>
+								</h3>
+							</div>
+							<div class="furniro-range__card card-range">
+								<a href="#" class="card-range__link-image">
+									<img class="card-range__image" src="img/range/living.avif" alt="Image">
+								</a>
+								<h3 class="card-range__title">
+									<a href="#" class="card-range__link-title">Living</a>
+								</h3>
+							</div>
+							<div class="furniro-range__card card-range">
+								<a href="#" class="card-range__link-image">
+									<img class="card-range__image" src="img/range/bedroom.avif" alt="Image">
+								</a>
+								<h3 class="card-range__title">
+									<a href="#" class="card-range__link-title">Bedroom</a>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="template__products products">
+					<div class="products__container">
+						<div class="products__blockhead blockhead">
+							<h2 class="blockhead__title blockhead__title--big">Our Products</h2>
+						</div>
+						<div class="products__items">
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--sale">-30%</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/syltherine.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<div class="card-products__content">
+										<h3 class="card-products__title">
+											<a href="#" class="card-products__link-title">Syltherine</a>
+										</h3>
+										<div class="card-products__description">
+											<p>Stylish cafe chair</p>
+										</div>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 2.500.000</div>
+										<div class="card-products__price card-products__price--old">Rp 3.500.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products button-products--white">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/leviosa.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<div class="card-products__content">
+										<h3 class="card-products__title">
+											<a href="#" class="card-products__link-title">Leviosa</a>
+										</h3>
+										<div class="card-products__description">
+											<p>Stylish cafe chair</p>
+										</div>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 2.500.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products button-products--white">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--sale">-50%</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/lolito.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<div class="card-products__content">
+										<h3 class="card-products__title">
+											<a href="#" class="card-products__link-title">Lolito</a>
+										</h3>
+										<div class="card-products__description">
+											<p>Luxury big sofa</p>
+										</div>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 7.000.000</div>
+										<div class="card-products__price card-products__price--old">Rp 14.000.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products button-products--white">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--new">New</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/respira.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<div class="card-products__content">
+										<h3 class="card-products__title">
+											<a href="#" class="card-products__link-title">Respira</a>
+										</h3>
+										<div class="card-products__description">
+											<p>Outdoor bar table and stool</p>
+										</div>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 500.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products button-products--white">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/grifo.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<div class="card-products__content">
+										<h3 class="card-products__title">
+											<a href="#" class="card-products__link-title">Grifo</a>
+										</h3>
+										<div class="card-products__description">
+											<p>Night lamp</p>
+										</div>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 1.500.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products button-products--white">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--new">New</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/muggo.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<div class="card-products__content">
+										<h3 class="card-products__title">
+											<a href="#" class="card-products__link-title">Muggo</a>
+										</h3>
+										<div class="card-products__description">
+											<p>Small mug</p>
+										</div>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 150.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products button-products--white">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--sale">-50%</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/pingky.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<div class="card-products__content">
+										<h3 class="card-products__title">
+											<a href="#" class="card-products__link-title">Pingky</a>
+										</h3>
+										<div class="card-products__description">
+											<p>Cute bed set</p>
+										</div>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 7.000.000</div>
+										<div class="card-products__price card-products__price--old">Rp 14.000.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products button-products--white">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--new">New</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/potty.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<div class="card-products__content">
+										<h3 class="card-products__title">
+											<a href="#" class="card-products__link-title">Potty</a>
+										</h3>
+										<div class="card-products__description">
+											<p>Minimalist flower pot</p>
+										</div>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 500.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products button-products--white">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="products__more">
+							<a href="#" class="products__button-show">Show More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block">
+					<h2 class="footer__title title">Урок №13 — Модуль FLEX</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#top" class="footer__link">Наверх</a>
+						</li>
+						<li class="footer__item">
+							<a href="#template" class="footer__link">Завдання з Figma</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h2 class="footer__title title">Корисні ресурси</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="https://validator.w3.org/nu/#file" target="_blank" class="footer__link">HTML-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="footer__link">CSS-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://caninclude.onrender.com/" target="_blank" class="footer__link">Сервіс для перевірки вкладеності</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cloudconvert.com/ttf-to-woff2" target="_blank" class="footer__link">TTF to WOFF2 Converter</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" class="footer__link">Генератор для border-radius</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://www.freeonlinetools.dev/tools/box-shadow-generator" target="_blank" class="footer__link">Посилання на генератор тіней для простого створення мультитіней.</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgradient.io/" target="_blank" class="footer__link">Генератор градієнтів</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer__link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements" target="_blank" class="footer__link">Довідкова інформація по псевдокласах та псевдоелементах</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://tinypng.com/" target="_blank" class="footer__link">Генератор зображень</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://arkanit7.github.io/bem-validator-extended/" target="_blank" class="footer__link">Валідатор для методології БЕМ (1)</a>
+						</li>						
+						<li class="footer__item">
+							<a href="https://nglazov.github.io/bem-validator-page/" target="_blank" class="footer__link">Валідатор для методології БЕМ (2)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://yoksel.github.io/html-tree/" target="_blank" class="footer__link">Генератор HTML-дерева</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://bem-cheat-sheet.9elements.com/" target="_blank" class="footer__link">БЕМ Шпаргалка</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssposition.html" target="_blank" class="footer__link">Шпаргалка CSS позиціонування (CSS position)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/transform.html" target="_blank" class="footer__link">Шпаргалка CSS transform. 2D та 3D трансформації</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/flexbox.html" target="_blank" class="footer__link">Шпаргалка по Flexbox</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://flexboxfroggy.com/#ru" target="_blank" class="footer__link">Гра-тренажер Flexbox Froggy</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://codingfantasy.com/games/flexboxadventure/play" target="_blank" class="footer__link">Гра-тренажер Flexboxadventure</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -746,6 +746,7 @@ body {
 .card-products__actions {	
 }
 .actions-products {
+	cursor: pointer;
 	opacity: 0;
 	visibility: hidden;
 	position: absolute;
@@ -817,7 +818,7 @@ body {
 	content: "";
 	background: url('../img/icons/share.svg') 0 0 / 100% no-repeat;
 	width: 16px;
-	height: 16px;
+	height: 18px;
 	display: flex;
 	align-items: center;
 	gap: 2px;

@@ -828,7 +828,7 @@ body {
 	content: "";
 	background: url('../img/icons/share-hover.svg') 0 0 / 100% no-repeat;
 	width: 16px;
-	height: 16px;
+	height: 18px;
 	display: flex;
 	align-items: center;
 	gap: 2px;

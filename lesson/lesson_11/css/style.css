@@ -124,7 +124,7 @@ body {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-.hero__info:not(:last-child) {
+.hero__block:not(:last-child) {
 	margin-bottom: 30px;
 }
 .block__items:not(:last-child) {

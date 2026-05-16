@@ -104,6 +104,52 @@ body {
 .text p:not(:last-child) {
 	margin-bottom: 20px;
 }
+/* ================ Стилізація списку ================ */
+.list {
+	counter-reset: list-counter;
+}
+.list:not(:last-child) {
+	margin-bottom: 20px;
+}
+.list__item {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	counter-increment: list-counter;
+	font-size: 18px;
+	line-height: 1.5;
+	color: rgb(185, 85, 2);
+}
+.list__item::before {
+	content: counter(list-counter)")";
+}
+.list__item:not(:last-child) {
+	margin-bottom: 15px;
+}
+/* =========== List Link =========== */
+.list__link {
+	color: blue;
+	position: relative;
+	transition: color 0.3s ease 0s;
+}
+.list__link:hover {
+	color: green;
+}
+.list__link::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 1px;
+	background-color: green;
+	bottom: -2px;
+	left: 50%;
+	transition: left 0.3s ease, width 0.3s ease;
+	pointer-events: none;
+}
+.list__link:hover::before {
+	left: 0;
+	width: 100%;
+}
 /* =============================================== */
 .hero {
 	padding-top: 20px;

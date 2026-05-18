@@ -134,7 +134,7 @@ body {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-.hero__info:not(:last-child) {
+.hero__block:not(:last-child) {
 	margin-bottom: 30px;
 }
 .block__items:not(:last-child) {
@@ -546,7 +546,9 @@ body {
 	padding-bottom: 56px;
 }
 .furniro-range__container {
-	max-width: 1183px;
+	max-width: 1213px;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin: 0 auto;
 }
 .furniro-range__blockhead {
@@ -622,6 +624,8 @@ body {
 }
 .products__container {
 	max-width: 1266px;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin: 0 auto;
 }
 .products__blockhead:not(:last-child) {

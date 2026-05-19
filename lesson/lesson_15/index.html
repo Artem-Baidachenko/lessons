@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №15 — Адаптивна верстка</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title title">Урок №15 — Адаптивна верстка</h1>
+				<div class="header__menu menu">
+					<div class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#adaptive" class="menu__link">Адаптивна верстка (теорія)</a>
+							</li>
+							<li class="menu__item">
+								<a href="#template" class="menu__link">Завдання з Figma</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div id="top" class="hero">
+				<div class="hero__container">
+					<div id="adaptive" class="hero__block block">
+						<h2 class="block__title title">Адаптивна (чуйна) верстка</h2>
+						<div class="block__text text">
+							<p>Адаптивна (чуйна) верстка - це не про впихування дизайну під ПК у маленькі екрани, це про зручність у користуванні та оптимізацію</p>
+						</div>
+						<div class="block__text text">
+							<p>Хороші практики адаптивної верстки:</p>
+						</div>
+						<ul class="block__list list">
+							<li class="list__item">
+								Дивіться на екран, та відповідайте на питання: "Чи зручно цим користуватись?" (! голосова вправа)
+							</li>
+							<li class="list__item">Для того щоб робити верстку швидко, продумовуйте адаптив ще на ПК</li>
+							<li class="list__item">Не ховайте від користувача найважливіші елементи, без критичної необхідності</li>
+							<li class="list__item">Один клік завжди кращий за два</li>
+							<li class="list__item">Не робіть великі відступи. Зайвий простір тут непотрібен</li>
+							<li class="list__item">
+								Важливі навігаційні вузли робіть зручнішими (крупнішими), не змушуйте користувача цілитись
+							</li>
+							<li class="list__item">Оптимізаця простору та завантаження. Ховайте зайве</li>
+							<li class="list__item">Оптимізовуйте або відмовляйтесь від анімацій</li>
+							<li class="list__item">
+								Долучайте свій власний досвід користувача, не повторюйте те що не зручно вам самим
+							</li>
+						</ul>
+						<div class="block__text text">
+							<p>Медіа-запити - інструмент, який дозволяє вносити певні зміни при певних умовах</p>
+							<p>Момент зміни стилів при якийсь умові ще називають breakpoint</p>
+							<p>Подробиці:</p>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax" class="text__link">https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax</a></p>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/aspect-ratio" class="text__link">https://developer.mozilla.org/en-US/docs/Web/CSS/@media/aspect-ratio</a></p>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio" class="text__link">https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="template" class="template">
+				<h2 class="template__title title">Завдання з Figma</h2>
+				<div class="template__products products">
+					<div class="products__container">
+						<div class="products__blockhead blockhead">
+							<h2 class="blockhead__title">Our Products</h2>
+						</div>
+						<div class="products__items">
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--sale">-30%</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/syltherine.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<h3 class="card-products__title">
+										<a href="#" class="card-products__link-title">Syltherine</a>
+									</h3>
+									<div class="card-products__description">
+										<p>Stylish cafe chair</p>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 2.500.000</div>
+										<div class="card-products__price card-products__price--old">Rp 3.500.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/leviosa.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<h3 class="card-products__title">
+										<a href="#" class="card-products__link-title">Leviosa</a>
+									</h3>
+									<div class="card-products__description">
+										<p>Stylish cafe chair</p>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 2.500.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--sale">-50%</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/lolito.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<h3 class="card-products__title">
+										<a href="#" class="card-products__link-title">Lolito</a>
+									</h3>
+									<div class="card-products__description">
+										<p>Luxury big sofa</p>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 7.000.000</div>
+										<div class="card-products__price card-products__price--old">Rp 14.000.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--new">New</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/respira.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<h3 class="card-products__title">
+										<a href="#" class="card-products__link-title">Respira</a>
+									</h3>
+									<div class="card-products__description">
+										<p>Outdoor bar table and stool</p>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 500.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/grifo.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<h3 class="card-products__title">
+										<a href="#" class="card-products__link-title">Grifo</a>
+									</h3>
+									<div class="card-products__description">
+										<p>Night lamp</p>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 1.500.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--new">New</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/muggo.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<h3 class="card-products__title">
+										<a href="#" class="card-products__link-title">Muggo</a>
+									</h3>
+									<div class="card-products__description">
+										<p>Small mug</p>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 150.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--sale">-50%</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/pingky.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<h3 class="card-products__title">
+										<a href="#" class="card-products__link-title">Pingky</a>
+									</h3>
+									<div class="card-products__description">
+										<p>Cute bed set</p>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 7.000.000</div>
+										<div class="card-products__price card-products__price--old">Rp 14.000.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="products__card card-products">
+								<div class="card-products__labels labels">
+									<a href="#" class="labels__label labels__label--new">New</a>
+								</div>
+								<a href="#" class="card-products__link-image">
+									<img class="card-products__image" src="img/products/potty.avif" alt="Image">
+								</a>
+								<div class="card-products__body">
+									<h3 class="card-products__title">
+										<a href="#" class="card-products__link-title">Potty</a>
+									</h3>
+									<div class="card-products__description">
+										<p>Minimalist flower pot</p>
+									</div>
+									<div class="card-products__prices">
+										<div class="card-products__price">Rp 500.000</div>
+									</div>
+									<div class="card-products__actions actions-products">
+										<div class="actions-products__body">
+											<a href="#" class="actions-products__button button-products">Add to cart</a>
+											<div class="actions-products__icons">
+												<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+												<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+												<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="products__more">
+							<a href="#" class="products__button-show">Show More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block">
+					<h2 class="footer__title title">Урок №15 — Адаптивна верстка</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#top" class="footer__link">Наверх</a>
+						</li>
+						<li class="footer__item">
+							<a href="#template" class="footer__link">Завдання з Figma</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h2 class="footer__title title">Корисні ресурси</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="https://validator.w3.org/nu/#file" target="_blank" class="footer__link">HTML-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="footer__link">CSS-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://caninclude.onrender.com/" target="_blank" class="footer__link">Сервіс для перевірки вкладеності</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cloudconvert.com/ttf-to-woff2" target="_blank" class="footer__link">TTF to WOFF2 Converter</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" class="footer__link">Генератор для border-radius</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://www.freeonlinetools.dev/tools/box-shadow-generator" target="_blank" class="footer__link">Посилання на генератор тіней для простого створення мультитіней.</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgradient.io/" target="_blank" class="footer__link">Генератор градієнтів</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer__link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements" target="_blank" class="footer__link">Довідкова інформація по псевдокласах та псевдоелементах</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://tinypng.com/" target="_blank" class="footer__link">Генератор зображень</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://arkanit7.github.io/bem-validator-extended/" target="_blank" class="footer__link">Валідатор для методології БЕМ (1)</a>
+						</li>					
+						<li class="footer__item">
+							<a href="https://nglazov.github.io/bem-validator-page/" target="_blank" class="footer__link">Валідатор для методології БЕМ (2)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://pavlokrovitskyi.github.io/BEM_validator/" target="_blank" class="footer__link">Валідатор для методології БЕМ (3)</a>
+						</li>						
+						<li class="footer__item">
+							<a href="https://yoksel.github.io/html-tree/" target="_blank" class="footer__link">Генератор HTML-дерева</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://bem-cheat-sheet.9elements.com/" target="_blank" class="footer__link">БЕМ Шпаргалка</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssposition.html" target="_blank" class="footer__link">Шпаргалка CSS позиціонування (CSS position)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/transform.html" target="_blank" class="footer__link">Шпаргалка CSS transform. 2D та 3D трансформації</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/flexbox.html" target="_blank" class="footer__link">Шпаргалка по Flexbox</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://flexboxfroggy.com/#ru" target="_blank" class="footer__link">Гра-тренажер Flexbox Froggy</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://codingfantasy.com/games/flexboxadventure/play" target="_blank" class="footer__link">Гра-тренажер Flexbox adventure</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

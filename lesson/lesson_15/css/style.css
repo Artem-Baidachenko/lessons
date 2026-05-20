@@ -12,10 +12,15 @@ body {
 	flex-grow: 1;
 }
 [class*="__container"] {
-	padding-left: 15px;
-	padding-right: 15px;
 	max-width: 1600px;
-	margin: 0 auto;
+	padding-inline: 15px;
+	margin-inline: auto;
+}
+@media (width < 768px) {
+	[class*="__container"] {
+		padding-inline: 10px;
+		margin-inline: auto;
+	}
 }
 /* ======================================== */
 .header {
@@ -191,9 +196,13 @@ body {
 }
 .products__container {
 	max-width: 1266px;
-	padding-left: 15px;
-	padding-right: 15px;
-	margin: 0 auto;
+	padding-inline: 15px;
+	margin-inline: auto;
+}
+@media (width < 768px) {
+	.products__container {
+		padding-inline: 10px;
+	}
 }
 .products__blockhead:not(:last-child) {
 	margin-bottom: 32px;

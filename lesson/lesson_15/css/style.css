@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 body {
 	font-family: "Montserrat", sans-serif;
 	color: #111;
@@ -181,9 +180,6 @@ body {
 .template__title {
 	text-align: center;
 }
-/* .template__title.title:not(:last-child) {
-	margin-bottom: 0;
-} */
 .products {
 	font-family: "Poppins", sans-serif;
 	padding-bottom: 69px;
@@ -400,24 +396,6 @@ body {
 		font-size: 14px;
 	}
 }
-.card-products__actions {	
-}
-/* .actions-products {
-	cursor: pointer;
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: all 0.5s;
-	background-color: rgba(58, 58, 58, 0.72);
-	z-index: 3;
-} */
 @media (width > 1024px) {
 	.actions-products {
 		cursor: pointer;
@@ -482,7 +460,6 @@ body {
 @media (width < 1025px) {
 	.button-products {
 		border: 1px solid #b88e2f;
-		/* color: #fff; */
 	}
 }
 .actions-products__link {

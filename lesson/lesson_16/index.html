@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №16 — Практика (Food)</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo-image">
+					<img class="header__logo" src="img/logo.svg" alt="logo">
+				</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#" class="menu__link">Home</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Recipes</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Blog</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Contact</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">About us</a>
+							</li>
+						</ul>
+					</nav>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+				<ul class="header__social social">
+					<li class="social__item">
+						<a href="#" class="social__link">
+							<svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.11163 3.29509H9.92331V0.139742C9.61075 0.0967442 8.53581 0 7.28393 0C4.67183 0 2.88248 1.643 2.88248 4.66274V7.44186H0V10.9693H2.88248V19.845H6.41654V10.9701H9.18243L9.6215 7.44269H6.41571V5.01251C6.41654 3.99297 6.69106 3.29509 8.11163 3.29509Z" fill="black"/>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link">
+							<svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M22 2.11613C21.1819 2.475 20.3101 2.71288 19.4013 2.82838C20.3363 2.27013 21.0499 1.39287 21.3854 0.3355C20.5136 0.85525 19.5511 1.22238 18.5254 1.42725C17.6976 0.545875 16.5179 0 15.2309 0C12.7339 0 10.7236 2.02675 10.7236 4.51137C10.7236 4.86888 10.7539 5.21263 10.8281 5.53988C7.0785 5.357 3.76062 3.55988 1.53175 0.82225C1.14262 1.49738 0.914375 2.27012 0.914375 3.102C0.914375 4.664 1.71875 6.04862 2.91775 6.85025C2.19312 6.8365 1.48225 6.62613 0.88 6.29475C0.88 6.3085 0.88 6.32638 0.88 6.34425C0.88 8.536 2.44338 10.3565 4.4935 10.7759C4.12638 10.8763 3.72625 10.9244 3.311 10.9244C3.02225 10.9244 2.73075 10.9079 2.45712 10.8474C3.0415 12.6335 4.69975 13.9466 6.6715 13.9893C5.137 15.1896 3.18863 15.9129 1.07938 15.9129C0.7095 15.9129 0.35475 15.8964 0 15.851C1.99787 17.1394 4.36563 17.875 6.919 17.875C15.2185 17.875 19.756 11 19.756 5.04075C19.756 4.84137 19.7491 4.64887 19.7395 4.45775C20.6346 3.8225 21.3867 3.02913 22 2.11613Z" fill="black"/>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link">
+							<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M6.875 0H15.125C18.9214 0 22 3.07862 22 6.875V15.125C22 18.9214 18.9214 22 15.125 22H6.875C3.07862 22 0 18.9214 0 15.125V6.875C0 3.07862 3.07862 0 6.875 0ZM15.125 19.9375C17.7787 19.9375 19.9375 17.7787 19.9375 15.125V6.875C19.9375 4.22125 17.7787 2.0625 15.125 2.0625H6.875C4.22125 2.0625 2.0625 4.22125 2.0625 6.875V15.125C2.0625 17.7787 4.22125 19.9375 6.875 19.9375H15.125Z" fill="black"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 11C5.5 7.96263 7.96263 5.5 11 5.5C14.0374 5.5 16.5 7.96263 16.5 11C16.5 14.0374 14.0374 16.5 11 16.5C7.96263 16.5 5.5 14.0374 5.5 11ZM7.5625 11C7.5625 12.8948 9.10525 14.4375 11 14.4375C12.8948 14.4375 14.4375 12.8948 14.4375 11C14.4375 9.10388 12.8948 7.5625 11 7.5625C9.10525 7.5625 7.5625 9.10388 7.5625 11Z" fill="black"/>
+								<path d="M17.6454 5.0875C17.6454 5.49226 17.3172 5.82038 16.9125 5.82038C16.5077 5.82038 16.1796 5.49226 16.1796 5.0875C16.1796 4.68274 16.5077 4.35463 16.9125 4.35463C17.3172 4.35463 17.6454 4.68274 17.6454 5.0875Z" fill="black"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<main class="page">
+			<div class="categories">
+				<div class="categories__container">
+					<div class="categories__blockhead blockhead blockhead--horizontal">
+						<h1 class="blockhead__title">Categories</h1>
+						<div class="blockhead__actions">
+							<a href="#" class="blockhead__button button">View All Categories</a>
+						</div>
+					</div>
+					<div class="categories__items">
+						<div class="categories__card card-categories card-categories--breakfast">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/breakfast.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Breakfast</a>
+							</h2>
+						</div>
+						<div class="categories__card card-categories card-categories--vegan">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/vegan.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Vegan</a>
+							</h2>
+						</div>
+						<div class="categories__card card-categories card-categories--meat">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/meat.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Meat</a>
+							</h2>
+						</div>
+						<div class="categories__card card-categories card-categories--dessert">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/dessert.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Dessert</a>
+							</h2>
+						</div>
+						<div class="categories__card card-categories card-categories--lunch">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/lunch.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Lunch</a>
+							</h2>
+						</div>
+						<div class="categories__card card-categories card-categories--chocolate">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/chocolate.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Chocolate</a>
+							</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="product-recipe">
+				<div class="product-recipe__container">
+					<div class="product-recipe__blockhead blockhead blockhead--center">
+						<h2 class="blockhead__title">Simple and tasty recipes</h2>
+						<div class="blockhead__text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
+							</p>
+						</div>
+					</div>
+					<div class="product-recipe__items">
+						<div class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/big-cheeseburger.avif" alt="Big Cheeseburger">
+								</a>
+								<a href="#" class="card-product__favorite card-product__favorite--active">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Big and Juicy Wagyu Beef Cheeseburger</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/fresh-roasted.avif" alt="Fresh Roasted">
+								</a>
+								<a href="#" class="card-product__favorite">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Fresh Lime Roasted Salmon with Ginger Sauce</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/strawberry.avif" alt="Strawberry">
+								</a>
+								<a href="#" class="card-product__favorite">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Strawberry Oatmeal Pancake with Honey Syrup</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/salad.avif" alt="Salad">
+								</a>
+								<a href="#" class="card-product__favorite card-product__favorite--active">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Fresh and Healthy Mixed Mayonnaise Salad</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/chicken-meatballs.avif" alt="Chicken Meatballs">
+								</a>
+								<a href="#" class="card-product__favorite">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Chicken Meatballs with Cream Cheese</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-recipe__card card-food">
+							<h3 class="card-food__title">
+								<a href="#" class="card-food__link-title">Don’t forget to eat healthy food</a>
+							</h3>
+							<div class="card-food__link-image">
+								<img class="card-food__image" src="img/tasty-recipes/healthy-food/ads-image.avif" alt="Image">
+								<img class="card-food__decor" src="img/tasty-recipes/healthy-food/star.svg" alt="Image">
+							</div>
+							<a href="#" target="_blank" class="card-food__link">www.foodieland.com</a>
+						</div>
+						<div class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/fruity-pancake.avif" alt="Fruity Pancake">
+								</a>
+								<a href="#" class="card-product__favorite card-product__favorite--active">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Fruity Pancake with Orange & Blueberry</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/chicken-rice.avif" alt="Chicken Rice">
+								</a>
+								<a href="#" class="card-product__favorite">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">The Best Easy One Pot Chicken and Rice</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/creamiest-chicken.avif" alt="Creamiest Chicken">
+								</a>
+								<a href="#" class="card-product__favorite">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">The Creamiest Creamy Chicken and Bacon Pasta</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">				
+			</div>
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>

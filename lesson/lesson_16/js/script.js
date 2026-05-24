@@ -1,11 +1,7 @@
 "use strict"
 
-document.addEventListener('click', documentActions)
+const menu = document.querySelector(".menu")
 
-function documentActions(e) {
-	const targetElement = e.target
-
-	if (targetElement.closest(".icon-menu")) {
-		document.documentElement.toggleAttribute("menu-open")
-	}
-}
+menu.addEventListener("click", () => {
+	menu.toggleAttribute("menu-open")
+})

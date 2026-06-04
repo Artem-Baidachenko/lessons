@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto%20Mono:wght@400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto%20Flex:wght@400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №17 — Модуль GRID</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title title">Урок №17 — Модуль GRID</h1>
+				<div class="header__menu menu">
+					<div class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#grid" class="menu__link">Властивості Grid-контейнера</a>
+							</li>
+							<li class="menu__item">
+								<a href="#grid-element" class="menu__link">Властивості Grid-елементів</a>
+							</li>
+							<li class="menu__item">
+								<a href="#template" class="menu__link">Завдання з Figma</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div id="top" class="hero">
+				<div class="hero__container">
+					<div class="hero__block block">
+						<h2 class="block__title title">Модуль Grid. CSS Grid Layout</h2>
+						<div class="block__text text">
+							<p>
+								<span class="bold">Grid</span> - це цілий модуль, що містить у собі набір властивостей та їхніх значень як для батька <span class="bold">grid-контейнера</span>, так і для його дочірніх елементів <span class="bold">grid-елементів</span>.
+							</p>
+						</div>
+					</div>
+					<div id="grid" class="hero__block block">
+						<h2 class="block__title title">Властивості Grid-контейнера</h2>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Варіанти оголошення grid-контейнера. Властивість display</h3>
+							<div class="block__text text">
+								<p>
+									Контейнер-сітка буває двох видів: звичайний display: grid і вбудований display: inline-grid. Перший генерує grid-контейнер рівня блоку, другий - grid-контейнер рівня рядка.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">display: grid; * (default);</span> — * (за замовченням) грід-контейнер визначається як блоковий елемент.
+								</p>
+							</div>
+							<div class="block__grid grid">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">display: inline-grid;</span> — грід-контейнер визначається як блочно-рядковий елемент.
+								</p>
+							</div>
+							<div class="block__grid grid grid--1">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__grid grid grid--1">
+								<div class="grid__item">7</div>
+								<div class="grid__item">8</div>
+								<div class="grid__item">9</div>
+								<div class="grid__item">10</div>
+								<div class="grid__item">11</div>
+								<div class="grid__item">12</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Визначення явної сітки. Властивості: grid-template-rows, grid-template-columns, grid-template, grid-template-areas</h3>
+							<div class="block__text text">
+								<p>
+									Кількість рядків / стовпців визначається за допомогою властивостей grid-template-rows і grid-template-columns. Властивості не успадковуються.
+								</p>
+								<p>
+									Кожен ідентифікатор сітки в значенні grid-template-areas відповідає комірці сітки. Щойно всі комірки ідентифіковані, браузер об'єднує всі суміжні комірки з однаковими іменами в одну область, яка охоплює всі їхні, за умови, що вони описують область прямокутної форми. Якщо ви спробуєте налаштувати більш складні області, весь шаблон буде недійсним і області сітки не будуть визначені.
+								</p>
+								<p>
+									Універсальна властивість побудови явних колонок та рядків grid-template: rows / columns;
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">Приклад №1 одиниця fr</span> — fr(фракція, фрагмент) - одиниця довжини, яка дозволяє створювати гнучкі доріжки. Не є одиницею виміру у звичайному її розумінні, тому не може бути представлена або об'єднана з іншими типами одиниць у виразах calc(). Загальний розмір фіксованих рядків або стовпців віднімається від доступного простору контейнера-сітки. Простір, що залишився, ділиться між рядками і стовпчиками з гнучкими розмірами пропорційно їхньому коефіцієнту.
+								</p>
+							</div>
+							<div class="block__grid grid grid--2">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__grid grid grid--3">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">Приклад №2 відсотки (%)</span> — розміри у % обчислюються від ширини або висоти контейнера-сітки.
+								</p>
+							</div>
+							<div class="block__grid grid grid--4">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__grid grid grid--5">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">Приклад №3 minmax</span> — функція minmax(min,max) визначає діапазон розмірів, більший або рівний min і менший або рівний max. Якщо max &lt; min, то max ігнорується, а minmax(min,max) обробляється як min. Значення в fr можна встановлювати тільки як максимальне.
+								</p>
+							</div>
+							<div class="block__grid grid grid--6">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__grid grid grid--7">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">Приклад №4 auto</span> — значення auto орієнтується на вміст елементів сітки однієї доріжки. Як мінімум, розглядається як мінімальний розмір елемента сітки, як визначено min-width або min-height. Як максимум, обробляється так само, як і max-content. Може розтягуватися за рахунок властивостей align-content і justify-content.
+								</p>
+							</div>
+							<div class="block__grid grid grid--8">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__grid grid grid--9">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">Приклад №5 repeat</span> — нотація repeat() представляє повторюваний фрагмент списку доріжок, що дає змогу записати в компактнішій формі велику кількість однакових за розмірами стовпчиків або рядків.
+								</p>
+							</div>
+							<div class="block__grid grid grid--10">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__grid grid grid--11">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">Приклад №6 areas</span> — властивість grid-template-areas визначає іменовані області сітки, які не пов'язані з будь-яким конкретним елементом сітки, але на які можна посилатися з властивостей розміщення сітки. Синтаксис властивості забезпечує візуалізацію структури сітки, полегшуючи розуміння загального макета контейнера-сітки. Властивість не успадковується.
+								</p>
+							</div>
+							<div class="block__grid grid grid--12">
+								<div class="grid__item">header</div>
+								<div class="grid__item">sidebar</div>
+								<div class="grid__item">main</div>
+								<div class="grid__item">sidebar</div>
+								<div class="grid__item">main</div>
+								<div class="grid__item">footer</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">Приклад №7 repeat + auto-fill + minmax</span> — використовуючи значення auto-fill, ви завжди отримаєте хоча б один стовпчик, навіть якщо він з якоїсь причини не поміщається в контейнер-сітку.
+								</p>
+							</div>
+							<div class="block__grid grid grid--13">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__grid grid grid--14">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">Приклад №8 repeat + auto-fit + minmax</span> — якщо ви використовуєте auto-fit, то доріжки, які не містять елементів сітки, будуть скинуті.
+								</p>
+							</div>
+							<div class="block__grid grid grid--15">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__grid grid grid--16">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Визначення неявної сітки. Властивості: grid-auto-columns, grid-auto-rows, grid-auto-flow</h3>
+							<div class="block__text text">
+								<p>
+									Якщо елемент сітки розташований у рядку або стовпці, розмір яких не визначено явно grid-template-rows або grid-template-columns, створюються неявні доріжки сітки для його зберігання. Це може статися в разі, якщо рядок або стовпець опинилися за межами встановлених розмірів сітки.
+								</p>
+								<p>
+									Елементи сітки, які не розміщені явно, автоматично поміщаються в незайнятий простір у контейнері-сітці за допомогою алгоритму автоматичного розміщення. Властивість grid-auto-flow керує автоматичним розміщенням елементів сітки без явного положення. Після заповнення явної сітки (або якщо явної сітки немає) автоматичне розміщення також призведе до генерації неявних доріжок сітки. Властивість не успадковується.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">grid-auto-columns + grid-auto-flow</span> — за замовчуванням ці автоматично додані доріжки мають мінімальний необхідний розмір. Властивості grid-auto-rows і grid-auto-columns дають змогу контролювати розмір неявних доріжок сітки. Якщо дано кілька розмірів доріжок, шаблон повторюється в міру необхідності, щоб знайти розмір неявних доріжок. Перша неявна доріжка сітки після явної сітки отримує перший заданий розмір і так далі. Властивості не успадковуються.
+								</p>
+							</div>
+							<div class="block__grid grid grid--17">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">grid-auto-rows</span> — за замовчуванням ці автоматично додані доріжки мають мінімальний необхідний розмір. Властивості grid-auto-rows і grid-auto-columns дають змогу контролювати розмір неявних доріжок сітки. Якщо дано кілька розмірів доріжок, шаблон повторюється в міру необхідності, щоб знайти розмір неявних доріжок. Перша неявна доріжка сітки після явної сітки отримує перший заданий розмір і так далі. Властивості не успадковуються.
+								</p>
+							</div>
+							<div class="block__grid grid grid--18">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">grid-auto-flow: row;</span> — алгоритм автоматичного розміщення розміщує елементи, заповнюючи кожен рядок по черзі зліва-направо (для LTR-мов), додаючи нові рядки в міру необхідності. Значення за замовчуванням.
+								</p>
+							</div>
+							<div class="block__grid grid grid--19">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">grid-auto-flow: column;</span> — алгоритм розміщує елементи, заповнюючи кожен стовпчик по черзі зверху-вниз, додаючи нові стовпчики в міру необхідності.
+								</p>
+							</div>
+							<div class="block__grid grid grid--20">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">grid-auto-flow: dense;</span> — алгоритм "щільного" укладання елементів. За необхідності може змінювати порядок проходження елементів, заповнюючи порожні місця більшими елементами.
+								</p>
+							</div>
+							<div class="block__grid grid grid--21">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Вирівнювання вмісту вздовж горизонтальної осі. Властивість: justify-items</h3>
+							<div class="block__text text">
+								<p>
+									Вирівнює вміст уздовж осі рядка (на відміну від align-items, який вирівнює елементи уздовж вертикальної осі). Це значення застосовується до всіх елементів сітки всередині контейнера. Властивість не успадковується.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-items: stretch; default</span> — заповнює всю ширину області (за замовчуванням).
+								</p>
+							</div>
+							<div class="block__grid grid grid--22">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-items: start;</span> — вирівнює вміст по лівій стороні області.
+								</p>
+							</div>
+							<div class="block__grid grid grid--23">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-items: end;</span> — вирівнює вміст по правій стороні області.
+								</p>
+							</div>
+							<div class="block__grid grid grid--24">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-items: center;</span> — вирівнює вміст по центру області.
+								</p>
+							</div>
+							<div class="block__grid grid grid--25">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Вирівнювання вмісту вздовж вертикальної осі. Властивість: align-items</h3>
+							<div class="block__text text">
+								<p>
+									Вирівнює вміст уздовж вертикальної осі (на відміну від justify-items який вирівнює елементи уздовж горизонтальної осі). Це значення застосовується до всіх елементів сітки всередині контейнера. Властивість не успадковується.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-items: stretch;</span> — заповнює всю ширину області (за замовчуванням).
+								</p>
+							</div>
+							<div class="block__grid grid grid--26">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-items: start;</span> — вирівнює вміст по верхній стороні області.
+								</p>
+							</div>
+							<div class="block__grid grid grid--27">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-items: end;</span> — вирівнює вміст по нижній стороні області.
+								</p>
+							</div>
+							<div class="block__grid grid grid--28">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-items: center;</span> — вирівнює вміст по центру області.
+								</p>
+							</div>
+							<div class="block__grid grid grid--29">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Вирівнювання сітки вздовж горизонтальної осі. Властивість: justify-content</h3>
+							<div class="block__text text">
+								<p>
+									Вирівнює сітку вздовж горизонтальної осі (на відміну від align-content, який вирівнює сітку вздовж вертикальної осі). Властивість не успадковується.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: start; (default)</span> — вирівнює сітку по лівій стороні контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--30">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: end;</span> — вирівнює сітку по правій стороні контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--31">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: center;</span> — вирівнює сітку по центру контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--32">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: stretch;</span> — масштабує елементи, щоб сітка могла заповнити всю ширину контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--33">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: space-around;</span> — однаковий простір між елементами, і напіврозмірні відступи по краях.
+								</p>
+							</div>
+							<div class="block__grid grid grid--34">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: space-between;</span> — однаковий простір між елементами, без відступів по краях.
+								</p>
+							</div>
+							<div class="block__grid grid grid--35">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-content: space-evenly;</span> — однаковий простір між елементами, і повнорозмірні відступи по краях.
+								</p>
+							</div>
+							<div class="block__grid grid grid--36">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Вирівнювання сітки вздовж вертикальної осі. Властивість: align-content</h3>
+							<div class="block__text text">
+								<p>
+									Вирівнює сітку вздовж вертикальної осі (на відміну від justify-content, яке вирівнює сітку вздовж горизонтальної осі). Властивість не успадковується.
+								</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-content: start; (default)</span> — вирівнює сітку по верхній стороні контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--37">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-content: end;</span> — вирівнює сітку по нижній стороні контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--38">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-content: center;</span> — вирівнює сітку по центру контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--39">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-content: stretch;</span> — масштабує елементи, щоб сітка могла заповнити всю ширину контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--40">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-content: space-around;</span> — однаковий простір між елементами, і напіврозмірні відступи по краях.
+								</p>
+							</div>
+							<div class="block__grid grid grid--41">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-content: space-between;</span> — однаковий простір між елементами, без відступів по краях.
+								</p>
+							</div>
+							<div class="block__grid grid grid--42">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-content: space-evenly;</span> — однаковий простір між елементами, і повнорозмірні відступи по краях.
+								</p>
+							</div>
+							<div class="block__grid grid grid--43">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+						</div>
+					</div>
+					<div id="grid-element" class="hero__block block">
+						<h2 class="block__title title">Властивості Grid-елементів</h2>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Перезапис вертикального положення align-self</h3>
+							<div class="block__text text">
+								<p>Властивість align-self вирівнює окремі елементи в гнучкому контейнері</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-self: stretch; * (default);</span> — * (за замовченням)
+								</p>
+							</div>
+							<div class="block__grid grid grid--44">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-self: start;</span> — елемент розташовується на початку контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--45">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-self: end;</span> — елемент розташовується в кінці контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--46">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">align-self: center;</span> — елемент розташовується по центру.
+								</p>
+							</div>
+							<div class="block__grid grid grid--47">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Перезапис горизонтального положення justify-self</h3>
+							<div class="block__text text">
+								<p>Властивість justify-self вирівнює окремі елементи в гнучкому контейнері</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-self: stretch; * (default);</span> — * (за замовченням)
+								</p>
+							</div>
+							<div class="block__grid grid grid--48">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-self: start;</span> — елемент розташовується на початку контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--49">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-self: end;</span> — елемент розташовується в кінці контейнера.
+								</p>
+							</div>
+							<div class="block__grid grid grid--50">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">justify-self: center;</span> — елемент розташовується по центру.
+								</p>
+							</div>
+							<div class="block__grid grid grid--51">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+							</div>
+						</div>
+						<div class="block__items">
+							<h3 class="block__title title title--fz20">Управління положенням елемента</h3>
+							<div class="block__text text">
+								<p>Початкова і кінечна позиція елементу по горизонталі</p>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">grid-column-start: ;</span><br>
+									<span class="bold">grid-column-end: ;</span><br>
+									<span class="bold">grid-column: ;</span>
+								</p>
+							</div>
+							<div class="block__grid grid grid--52">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+								<div class="grid__item">7</div>
+								<div class="grid__item">8</div>
+								<div class="grid__item">9</div>
+								<div class="grid__item">10</div>
+								<div class="grid__item">11</div>
+								<div class="grid__item">12</div>
+							</div>
+							<div class="block__text text">
+								<p>
+									<span class="bold">grid-row-start: ;</span><br>
+									<span class="bold">grid-row-end: ;</span><br>
+									<span class="bold">grid-row: ;</span>
+								</p>
+							</div>
+							<div class="block__grid grid grid--53">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+								<div class="grid__item">7</div>
+								<div class="grid__item">8</div>
+								<div class="grid__item">9</div>
+								<div class="grid__item">10</div>
+								<div class="grid__item">11</div>
+								<div class="grid__item">12</div>
+							</div>
+							<div class="block__grid grid grid--54">
+								<div class="grid__item">1</div>
+								<div class="grid__item">2</div>
+								<div class="grid__item">3</div>
+								<div class="grid__item">4</div>
+								<div class="grid__item">5</div>
+								<div class="grid__item">6</div>
+								<div class="grid__item">7</div>
+								<div class="grid__item">8</div>
+								<div class="grid__item">9</div>
+								<div class="grid__item">10</div>
+								<div class="grid__item">11</div>
+								<div class="grid__item">12</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="template" class="template">
+				<h2 class="template__title title">Завдання з Figma</h2>
+				<div class="template__about-info about-info">
+					<div class="about-info__container">
+						<div class="about-info__block">
+							<div class="about-info__content">
+								<h3 class="about-info__title">Our Story</h3>
+								<div class="about-info__text">
+									<p>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+									</p>
+									<p>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+									</p>
+									<p>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+									</p>
+									<p>
+										Lorem Ipsum is simply dummy text of the printing and typesetting
+									</p>
+								</div>
+							</div>
+							<div class="about-info__media">
+								<img class="about-info__image" src="img/about-info/01.avif" alt="Image">
+							</div>
+						</div>
+						<div class="about-info__block">
+							<div class="about-info__content">
+								<h3 class="about-info__title">Our Mission</h3>
+								<div class="about-info__text">
+									<p>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+									</p>
+									<p>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+									</p>
+									<p>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
+									</p>
+								</div>
+							</div>
+							<div class="about-info__media">
+								<img class="about-info__image" src="img/about-info/02.avif" alt="Image">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="template__expertise expertise">
+					<div class="expertise__container">
+						<div class="expertise__block-header block-header">
+							<h2 class="block-header__title">Core Expertise</h2>
+						</div>
+						<div class="expertise__cards">
+							<div class="expertise__card card-expertise">
+								<div class="card-expertise__top">
+									<h3 class="card-expertise__title">
+										<a href="#" class="card-expertise__link-title">AI & Machine Learning</a>
+									</h3>
+								</div>
+								<a href="#" class="card-expertise__link-image">
+									<img class="card-expertise__image" src="img/expertise/expertise-card/machine-learning.webp" alt="Machine Learning">
+								</a>
+								<div class="card-expertise__content">
+									<div class="card-expertise__text">
+										<p>
+											Expert development of neural networks, computer vision systems, and NLP solutions with proven production deployment experience.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="expertise__card card-expertise">
+								<div class="card-expertise__top">
+									<h3 class="card-expertise__title">
+										<a href="#" class="card-expertise__link-title">Blockchain</a>
+									</h3>
+								</div>
+								<a href="#" class="card-expertise__link-image">
+									<img class="card-expertise__image" src="img/expertise/expertise-card/blockchain.webp" alt="Blockchain">
+								</a>
+								<div class="card-expertise__content">
+									<div class="card-expertise__text">
+										<p>
+										Extensive experience in DeFi protocol development, smart contracts, and Web3 infrastructure implementation.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="expertise__card card-expertise">
+								<div class="card-expertise__top">
+									<h3 class="card-expertise__title">
+										<a href="#" class="card-expertise__link-title">Algorithmic Trading</a>
+									</h3>
+								</div>
+								<a href="#" class="card-expertise__link-image">
+									<img class="card-expertise__image" src="img/expertise/expertise-card/algorithmic-trading.webp" alt="Algorithmic Trading">
+								</a>
+								<div class="card-expertise__content">
+									<div class="card-expertise__text">
+										<p>
+											Specialized in high-frequency trading systems and ML-powered market analysis algorithms.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="expertise__card card-expertise">
+								<div class="card-expertise__top">
+									<h3 class="card-expertise__title">
+										<a href="#" class="card-expertise__link-title">Esports Management</a>
+									</h3>
+								</div>
+								<a href="#" class="card-expertise__link-image">
+									<img class="card-expertise__image" src="img/expertise/expertise-card/esports-management.webp" alt="Esports Management">
+								</a>
+								<div class="card-expertise__content">
+									<div class="card-expertise__text">
+										<p>
+											Pioneering data-driven approaches to team optimization and tournament management in competitive gaming.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="template__digcounters digcounters">
+					<div class="digcounters__container">
+						<div class="digcounters__block-header block-header">
+							<h2 class="block-header__title">Our Track Record</h2>
+						</div>
+						<div class="digcounters__digcounter digcounter">
+							<div class="digcounter__item">
+								<div class="digcounter__value"><span>12</span>+</div>
+								<h3 class="digcounter__title">Years AI & ML Development</h3>
+								<div class="digcounter__text">
+									<p>Building and deploying production-grade ML systems and AI solutions</p>
+								</div>
+							</div>
+							<div class="digcounter__item">
+								<div class="digcounter__value" data-text="$2B+">$<span>2</span>B+</div>
+								<h3 class="digcounter__title">Trading Volume Tested</h3>
+								<div class="digcounter__text">
+									<p>Through our battle-tested algorithmic trading systems</p>
+								</div>
+							</div>
+							<div class="digcounter__item">
+								<div class="digcounter__value"><span>100</span>+</div>
+								<h3 class="digcounter__title">Blockchain Projects Audited</h3>
+								<div class="digcounter__text">
+									<p>Including DeFi protocols and smart contracts</p>
+								</div>
+							</div>
+							<div class="digcounter__item">
+								<div class="digcounter__value"><span>25</span>+</div>
+								<h3 class="digcounter__title">Esports Teams Audited</h3>
+								<div class="digcounter__text">
+									<p>With data-driven performance optimization</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block">
+					<h2 class="footer__title title">Урок №17 — Модуль GRID</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#template" class="footer__link">Завдання з Figma</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h2 class="footer__title title">Корисні ресурси</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="https://validator.w3.org/nu/#file" target="_blank" class="footer__link">HTML-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="footer__link">CSS-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://caninclude.onrender.com/" target="_blank" class="footer__link">Сервіс для перевірки вкладеності</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cloudconvert.com/ttf-to-woff2" target="_blank" class="footer__link">TTF to WOFF2 Converter</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" class="footer__link">Генератор для border-radius</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://www.freeonlinetools.dev/tools/box-shadow-generator" target="_blank" class="footer__link">Посилання на генератор тіней для простого створення мультитіней.</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgradient.io/" target="_blank" class="footer__link">Генератор градієнтів</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer__link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements" target="_blank" class="footer__link">Довідкова інформація по псевдокласах та псевдоелементах</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://tinypng.com/" target="_blank" class="footer__link">Генератор зображень</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://arkanit7.github.io/bem-validator-extended/" target="_blank" class="footer__link">Валідатор для методології БЕМ (1)</a>
+						</li>						
+						<li class="footer__item">
+							<a href="https://nglazov.github.io/bem-validator-page/" target="_blank" class="footer__link">Валідатор для методології БЕМ (2)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://pavlokrovitskyi.github.io/BEM_validator/" target="_blank" class="footer__link">Валідатор для методології БЕМ (3)</a>
+						</li>	
+						<li class="footer__item">
+							<a href="https://yoksel.github.io/html-tree/" target="_blank" class="footer__link">Генератор HTML-дерева</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://bem-cheat-sheet.9elements.com/" target="_blank" class="footer__link">БЕМ Шпаргалка</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssposition.html" target="_blank" class="footer__link">Шпаргалка CSS позиціонування (CSS position)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/transform.html" target="_blank" class="footer__link">Шпаргалка CSS transform. 2D та 3D трансформації</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/flexbox.html" target="_blank" class="footer__link">Шпаргалка по Flexbox</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://flexboxfroggy.com/#ru" target="_blank" class="footer__link">Гра-тренажер Flexbox Froggy</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/grid.html" target="_blank" class="footer__link">Шпаргалка по CSS Grid Layout</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgridgarden.com/#ru" target="_blank" class="footer__link">Гра-тренажер Grid Garden</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

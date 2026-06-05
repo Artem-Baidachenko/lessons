@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №18 — Семантика</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title title">Урок №18 — Семантика</h1>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#template" class="menu__link">Завдання з Figma</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="hero">
+				<figure class="hero__media">
+					<img class="hero__image" src="img/hero/hero-bg.avif" alt="Image">
+				</figure>
+				<div class="hero__container">	
+					<div class="hero__buy buy">
+						<div class="buy__label">New Arrival</div>
+						<h2 class="buy__title">Discover Our New Collection</h2>
+						<div class="buy__text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+						</div>
+						<div class="buy__actions">
+							<a href="#" target="_blank" class="buy__button">BUY Now</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="range">	
+				<div class="range__container">
+					<div class="range__blockhead blockhead">
+						<h2 class="blockhead__title">Browse The Range</h2>
+						<div class="blockhead__text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</div>
+					<div class="range__items">
+						<article class="range__card card-range">
+							<a href="#" class="card-range__link-image">
+								<img class="card-range__image" src="img/range/dinning.avif" alt="Image">
+							</a>
+							<h3 class="card-range__title">
+								<a href="#" class="card-range__link-title">Dining</a>
+							</h3>
+						</article>
+						<article class="range__card card-range">
+							<a href="#" class="card-range__link-image">
+								<img class="card-range__image" src="img/range/living.avif" alt="Image">
+							</a>
+							<h3 class="card-range__title">
+								<a href="#" class="card-range__link-title">Living</a>
+							</h3>
+						</article>
+						<article class="range__card card-range">
+							<a href="#" class="card-range__link-image">
+								<img class="card-range__image" src="img/range/bedroom.avif" alt="Image">
+							</a>
+							<h3 class="card-range__title">
+								<a href="#" class="card-range__link-title">Bedroom</a>
+							</h3>
+						</article>
+					</div>
+				</div>			
+			</section>
+			<section class="products">
+				<div class="products__container">
+					<div class="products__blockhead blockhead">
+						<h2 class="blockhead__title">Our Products</h2>
+					</div>
+					<div class="products__column">
+						<article class="products__card card-products">
+							<div class="card-products__labels labels">
+								<a href="#" class="labels__label labels__label--sale">-30%</a>
+							</div>
+							<a href="#" class="card-products__link-image">
+								<img class="card-products__image" src="img/products/syltherine.avif" alt="Image">
+							</a>
+							<div class="card-products__body">
+								<h3 class="card-products__title">
+									<a href="#" class="card-products__link-title">Syltherine</a>
+								</h3>
+								<div class="card-products__description">
+									<p>Stylish cafe chair</p>
+								</div>
+								<div class="card-products__prices">
+									<div class="card-products__price">Rp 2.500.000</div>
+									<div class="card-products__price card-products__price--old">Rp 3.500.000</div>
+								</div>
+								<div class="card-products__actions actions-products">
+									<div class="actions-products__body">
+										<a href="#" class="actions-products__button button-products">Add to cart</a>
+										<div class="actions-products__icons">
+											<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+											<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+											<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="products__card card-products">
+							<a href="#" class="card-products__link-image">
+								<img class="card-products__image" src="img/products/leviosa.avif" alt="Image">
+							</a>
+							<div class="card-products__body">
+								<h3 class="card-products__title">
+									<a href="#" class="card-products__link-title">Leviosa</a>
+								</h3>
+								<div class="card-products__description">
+									<p>Stylish cafe chair</p>
+								</div>
+								<div class="card-products__prices">
+									<div class="card-products__price">Rp 2.500.000</div>
+								</div>
+								<div class="card-products__actions actions-products">
+									<div class="actions-products__body">
+										<a href="#" class="actions-products__button button-products">Add to cart</a>
+										<div class="actions-products__icons">
+											<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+											<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+											<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="products__card card-products">
+							<div class="card-products__labels labels">
+								<a href="#" class="labels__label labels__label--sale">-50%</a>
+							</div>
+							<a href="#" class="card-products__link-image">
+								<img class="card-products__image" src="img/products/lolito.avif" alt="Image">
+							</a>
+							<div class="card-products__body">
+								<h3 class="card-products__title">
+									<a href="#" class="card-products__link-title">Lolito</a>
+								</h3>
+								<div class="card-products__description">
+									<p>Luxury big sofa</p>
+								</div>
+								<div class="card-products__prices">
+									<div class="card-products__price">Rp 7.000.000</div>
+									<div class="card-products__price card-products__price--old">Rp 14.000.000</div>
+								</div>
+								<div class="card-products__actions actions-products">
+									<div class="actions-products__body">
+										<a href="#" class="actions-products__button button-products">Add to cart</a>
+										<div class="actions-products__icons">
+											<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+											<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+											<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="products__card card-products">
+							<div class="card-products__labels labels">
+								<a href="#" class="labels__label labels__label--new">New</a>
+							</div>
+							<a href="#" class="card-products__link-image">
+								<img class="card-products__image" src="img/products/respira.avif" alt="Image">
+							</a>
+							<div class="card-products__body">
+								<h3 class="card-products__title">
+									<a href="#" class="card-products__link-title">Respira</a>
+								</h3>
+								<div class="card-products__description">
+									<p>Outdoor bar table and stool</p>
+								</div>
+								<div class="card-products__prices">
+									<div class="card-products__price">Rp 500.000</div>
+								</div>
+								<div class="card-products__actions actions-products">
+									<div class="actions-products__body">
+										<a href="#" class="actions-products__button button-products">Add to cart</a>
+										<div class="actions-products__icons">
+											<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+											<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+											<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="products__card card-products">
+							<a href="#" class="card-products__link-image">
+								<img class="card-products__image" src="img/products/grifo.avif" alt="Image">
+							</a>
+							<div class="card-products__body">
+								<h3 class="card-products__title">
+									<a href="#" class="card-products__link-title">Grifo</a>
+								</h3>
+								<div class="card-products__description">
+									<p>Night lamp</p>
+								</div>
+								<div class="card-products__prices">
+									<div class="card-products__price">Rp 1.500.000</div>
+								</div>
+								<div class="card-products__actions actions-products">
+									<div class="actions-products__body">
+										<a href="#" class="actions-products__button button-products">Add to cart</a>
+										<div class="actions-products__icons">
+											<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+											<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+											<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="products__card card-products">
+							<div class="card-products__labels labels">
+								<a href="#" class="labels__label labels__label--new">New</a>
+							</div>
+							<a href="#" class="card-products__link-image">
+								<img class="card-products__image" src="img/products/muggo.avif" alt="Image">
+							</a>
+							<div class="card-products__body">
+								<h3 class="card-products__title">
+									<a href="#" class="card-products__link-title">Muggo</a>
+								</h3>
+								<div class="card-products__description">
+									<p>Small mug</p>
+								</div>
+								<div class="card-products__prices">
+									<div class="card-products__price">Rp 150.000</div>
+								</div>
+								<div class="card-products__actions actions-products">
+									<div class="actions-products__body">
+										<a href="#" class="actions-products__button button-products">Add to cart</a>
+										<div class="actions-products__icons">
+											<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+											<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+											<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="products__card card-products">
+							<div class="card-products__labels labels">
+								<a href="#" class="labels__label labels__label--sale">-50%</a>
+							</div>
+							<a href="#" class="card-products__link-image">
+								<img class="card-products__image" src="img/products/pingky.avif" alt="Image">
+							</a>
+							<div class="card-products__body">
+								<h3 class="card-products__title">
+									<a href="#" class="card-products__link-title">Pingky</a>
+								</h3>
+								<div class="card-products__description">
+									<p>Cute bed set</p>
+								</div>
+								<div class="card-products__prices">
+									<div class="card-products__price">Rp 7.000.000</div>
+									<div class="card-products__price card-products__price--old">Rp 14.000.000</div>
+								</div>
+								<div class="card-products__actions actions-products">
+									<div class="actions-products__body">
+										<a href="#" class="actions-products__button button-products">Add to cart</a>
+										<div class="actions-products__icons">
+											<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+											<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+											<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="products__card card-products">
+							<div class="card-products__labels labels">
+								<a href="#" class="labels__label labels__label--new">New</a>
+							</div>
+							<a href="#" class="card-products__link-image">
+								<img class="card-products__image" src="img/products/potty.avif" alt="Image">
+							</a>
+							<div class="card-products__body">
+								<h3 class="card-products__title">
+									<a href="#" class="card-products__link-title">Potty</a>
+								</h3>
+								<div class="card-products__description">
+									<p>Minimalist flower pot</p>
+								</div>
+								<div class="card-products__prices">
+									<div class="card-products__price">Rp 500.000</div>
+								</div>
+								<div class="card-products__actions actions-products">
+									<div class="actions-products__body">
+										<a href="#" class="actions-products__button button-products">Add to cart</a>
+										<div class="actions-products__icons">
+											<a href="#" class="actions-products__link actions-products__link--share">Share</a>
+											<a href="#" class="actions-products__link actions-products__link--compare">Compare</a>
+											<a href="#" class="actions-products__link actions-products__link--favorite">Like</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="products__more">
+						<button type="button" class="products__button-show">Show More</button>
+					</div>
+				</div>				
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block">
+					<h2 class="footer__title title">Урок №18 — Семантика</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#template" class="footer__link">Завдання з Figma</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h2 class="footer__title title">Корисні ресурси</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="https://validator.w3.org/nu/#file" target="_blank" class="footer__link">HTML-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="footer__link">CSS-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://caninclude.onrender.com/" target="_blank" class="footer__link">Сервіс для перевірки вкладеності</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cloudconvert.com/ttf-to-woff2" target="_blank" class="footer__link">TTF to WOFF2 Converter</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" class="footer__link">Генератор для border-radius</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://www.freeonlinetools.dev/tools/box-shadow-generator" target="_blank" class="footer__link">Посилання на генератор тіней для простого створення мультитіней.</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgradient.io/" target="_blank" class="footer__link">Генератор градієнтів</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer__link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements" target="_blank" class="footer__link">Довідкова інформація по псевдокласах та псевдоелементах</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://tinypng.com/" target="_blank" class="footer__link">Генератор зображень</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://arkanit7.github.io/bem-validator-extended/" target="_blank" class="footer__link">Валідатор для методології БЕМ (1)</a>
+						</li>						
+						<li class="footer__item">
+							<a href="https://nglazov.github.io/bem-validator-page/" target="_blank" class="footer__link">Валідатор для методології БЕМ (2)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://pavlokrovitskyi.github.io/BEM_validator/" target="_blank" class="footer__link">Валідатор для методології БЕМ (3)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://yoksel.github.io/html-tree/" target="_blank" class="footer__link">Генератор HTML-дерева</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://bem-cheat-sheet.9elements.com/" target="_blank" class="footer__link">БЕМ Шпаргалка</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssposition.html" target="_blank" class="footer__link">Шпаргалка CSS позиціонування (CSS position)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/transform.html" target="_blank" class="footer__link">Шпаргалка CSS transform. 2D та 3D трансформації</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/flexbox.html" target="_blank" class="footer__link">Шпаргалка по Flexbox</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://flexboxfroggy.com/#ru" target="_blank" class="footer__link">Гра-тренажер Flexbox Froggy</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/grid.html" target="_blank" class="footer__link">Шпаргалка по CSS Grid Layout</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgridgarden.com/#ru" target="_blank" class="footer__link">Гра-тренажер Grid Garden</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/semantics-tags.html" target="_blank" class="footer__link">Семантична верстка. Основні HTML-теги</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/semantics-code.html" target="_blank" class="footer__link">Семантична верстка на практиці</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

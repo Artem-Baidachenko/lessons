@@ -742,7 +742,7 @@ body {
 }
 .expertise__cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(306px, 100%), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
 	gap: 10px;
 }
 .expertise__card {

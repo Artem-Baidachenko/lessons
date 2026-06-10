@@ -202,12 +202,12 @@ body {
 .em {
 	font-size: 1.25rem;
 	width: 20em;
-	background-color: #7a956b;
+	background-color: #1c2349;
 	color: #fff;
 	padding: 0.9375rem;
 }
 .box--h {
-	background-color: #7a956b;
+	background-color: #1c2349;
 	height: 100svh;
 	padding-block: 1.25rem;
 	padding-inline: 2.125rem;
@@ -215,7 +215,7 @@ body {
 }
 .calc {
 	width: calc(100% - 1.25rem);
-	background-color: #77608d;
+	background-color: #1c2349;
 	padding-block: 1.25rem;
 	padding-inline: 1.875rem;
 	color: #fff;
@@ -225,7 +225,7 @@ body {
 }
 .minmax {
 	width: min(500px, 100%);
-	background-color: #794f45;
+	background-color: #1c2349;
 	color: #fff;
 	padding: 0.9375rem;
 }

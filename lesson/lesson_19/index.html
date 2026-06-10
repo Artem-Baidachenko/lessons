@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №19 — Відносні одиниці та інше</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title title">Урок №19 — Відносні одиниці та інше</h1>
+				<div class="header__menu menu">
+					<div class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#template" class="menu__link">Завдання з Figma</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="info-block">
+				<div class="info-block__container">
+					<div class="info-block__items">
+						<div class="info-block__item">
+							<h2 class="info-block__title title">Відносні одиниці</h2>
+							<div class="info-block__box box">
+								<h3 class="box__title title">Відсотки %</h3>
+								<div class="box__text text">
+									<p>Ш.Б.Е. - ширина батьківського елементу</p>
+									<p>В.Б.Е. - ширина батьківського елементу</p>
+								</div>
+								<div class="box__block block">
+									<div class="block__text text">
+										<p>
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius rem, ipsa placeat eligendi maxime accusamus quidem pariatur nesciunt quaerat est perspiciatis voluptatibus ratione blanditiis, laboriosam earum inventore laudantium molestias suscipit?
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="info-block__box box">
+								<h3 class="box__title title">REM</h3>
+								<div class="box__text text">
+									<p>Відносно розміру шрифту за замовченням</p>
+									<p>1rem = 16px (розміру шрифту за замовченням)</p>
+								</div>
+								<div class="box__block block">
+									<div class="block__text text rem">
+										<p>
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius rem, ipsa placeat eligendi maxime accusamus quidem pariatur nesciunt quaerat est perspiciatis voluptatibus ratione blanditiis, laboriosam earum inventore laudantium molestias suscipit?
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="info-block__box box">
+								<h3 class="box__title title">EM</h3>
+								<div class="box__text text">
+									<p>Відносно поточного, шрифту за замовченням або успаткованого розміру шрифту</p>
+								</div>
+								<div class="box__block block">
+									<div class="block__text text em">
+										<p>
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius rem, ipsa placeat eligendi maxime accusamus quidem pariatur nesciunt quaerat est perspiciatis voluptatibus ratione blanditiis, laboriosam earum inventore laudantium molestias suscipit?
+										</p>
+									</div>
+								</div>
+								<div class="box__text text">
+									<p>Коли ми використовуємо EM?</p>
+									<p>1. Коли треба прив'язатись до поточного або успаткованого розміру шрифту</p>
+									<p>2. У @media</p>
+									<p>В усіх інших випадках використовуються REM</p>
+								</div>
+							</div>
+							<div class="info-block__box box">
+								<h3 class="box__title title">Одиниці в'юпорту</h3>
+								<div class="box__text text">
+									<p>VW - відносно ширини</p>
+ 									<p>VH - відносно висоти</p>
+									<p>VMAX - більший розмір</p>
+									<p>VMIN - меньший розмір</p>
+									<p>SVH, LVH, DVH</p>
+									<p>SVW, LVW, DVW</p>
+								</div>
+								<div class="box box--h">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, provident ut! Voluptas nam rem corporis dolorem eveniet ex quo possimus quod, vero recusandae voluptatem, debitis quisquam nobis blanditiis tempora pariatur.
+								</div>
+							</div>
+						</div>
+						<div class="info-block__item">
+							<h2 class="info-block__title title">Абсолютна одиниця</h2>
+							<div class="info-block__box box">
+								<h3 class="box__title title">PX</h3>
+								<div class="box__text text">
+									<p>Використовуємо тільки тоді, коли хочемо зафіксувати конкретний розмір який не від чого не залежить.</p>
+								</div>
+							</div>
+							<div class="info-block__box box">
+								<h3 class="box__title title">CALC</h3>
+								<div class="box__text text">
+									<p>Дозволяє виконувати обчислення в CSS включно між різними одиницями (+ або -)</p>
+								</div>
+								<div class="box__block block">
+									<div class="block__text text calc">
+										<p>
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius rem, ipsa placeat eligendi maxime accusamus quidem pariatur nesciunt quaerat est perspiciatis voluptatibus ratione blanditiis, laboriosam earum inventore laudantium molestias suscipit?
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="info-block__box box">
+								<h3 class="box__title title">CLAMP</h3>
+								<div class="box__text text">
+									<p>Встановлює межі знеачення властивості, а також проміжне значення</p>
+								</div>
+								<div class="box__block block">
+									<div class="block__text text clamp">
+										<p>
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius rem, ipsa placeat eligendi maxime accusamus quidem pariatur nesciunt quaerat est perspiciatis voluptatibus ratione blanditiis, laboriosam earum inventore laudantium molestias suscipit?
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="info-block__box box">
+								<h3 class="box__title title">MIN, MAX</h3>
+								<div class="box__block block">
+									<div class="block__text text minmax">
+										<p>
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius rem, ipsa placeat eligendi maxime accusamus quidem pariatur nesciunt quaerat est perspiciatis voluptatibus ratione blanditiis, laboriosam earum inventore laudantium molestias suscipit?
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="info-block__box box">
+								<h3 class="box__title title">Вертикальний текст</h3>
+								<div class="box__block block">
+									<div class="block__text text vertical-text">
+										<p>
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius rem, ipsa placeat eligendi maxime accusamus quidem pariatur nesciunt quaerat est perspiciatis voluptatibus ratione blanditiis, laboriosam earum inventore laudantium molestias suscipit?
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="info-block__box box">
+								<h3 class="box__title title">Дзеркальне відображення</h3>
+								<div class="box__block block">
+									<div class="block__text text mirror">
+										<p>
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius rem, ipsa placeat eligendi maxime accusamus quidem pariatur nesciunt quaerat est perspiciatis voluptatibus ratione blanditiis, laboriosam earum inventore laudantium molestias suscipit?
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="template" class="hero">
+				<div class="hero__container">
+					<div class="hero__body body-hero">
+						<div class="body-hero__content">
+							<div class="body-hero__labels">
+								<div class="body-hero__label">
+									<img class="body-hero__icon" src="img/hero/hot-recipes.webp" alt="Image">
+									<div class="body-hero__text">Hot Recipes</div>
+								</div>
+							</div>
+							<div class="body-hero__blockhead blockhead blockhead--hero">
+								<h2 class="blockhead__title blockhead__title--big">Spicy delicious chicken wings</h2>
+								<div class="blockhead__text">
+									<p>
+										Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
+									</p>
+								</div>
+								<div class="blockhead__options options-blockhead">
+									<div class="options-blockhead__item options-blockhead__item--timer">30 Minutes</div>
+									<div class="options-blockhead__item options-blockhead__item--snack">Chicken</div>
+								</div>
+							</div>
+							<div class="body-hero__bottom">
+								<figure class="body-hero__items">
+									<img class="body-hero__avatar" src="img/hero/avatar.webp" alt="Image">
+									<figcaption class="body-hero__description">
+										<div class="body-hero__name">John Smith</div>
+										<time class="body-hero__date" datetime="2022-03-15">15 March 2022</time>
+									</figcaption>
+								</figure>
+								<div class="body-hero__actions">
+									<a href="#" class="body-hero__button button button--icon">
+										<span>View Recipes</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<picture class="hero__media">
+						<img class="hero__image" src="img/hero/baked-image.avif" alt="Image">
+					</picture>					
+				</div>
+			</section>
+			<section class="categories">
+				<div class="categories__container">
+					<div class="categories__blockhead blockhead blockhead--horizontal">
+						<h2 class="blockhead__title">Categories</h2>
+						<div class="blockhead__actions">
+							<a href="#" class="blockhead__button button">View All Categories</a>
+						</div>
+					</div>
+					<div class="categories__items">
+						<div class="categories__card card-categories card-categories--breakfast">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/breakfast.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Breakfast</a>
+							</h2>
+						</div>
+						<div class="categories__card card-categories card-categories--vegan">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/vegan.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Vegan</a>
+							</h2>
+						</div>
+						<div class="categories__card card-categories card-categories--meat">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/meat.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Meat</a>
+							</h2>
+						</div>
+						<div class="categories__card card-categories card-categories--dessert">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/dessert.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Dessert</a>
+							</h2>
+						</div>
+						<div class="categories__card card-categories card-categories--lunch">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/lunch.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Lunch</a>
+							</h2>
+						</div>
+						<div class="categories__card card-categories card-categories--chocolate">
+							<a href="#" class="card-categories__link-image">
+								<img class="card-categories__image" src="img/categories/chocolate.avif" alt="Image">
+							</a>
+							<h2 class="card-categories__title">
+								<a href="#" class="card-categories__link-title">Chocolate</a>
+							</h2>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="product-recipe">
+				<div class="product-recipe__container">
+					<div class="product-recipe__blockhead blockhead blockhead--center">
+						<h2 class="blockhead__title">Simple and tasty recipes</h2>
+						<div class="blockhead__text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
+							</p>
+						</div>
+					</div>
+					<div class="product-recipe__items">
+						<article class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/big-cheeseburger.avif" alt="Big Cheeseburger">
+								</a>
+								<a href="#" class="card-product__favorite card-product__favorite--active">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Big and Juicy Wagyu Beef Cheeseburger</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</article>
+						<article class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/fresh-roasted.avif" alt="Fresh Roasted">
+								</a>
+								<a href="#" class="card-product__favorite">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Fresh Lime Roasted Salmon with Ginger Sauce</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</article>
+						<article class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/strawberry.avif" alt="Strawberry">
+								</a>
+								<a href="#" class="card-product__favorite">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Strawberry Oatmeal Pancake with Honey Syrup</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</article>
+						<article class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/salad.avif" alt="Salad">
+								</a>
+								<a href="#" class="card-product__favorite card-product__favorite--active">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Fresh and Healthy Mixed Mayonnaise Salad</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</article>
+						<article class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/chicken-meatballs.avif" alt="Chicken Meatballs">
+								</a>
+								<a href="#" class="card-product__favorite">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Chicken Meatballs with Cream Cheese</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</article>
+						<article class="product-recipe__card card-food">
+							<h3 class="card-food__title">
+								<a href="#" class="card-food__link-title">Don’t forget to eat healthy food</a>
+							</h3>
+							<div class="card-food__link-image">
+								<img class="card-food__image" src="img/tasty-recipes/healthy-food/ads-image.avif" alt="Image">
+								<img class="card-food__decor" src="img/tasty-recipes/healthy-food/star.svg" alt="Image">
+							</div>
+							<a href="#" target="_blank" class="card-food__link">www.foodieland.com</a>
+						</article>
+						<article class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/fruity-pancake.avif" alt="Fruity Pancake">
+								</a>
+								<a href="#" class="card-product__favorite card-product__favorite--active">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">Fruity Pancake with Orange & Blueberry</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</article>
+						<article class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/chicken-rice.avif" alt="Chicken Rice">
+								</a>
+								<a href="#" class="card-product__favorite">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">The Best Easy One Pot Chicken and Rice</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</article>
+						<article class="product-recipe__card card-product">
+							<div class="card-product__top">
+								<a href="#" class="card-product__link-image">
+									<img class="card-product__image" src="img/tasty-recipes/creamiest-chicken.avif" alt="Creamiest Chicken">
+								</a>
+								<a href="#" class="card-product__favorite">
+									<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.625 8.2786e-06C13.7519 -0.00149138 12.8905 0.200775 12.1093 0.590718C11.328 0.980661 10.6486 1.54752 10.125 2.24621C9.41584 1.30266 8.42792 0.606001 7.30103 0.254824C6.17415 -0.0963541 4.96536 -0.0842713 3.84572 0.289363C2.72607 0.662997 1.75228 1.37926 1.06212 2.3368C0.371965 3.29434 0.0003989 4.44467 0 5.62501C0 12.3621 9.36008 17.6813 9.75851 17.9044C9.87048 17.9671 9.99667 18 10.125 18C10.2533 18 10.3795 17.9671 10.4915 17.9044C12.213 16.8961 13.8287 15.7173 15.3142 14.3856C18.5893 11.438 20.25 8.49047 20.25 5.62501C20.2483 4.13368 19.6551 2.70393 18.6006 1.6494C17.5461 0.594873 16.1163 0.00169855 14.625 8.2786e-06Z" fill="#DBE2E5"/>
+									</svg>
+								</a>
+							</div>
+							<div class="card-product__body">
+								<h3 class="card-product__title">
+									<a href="#" class="card-product__link-title">The Creamiest Creamy Chicken and Bacon Pasta</a>
+								</h3>
+								<div class="card-product__items">
+									<div class="card-product__item card-product__item--timer">30 Minutes</div>
+									<div class="card-product__item card-product__item--snack">Snack</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="info-chef">
+				<div class="info-chef__container">
+					<div class="info-chef__content">
+						<div class="info-chef__blockhead blockhead blockhead--left">
+							<h2 class="blockhead__title">Everyone can be a chef in their own kitchen</h2>
+							<div class="blockhead__text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
+								</p>
+							</div>
+						</div>
+						<div class="info-chef__actions">
+							<a href="#" target="_blank" class="info-chef__button button button--dark">Learn More</a>
+						</div>
+					</div>
+					<div class="info-chef__body">
+						<div class="info-chef__items">
+							<picture class="info-chef__media">
+								<img class="info-chef__image" src="img/info/male-chef.avif" alt="Image">
+							</picture>
+							<div class="info-chef__decor">
+								<img class="info-chef__tomate" src="img/info/tomate.webp" alt="Image">
+								<img class="info-chef__meat" src="img/info/meat.webp" alt="Image">
+								<img class="info-chef__onion" src="img/info/onion.webp" alt="Image">
+								<img class="info-chef__vegan" src="img/info/vegan.webp" alt="Image">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="reviews__container">
+					<div class="reviews__blockhead blockhead blockhead--center">
+						<h2 class="blockhead__title">Check out @foodieland on Instagram</h2>
+						<div class="blockhead__text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
+							</p>
+						</div>
+					</div>
+					<div class="reviews__columns">
+						<div class="reviews__card card-reviews">
+							<div class="card-reviews__top top-card">
+								<figure class="top-card__items">
+									<a href="#" class="card-reviews__logo">
+										<img src="img/reviews/logo.webp" alt="Image">
+									</a>
+									<figcaption class="card-reviews__item">
+										<div class="card-reviews__name">
+											<div class="card-reviews__icon">
+												<img src="img/reviews/icon-check.svg" alt="Image">
+											</div>
+											<div class="card-reviews__text">Foodieland.</div>
+										</div>
+										<div class="card-reviews__city">Tokyo, Japan</div>
+									</figcaption>
+								</figure>
+								<a href="#" class="top-card__link"></a>
+							</div>
+							<a href="#" class="card-reviews__link">
+								<img class="card-reviews__image" src="img/reviews/01.avif" alt="Image">
+								<span class="card-reviews__number">1/3</span>
+							</a>
+							<div class="card-reviews__content content-reviews">
+								<div class="content-reviews__top">
+									<ul class="content-reviews__icons">
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--favorite"></a>
+										</li>
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--comment"></a>
+										</li>
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--message"></a>
+										</li>
+									</ul>
+									<div class="content-reviews__pagination">
+										<span class="content-reviews__bullets content-reviews__bullets--active"></span>
+										<span class="content-reviews__bullets"></span>
+										<span class="content-reviews__bullets"></span>
+									</div>
+									<ul class="content-reviews__icons">
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--save"></a>
+										</li>
+									</ul>
+								</div>
+								<div class="content-reviews__body">
+									<div class="content-reviews__user">
+										<img class="content-reviews__avatar" src="img/reviews/avatar.webp" alt="Image">
+										<div class="content-reviews__description">Liked by <span>craig_love</span> and <span>44,686</span></div>
+									</div>
+									<div class="content-reviews__text">
+										<p><span>Foodieland.</span> The vegetables dishes need to have certain vitamin for those people</p>
+									</div>
+									<time class="content-reviews__date" datetime="09-19">September 19</time>
+								</div>
+							</div>
+						</div>
+						<div class="reviews__card card-reviews">
+							<div class="card-reviews__top top-card">
+								<figure class="top-card__items">
+									<a href="#" class="card-reviews__logo">
+										<img src="img/reviews/logo.webp" alt="Image">
+									</a>
+									<figcaption class="card-reviews__item">
+										<div class="card-reviews__name">
+											<div class="card-reviews__icon">
+												<img src="img/reviews/icon-check.svg" alt="Image">
+											</div>
+											<div class="card-reviews__text">Foodieland.</div>
+										</div>
+										<div class="card-reviews__city">Tokyo, Japan</div>
+									</figcaption>
+								</figure>
+								<a href="#" class="top-card__link"></a>
+							</div>
+							<a href="#" class="card-reviews__link">
+								<img class="card-reviews__image" src="img/reviews/02.avif" alt="Image">
+								<span class="card-reviews__number">1/3</span>
+							</a>
+							<div class="card-reviews__content content-reviews">
+								<div class="content-reviews__top">
+									<ul class="content-reviews__icons">
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--favorite"></a>
+										</li>
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--comment"></a>
+										</li>
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--message"></a>
+										</li>
+									</ul>
+									<div class="content-reviews__pagination">
+										<span class="content-reviews__bullets content-reviews__bullets--active"></span>
+										<span class="content-reviews__bullets"></span>
+										<span class="content-reviews__bullets"></span>
+									</div>
+									<ul class="content-reviews__icons">
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--save"></a>
+										</li>
+									</ul>
+								</div>
+								<div class="content-reviews__body">
+									<div class="content-reviews__user">
+										<img class="content-reviews__avatar" src="img/reviews/avatar.webp" alt="Image">
+										<div class="content-reviews__description">Liked by <span>craig_love</span> and <span>44,686</span></div>
+									</div>
+									<div class="content-reviews__text">
+										<p><span>Foodieland.</span> Sweet food can bring someon into happiness as long as they don’t eat to much</p>
+									</div>
+									<time class="content-reviews__date" datetime="09-19">September 19</time>
+								</div>
+							</div>
+						</div>
+						<div class="reviews__card card-reviews">
+							<div class="card-reviews__top top-card">
+								<figure class="top-card__items">
+									<a href="#" class="card-reviews__logo">
+										<img src="img/reviews/logo.webp" alt="Image">
+									</a>
+									<figcaption class="card-reviews__item">
+										<div class="card-reviews__name">
+											<div class="card-reviews__icon">
+												<img src="img/reviews/icon-check.svg" alt="Image">
+											</div>
+											<div class="card-reviews__text">Foodieland.</div>
+										</div>
+										<div class="card-reviews__city">Tokyo, Japan</div>
+									</figcaption>
+								</figure>
+								<a href="#" class="top-card__link"></a>
+							</div>
+							<a href="#" class="card-reviews__link">
+								<img class="card-reviews__image" src="img/reviews/03.avif" alt="Image">
+								<span class="card-reviews__number">1/3</span>
+							</a>
+							<div class="card-reviews__content content-reviews">
+								<div class="content-reviews__top">
+									<ul class="content-reviews__icons">
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--favorite"></a>
+										</li>
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--comment"></a>
+										</li>
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--message"></a>
+										</li>
+									</ul>
+									<div class="content-reviews__pagination">
+										<span class="content-reviews__bullets content-reviews__bullets--active"></span>
+										<span class="content-reviews__bullets"></span>
+										<span class="content-reviews__bullets"></span>
+									</div>
+									<ul class="content-reviews__icons">
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--save"></a>
+										</li>
+									</ul>
+								</div>
+								<div class="content-reviews__body">
+									<div class="content-reviews__user">
+										<img class="content-reviews__avatar" src="img/reviews/avatar.webp" alt="Image">
+										<div class="content-reviews__description">Liked by <span>craig_love</span> and <span>44,686</span></div>
+									</div>
+									<div class="content-reviews__text">
+										<p><span>Foodieland.</span> What are you doing before start cooking? prepare the  tools or ingredients?</p>
+									</div>
+									<time class="content-reviews__date" datetime="09-19">September 19</time>
+								</div>
+							</div>
+						</div>
+						<div class="reviews__card card-reviews">
+							<div class="card-reviews__top top-card">
+								<figure class="top-card__items">
+									<a href="#" class="card-reviews__logo">
+										<img src="img/reviews/logo.webp" alt="Image">
+									</a>
+									<figcaption class="card-reviews__item">
+										<div class="card-reviews__name">
+											<div class="card-reviews__icon">
+												<img src="img/reviews/icon-check.svg" alt="Image">
+											</div>
+											<div class="card-reviews__text">Foodieland.</div>
+										</div>
+										<div class="card-reviews__city">Tokyo, Japan</div>
+									</figcaption>
+								</figure>
+								<a href="#" class="top-card__link"></a>
+							</div>
+							<a href="#" class="card-reviews__link">
+								<img class="card-reviews__image" src="img/reviews/04.avif" alt="Image">
+								<span class="card-reviews__number">1/3</span>
+							</a>
+							<div class="card-reviews__content content-reviews">
+								<div class="content-reviews__top">
+									<ul class="content-reviews__icons">
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--favorite"></a>
+										</li>
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--comment"></a>
+										</li>
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--message"></a>
+										</li>
+									</ul>
+									<div class="content-reviews__pagination">
+										<span class="content-reviews__bullets content-reviews__bullets--active"></span>
+										<span class="content-reviews__bullets"></span>
+										<span class="content-reviews__bullets"></span>
+									</div>
+									<ul class="content-reviews__icons">
+										<li class="content-reviews__item">
+											<a href="#" class="content-reviews__link content-reviews__link--save"></a>
+										</li>
+									</ul>
+								</div>
+								<div class="content-reviews__body">
+									<div class="content-reviews__user">
+										<img class="content-reviews__avatar" src="img/reviews/avatar.webp" alt="Image">
+										<div class="content-reviews__description">Liked by <span>craig_love</span> and <span>44,686</span></div>
+									</div>
+									<div class="content-reviews__text">
+										<p><span>Foodieland.</span> Steak never be wrong, it’s suitable for you who want romantic dinner</p>
+									</div>
+									<time class="content-reviews__date" datetime="09-19">September 19</time>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="reviews__button button button--dark button--inst">Visit Our Instagram</a>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block">
+					<h2 class="footer__title title">Урок №19 — Відносні одиниці та інше</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#top" class="footer__link">Наверх</a>
+						</li>
+						<li class="footer__item">
+							<a href="#template" class="footer__link">Завдання з Figma</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h2 class="footer__title title">Корисні ресурси</h2>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="https://validator.w3.org/nu/#file" target="_blank" class="footer__link">HTML-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://jigsaw.w3.org/css-validator/" target="_blank" class="footer__link">CSS-валідатор</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://caninclude.onrender.com/" target="_blank" class="footer__link">Сервіс для перевірки вкладеності</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cloudconvert.com/ttf-to-woff2" target="_blank" class="footer__link">TTF to WOFF2 Converter</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://9elements.github.io/fancy-border-radius/" target="_blank" class="footer__link">Генератор для border-radius</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://www.freeonlinetools.dev/tools/box-shadow-generator" target="_blank" class="footer__link">Посилання на генератор тіней для простого створення мультитіней.</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgradient.io/" target="_blank" class="footer__link">Генератор градієнтів</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssbackground.html" target="_blank" class="footer__link">Шпаргалка по властивостях background</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://developer.mozilla.org/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements" target="_blank" class="footer__link">Довідкова інформація по псевдокласах та псевдоелементах</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://tinypng.com/" target="_blank" class="footer__link">Генератор зображень</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://arkanit7.github.io/bem-validator-extended/" target="_blank" class="footer__link">Валідатор для методології БЕМ (1)</a>
+						</li>						
+						<li class="footer__item">
+							<a href="https://nglazov.github.io/bem-validator-page/" target="_blank" class="footer__link">Валідатор для методології БЕМ (2)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://pavlokrovitskyi.github.io/BEM_validator/" target="_blank" class="footer__link">Валідатор для методології БЕМ (3)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://yoksel.github.io/html-tree/" target="_blank" class="footer__link">Генератор HTML-дерева</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://bem-cheat-sheet.9elements.com/" target="_blank" class="footer__link">БЕМ Шпаргалка</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/cssposition.html" target="_blank" class="footer__link">Шпаргалка CSS позиціонування (CSS position)</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/transform.html" target="_blank" class="footer__link">Шпаргалка CSS transform. 2D та 3D трансформації</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/flexbox.html" target="_blank" class="footer__link">Шпаргалка по Flexbox</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://flexboxfroggy.com/#ru" target="_blank" class="footer__link">Гра-тренажер Flexbox Froggy</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/grid.html" target="_blank" class="footer__link">Шпаргалка по CSS Grid Layout</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://cssgridgarden.com/#ru" target="_blank" class="footer__link">Гра-тренажер Grid Garden</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/semantics-tags.html" target="_blank" class="footer__link">Семантична верстка. Основні HTML-теги</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/semantics-code.html" target="_blank" class="footer__link">Семантична верстка на практиці</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/css-units.html" target="_blank" class="footer__link">Одиниці вимірювання CSS - PX, EM, REM, %, VW, VH, VMIN, VMAX, FR, EX, CH</a>
+						</li>
+						<li class="footer__item">
+							<a href="https://fls.guru/logical-css.html" target="_blank" class="footer__link">Логічні CSS властивості</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

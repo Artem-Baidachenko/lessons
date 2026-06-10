@@ -1,0 +1,239 @@
+/* ----------------- Blockhead ---------------- */
+.blockhead {
+	display: flex;
+}
+.blockhead--left {
+	flex-direction: column;
+	gap: 1.5rem; /* 24 px*/
+}
+.blockhead--left .blockhead__text {
+	max-width: 31.75rem; /* 508 px*/
+	text-wrap: pretty;
+}
+.blockhead--hero {
+	flex-direction: column;
+}
+.blockhead--hero > * {
+	margin-bottom: 1.5rem; /* 24 px*/
+}
+.blockhead--hero .blockhead__text {
+	margin-bottom: 1.875rem; /* 30 px*/
+}
+.blockhead--horizontal {
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+@media (width < 30em) { /* 480 px*/
+	.blockhead--horizontal {
+		flex-direction: column;
+		gap: 1.25rem; /* 20 px*/
+	}
+	.blockhead--left {
+		display: grid;
+		gap: 1.25rem; /* 20 px*/
+	}
+}
+.blockhead--center {
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 1.5rem; /* 24 px*/
+}
+.blockhead__title {
+	text-wrap: balance;
+	font-weight: 600;
+	font-size: 3rem; /* 48 px*/
+	line-height: 1.2; 
+	letter-spacing: -0.04em;
+	color: var(--bg-button);
+}
+.blockhead__title--big {
+	font-size: 4rem; /* 64 px*/
+}
+@media (width < 69em){ /* 1104 px*/
+	.blockhead__title--big {
+		font-size: 2.5rem; /* 40 px*/
+	}
+}
+@media (width < 61.9375em) { /* 991 px*/
+	.blockhead--left .blockhead__text {
+		max-width: 100%;
+	}
+}
+@media (width < 45em) { /* 720 px*/
+	.blockhead--center {
+		gap: 1rem;
+	}
+	.blockhead__title {
+		font-size: 1.625rem; /* 26 px*/
+	}
+}
+.blockhead__text {
+	max-width: 44.125rem; /* 706 px*/
+	text-wrap: pretty;
+	line-height: 1.75;
+}
+.blockhead__options {	
+}
+.options-blockhead {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+.options-blockhead__item {
+	padding-block: 0.5rem; /* 8 px*/
+	padding-inline: 1rem;
+	background-color: rgba(0, 0, 0, 0.05000000074505806);
+	border-radius: 1.875rem; /* 30 px*/
+	display: flex;
+	gap: 0.625rem; /* 10 px*/
+	align-items: center;
+	font-size: 0.875rem; /* 14 px*/
+	line-height: 1.0625rem;
+	letter-spacing: -0.02em;
+	color: var(--color-text);
+}
+.options-blockhead__item::before {
+	content: "";
+	width: 1.5rem; /* 24 px*/
+	aspect-ratio: 1;
+}
+.options-blockhead__item--timer::before {
+	content: "";
+	background: url('../img/icons/timer.svg') center no-repeat;
+}
+.options-blockhead__item--snack::before {
+	content: "";
+	background: url('../img/icons/snack.svg') center no-repeat;
+}
+.blockhead__actions {
+}
+.blockhead__button {
+}
+@media (width < 30em) { /* 480 px*/
+	.blockhead__actions {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.body-hero__actions {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.body-hero__button {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	.blockhead__button {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+}
+.blockhead--hero > *:last-child {
+	margin-bottom: 0;
+}
+/* ---- Button -------- */
+.button {
+	display: inline-flex;
+	align-items: center;
+	background-color: var(--light-bg);
+	border-radius: 1rem;
+	padding: 1.3125rem 1.6875rem; /* 21px 27px*/
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 1.19;
+	letter-spacing: -0.02em;
+	color: var(--bg-button);
+	transition: 
+		background-color 0.5s,
+		color 0.5s;
+}
+.button--icon {
+	gap: 0.9375rem; /* 15 px*/
+	background-color: var(--bg-button);
+	color: #fff;
+	transition: color 0.3s;
+}
+.button--dark {
+	background-color: var(--bg-button);
+	color: #fff;
+	transition: 	
+		background-color 0.5s,
+		color 0.5s;
+}
+.button--icon::after {
+	content: "";
+	background: url('../img/icons/play.svg') center no-repeat;
+	width: 1.5rem;
+	aspect-ratio: 1;
+	transition: all 0.5s;
+}
+.button--icon:hover::after {
+	background: url('../img/icons/play-red.svg') center no-repeat;
+}
+.button--inst {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	background-color: var(--bg-button);
+	color: #fff;
+	transition: color 0.5s;
+}
+.button--inst::after {
+	content: "";
+	background: url('../img/icons/instagram-white.svg') center no-repeat;
+	width: 1.5rem; /* 24 px*/
+	aspect-ratio: 1;
+	transition: all 0.5s;
+}
+.button:hover {
+	background-color: var(--bg-button);
+	color: #fff;
+	transition: 
+		background-color 0.5s,
+		color 0.5s;
+}
+.button--icon:hover {
+	transition: color 0.3s;
+	color: var(--color-active);
+}
+.button--dark:hover {
+	transition: 
+		background-color 0.5s,
+		color 0.5s;
+	background-color: var(--light-bg);
+	color: var(--bg-button);
+}
+.button--inst:hover {
+	background-color: var(--bg-button);
+	color: var(--color-active);
+	transition: 
+		background-color 0.3s,
+		color 0.3s;
+}
+.button--inst:hover::after {
+	background: url('../img/icons/instagram-red.svg') center no-repeat;
+	transition: all 0.5s;
+}
+/* ----------------- Social ---------------- */
+.reviews-social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 2.5rem; /* 40 px*/
+	row-gap: 0.3125rem; /* 5 px*/
+}
+.reviews-social__item {
+}
+.reviews-social__link path {
+	transition: all 0.5s;
+}
+.reviews-social__link:hover path {
+	transition: all 0.5s;
+	fill: var(--color-active);
+}

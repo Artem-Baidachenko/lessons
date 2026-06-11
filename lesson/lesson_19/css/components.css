@@ -24,6 +24,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
+	gap: 0.3125rem;
 }
 @media (width < 30em) { /* 480 px*/
 	.blockhead--horizontal {

@@ -1,5 +1,5 @@
 @import url("fonts.css");
-@import "components.css";
+@import url("components.css");
 
 :root {
 	--font-family: "Inter", sans-serif;
@@ -1024,6 +1024,9 @@ body {
 	font-weight: 600;
 }
 .content-reviews__text:not(:last-child) {
+	margin-bottom: 0.625rem;
+}
+.content-reviews__text p:not(:last-child) {
 	margin-bottom: 0.625rem;
 }
 .content-reviews__date {

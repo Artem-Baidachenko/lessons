@@ -76,6 +76,9 @@
 	text-wrap: pretty;
 	line-height: 1.75;
 }
+.blockhead__text p:not(:last-child) {
+	margin-bottom: 0.625rem;
+}
 .blockhead__options {	
 }
 .options-blockhead {
